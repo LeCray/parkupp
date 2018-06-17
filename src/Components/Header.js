@@ -29,33 +29,18 @@ export default class Header extends React.Component {
     render() {
         return (
             <Router>
-                <Navbar color="indigo" dark expand="md" scrolling>
+                <Navbar color="default-color" dark expand="md" scrolling style={{paddingLeft: 125}}>
                     <NavbarBrand href="/">
-                        <strong>Navbar</strong>
+                         <img src={require("../parkupp_logo.png")} height="50"/>
+
+                         
                     </NavbarBrand>
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
-                          <NavItem active>
-                              <NavLink to="#">Home</NavLink>
-                          </NavItem>
                           <NavItem>
-                              <NavLink to="#">Features</NavLink>
-                          </NavItem>
-                          <NavItem>
-                              <NavLink to="#">Pricing</NavLink>
-                          </NavItem>
-                          <NavItem>
-                              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                              <DropdownToggle nav caret>Dropdown</DropdownToggle>
-                              <DropdownMenu>
-                                  <DropdownItem href="#">Action</DropdownItem>
-                                  <DropdownItem href="#">Another Action</DropdownItem>
-                                  <DropdownItem href="#">Something else here</DropdownItem>
-                                  <DropdownItem href="#">Something else here</DropdownItem>
-                              </DropdownMenu>
-                              </Dropdown>
-                          </NavItem>
+                              <NavLink to="#">About</NavLink>
+                          </NavItem>                         
                         </NavbarNav>
                         
                     </Collapse>
