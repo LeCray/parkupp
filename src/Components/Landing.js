@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import Background from '../parkupp_gif.png';
+
+
 
 import {
   Collapse,
@@ -22,10 +25,11 @@ export default class Landing extends Component {
 
 	render() {		
 		return(  
-			<div class="container">
-				<h1>LANDING PAGE</h1>
+			<div >				
+        <img src={require("../parkupp_gif.png")} style={{width: "100%"}} /> 
 
 				<Button bsStyle="success">Success</Button>
+        
 			</div>
 		)
 	}
