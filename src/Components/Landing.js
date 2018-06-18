@@ -47,18 +47,37 @@ export default class Landing extends Component {
                         <hr style={{borderColor: "white", width: 120, marginTop: 200}}/>
                     </div>
 
-                    <div style={{paddingTop: 200, paddingBottom: 200}}>
+                    <div style={{paddingTop: 100, paddingBottom: 200}}>
                         <h1 style={{color: "white", fontSize: 50}}>Why ParkUpp?</h1>
-                        <div class="row" style={{marginTop: 60}}>
-                            <div class="col-sm-3 offset-sm-1" style={{border: "1px solid red"}}>
-                                <img src={require("../time.png")} style={{height: 200, width: "100%"}} /> 
+
+                        <div class="row" style={{marginTop: 100, color: "white"}}>
+                            <div class="col-sm-4">
+                                <img src={require("../time.png")} style={{height: 200}} /> 
+                                <h3 style={{marginTop: 50}}>Save Time</h3>
+                                <p>ParkUpp wherever you go</p>
                             </div>
-                            <div class="col-sm-3">
-                                  
+                            <div class="col-sm-4">
+                                <img src={require("../pay.png")} style={{height: 200}} />
+                                <h3 style={{marginTop: 50}}>Pay Easy</h3>
+                                <p>
+                                    Users can find their spot<br/>
+                                    and pay for it with the<br/>
+                                    app and cut out any cash<br/>
+                                    exchange
+                                </p>
                             </div>
-                            <div class="col-sm-3">
-                                  
+                            <div class="col-sm-4">
+                                <img src={require("../culture.png")} style={{height: 200}} />
+                                <h3 style={{marginTop: 50}}>Share Culture</h3>
+                                <p>
+                                    ParkUpp lets you list your<br/>
+                                    driveway so drivers can<br/>
+                                    find parking anywhere in<br/>
+                                    the city
+                                </p>
                             </div>
+
+                            <hr style={{borderColor: "white", width: 120, marginTop: 200}}/>
                         </div>
                         
                     </div>
