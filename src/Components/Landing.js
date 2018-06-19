@@ -235,9 +235,14 @@ export default class Landing extends Component {
                                     </div>
                                 </div>
                             </section>                              
-                        </div>
                                 
-                        <hr style={{borderColor: "white", width: 120, marginTop: 100}}/>                        
+                            <hr style={{borderColor: "white", width: "50%", marginTop: 100}}/>    
+
+                            <div style={{marginTop: 50}}>
+                                <p>Support. | Contact us. | Terms & Conditions. | Privacy Policy. | Careers. </p>
+                                <p>© Copyright 2018 ParkUpp. All rights reserved</p>
+                            </div>                    
+                        </div>
                     </div>
 
 
