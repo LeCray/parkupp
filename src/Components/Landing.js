@@ -24,10 +24,16 @@ import {
 export default class Landing extends Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {
+            value: '',
+            driver: false,
+            owner: false
+        };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.driver = this.driver.bind(this);
+        this.owner = this.owner.bind(this);
     }
 
     handleChange(event) {
@@ -38,6 +44,15 @@ export default class Landing extends Component {
         alert('A name was submitted: ' + this.state.value);
         event.preventDefault();
     }
+
+    driver() {
+        console.log("It's running tho")
+        this.setState({driver: true, owner: false})
+    }
+    owner() {
+        this.setState({owner: true, driver: false})
+    }
+
 
 	render() {		
 		return(  
@@ -197,37 +212,31 @@ export default class Landing extends Component {
                     <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad", color: "white"}}>
                         <div class="container">
                             <h1 style={{fontSize: 50}}>Sign Up to ParkUpp</h1>
-
-                        
-                            
-                            
-                                <section className="form-dark">
-                                  <div class="row">
+                                                                                
+                            <section className="form-dark">
+                                <div class="row">
                                     <div class="col-sm-4 offset-sm-4">
-                                      
+                                  
                                         <div className="text-white">                                      
-                                          <Input label="Name" group type="text" validate />
-                                          <Input label="Email Address" group type="email" validate/>
-                                       
-
-                                          <Row className="d-flex align-items-center mb-4">
-                                            <div className="text-center mb-3 col-md-12">
-                                              <Button color="default" rounded type="button" className="btn-block z-depth-1">Sign Up</Button>
+                                            <Input label="Name" group type="text" validate />
+                                            <Input label="Email Address" group type="email" validate/>
+                                            
+                                            <div style={{textAlign: "center"}} >                                                
+                                                <Button color={this.state.driver? "yellow" : "default"} onClick={this.driver}>DRIVER</Button>                                                                                               
+                                                <Button color={this.state.owner? "yellow" : "default"} onClick={this.owner}>OWNER</Button>                                                
                                             </div>
-                                          </Row>
-                                      
-                                        </div>
-                                      
+                                   
+                                            <Row className="d-flex align-items-center mb-4" style={{marginTop: 20}}>
+                                                <div className="text-center mb-3 col-md-12">
+                                                    <Button color="yellow" rounded type="button" className="btn-block z-depth-1">Sign Up</Button>
+                                                </div>
+                                            </Row>                                      
+                                        </div>                                      
                                     </div>
-                                  </div>
-                                </section>
-                              
+                                </div>
+                            </section>                              
                         </div>
-                            
-                        
-
-                        
-                           
+                                
                         <hr style={{borderColor: "white", width: 120, marginTop: 100}}/>                        
                     </div>
 
