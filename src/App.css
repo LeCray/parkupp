@@ -88,4 +88,19 @@
   -ms-transform-origin: 100% 100%;
   transform-origin: 100% 100%; }
 
+  @media (max-width: 576px) {
+  .pictures {
+    margin-top:  50px;
+  }
+  .owner {
+    margin-top:  20px;
+  }
+  .heading {
+    padding-left: 50px;
+  }
+  .parkers {
+    margin-top: 40px;
+  }
+}
+
   

@@ -66,13 +66,13 @@ export default class Landing extends Component {
                         <h2 style={{color: "white", fontSize: 30}}><strong>Reimagine. Parking.</strong></h2>
 
                         <div class="row" style={{marginTop: 60}}>
-                            <div class="col-sm-2 offset-sm-4">
+                            <div class="col-sm-6 col-md-4 offset-md-2 col-lg-2 offset-lg-4">
                                 <div>
                                     <h2 style={{color: "yellow"}}>1 235 789</h2>
                                     <h4 style={{color: "white"}}>Shared Driveways</h4>   
                                 </div>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-6 col-md-4 col-lg-2 parkers">
                                 <div>
                                     <h2 style={{color: "yellow"}}>100 245 365</h2>
                                     <h4 style={{color: "white"}}>Sharing Parkers</h4>   
@@ -89,12 +89,12 @@ export default class Landing extends Component {
 
                         <div class="row" style={{marginTop: 100, color: "white"}}>
                             <div class="col-sm-4">
-                                <img src={require("../time.png")} style={{height: 200}} /> 
+                                <img src={require("../time.png")} style={{height: 150}} /> 
                                 <h3 style={{marginTop: 50}}>Save Time</h3>
                                 <p>ParkUpp wherever you go</p>
                             </div>
-                            <div class="col-sm-4">
-                                <img src={require("../pay_easy.png")} style={{height: 200}} />
+                            <div class="col-sm-4 pictures">
+                                <img src={require("../pay_easy.png")} style={{height: 150}} />
                                 <h3 style={{marginTop: 50}}>Pay Easy</h3>
                                 <p>
                                     Users can find their spot<br/>
@@ -103,8 +103,8 @@ export default class Landing extends Component {
                                     exchange
                                 </p>
                             </div>
-                            <div class="col-sm-4">
-                                <img src={require("../culture.png")} style={{height: 200}} />
+                            <div class="col-sm-4 pictures">
+                                <img src={require("../culture.png")} style={{height: 150}} />
                                 <h3 style={{marginTop: 50}}>Share Culture</h3>
                                 <p>
                                     ParkUpp lets you list your<br/>
@@ -121,7 +121,7 @@ export default class Landing extends Component {
                                     <h4>DRIVER</h4>
                                 </div>
                             </div>
-                            <div class="col-sm-2">
+                            <div class="col-sm-2 owner">
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
                                     <h4>OWNER</h4>
                                 </div>
@@ -138,18 +138,18 @@ export default class Landing extends Component {
 
                         <div class="row" style={{marginTop: 100, color: "white"}}>
 
-                            <div class="col-sm-4">
-                                <img src={require("../search.png")} style={{height: 200}} /> 
+                            <div class="col-sm-4 ">
+                                <img src={require("../search.png")} style={{height: 150}} /> 
                                 <h3 style={{marginTop: 50}}>Search</h3>                                
                             </div>
 
-                            <div class="col-sm-4">
-                                <img src={require("../parking.png")} style={{height: 200}} />
+                            <div class="col-sm-4 pictures">
+                                <img src={require("../parking.png")} style={{height: 150}} />
                                 <h3 style={{marginTop: 50}}>Park</h3>                             
                             </div>
 
-                            <div class="col-sm-4">
-                                <img src={require("../pay.png")} style={{height: 200}} />
+                            <div class="col-sm-4 pictures">
+                                <img src={require("../pay.png")} style={{height: 150}} />
                                 <h3 style={{marginTop: 50}}>Pay</h3>                            
                             </div>
                         </div>  
@@ -164,17 +164,17 @@ export default class Landing extends Component {
                         <div class="row" style={{marginTop: 100, color: "white"}}>
 
                             <div class="col-sm-4">
-                                <img src={require("../list.png")} style={{height: 200}} /> 
+                                <img src={require("../list.png")} style={{height: 150}} /> 
                                 <h3 style={{marginTop: 50}}>List</h3>                                
                             </div>
 
-                            <div class="col-sm-4">
-                                <img src={require("../accept.png")} style={{height: 200}} />
+                            <div class="col-sm-4 pictures">
+                                <img src={require("../accept.png")} style={{height: 150}} />
                                 <h3 style={{marginTop: 50}}>Accept</h3>                             
                             </div>
 
-                            <div class="col-sm-4">
-                                <img src={require("../get_paid.png")} style={{height: 200}} />
+                            <div class="col-sm-4 pictures">
+                                <img src={require("../get_paid.png")} style={{height: 150}} />
                                 <h3 style={{marginTop: 50}}>Get Paid</h3>                            
                             </div>
                         </div>  

@@ -29,11 +29,11 @@ export default class Header extends React.Component {
     render() {
         return (
             <Router>
-                <Navbar color="default-color" dark expand="md" scrolling style={{paddingLeft: 125}}>
+                <Navbar fixedTop color="default-color" dark expand="md" scrolling style={{paddingLeft: 50}}>
                     <NavbarBrand href="/">
                          <img src={require("../parkupp_logo.png")} height="50"/>                         
                     </NavbarBrand>
-                    
+
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
