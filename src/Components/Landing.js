@@ -57,7 +57,7 @@ export default class Landing extends Component {
 	render() {		
 		return(  
 			<div style={{overflow: "hidden"}}>				
-                <img src={require("../parkupp_gif.png")} style={{width: "100%"}} /> 
+                <img src={require("../parkupp.gif")} style={{width: "100%"}} /> 
                 <div style={{textAlign: "center"}}>
 
                     {/* PARKUPP */}
