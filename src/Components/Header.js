@@ -30,8 +30,8 @@ export default class Header extends React.Component {
 
     render() {
         return (
-            <Router>
-                <Navbar fixedTop color="default-color" dark expand="md" scrolling style={{paddingLeft: 50}}>
+            
+                <Navbar navbar-fixed-top color="default-color" dark expand="md" scrolling style={{paddingLeft: 50}}>
                     <NavbarBrand href="/">
                          <img src={require("../parkupp_logo.png")} height="50"/>                         
                     </NavbarBrand>
@@ -53,7 +53,7 @@ export default class Header extends React.Component {
                         
                     </Collapse>
                 </Navbar>
-            </Router>
+            
         );
     }
 }
