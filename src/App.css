@@ -107,6 +107,13 @@
   .line {
     margin-top: 100px;
   }
+  .right {
+    text-align: center;
+  }
+  .lefty {
+    text-align: center;
+
+  }
 }
 
   

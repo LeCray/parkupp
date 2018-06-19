@@ -64,12 +64,12 @@ export default class Landing extends Component {
 
                     {/* PARKUPP */}
                     <div class="parkupp" style={{paddingTop: 100, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
-                        <h1 style={{color: "white", fontSize: 100}}><strong>ParkUpp</strong></h1><br/>
+                        <h1 style={{color: "white", fontSize: 70}}><strong>ParkUpp</strong></h1><br/>
                         <h2 style={{color: "white", fontSize: 30}}><strong>Reimagine. Parking.</strong></h2>
 
                         <div class="row" style={{marginTop: 60}}>
                             <div class="col-sm-6 col-md-4 offset-md-2 col-lg-2 offset-lg-4">
-                                <div>
+                                <div >
                                     <h2 style={{color: "yellow"}}>1 235 789</h2>
                                     <h4 style={{color: "white"}}>Shared Driveways</h4>   
                                 </div>
@@ -87,16 +87,19 @@ export default class Landing extends Component {
                     
                     {/* WHY PARKUPP */}
                     <div style={{paddingBottom: 50, backgroundColor: "#2bbbad"}}>
-                        <h1 style={{color: "white", fontSize: 50}}>Why ParkUpp?</h1>
+                        <h1 style={{color: "white", fontSize: 50}}>How it Works</h1>
 
                         <div class="row" style={{marginTop: 50, color: "white"}}>
-                            <div class="col-sm-4">
-                                <img src={require("../time.png")} style={{height: 150}} /> 
-                                <h3 style={{marginTop: 50}}>Save Time</h3>
-                                <p>ParkUpp wherever you go</p>
+                            <div class="col-lg-4">
+                                <div >
+                                    <img src={require("../time.png")} style={{height: 130}} /> 
+                                    <h3 style={{marginTop: 50}}>Save Time</h3>
+                                    <p>ParkUpp wherever you go</p>
+                                </div>
                             </div>
-                            <div class="col-sm-4 pictures">
-                                <img src={require("../pay_easy.png")} style={{height: 150}} />
+                            <div class="col-lg-4 pictures">
+                                
+                                <img src={require("../pay_easy.png")} style={{height: 130}} />
                                 <h3 style={{marginTop: 50}}>Pay Easy</h3>
                                 <p>
                                     Users can find their spot<br/>
@@ -104,16 +107,19 @@ export default class Landing extends Component {
                                     app and cut out any cash<br/>
                                     exchange
                                 </p>
+                                
                             </div>
-                            <div class="col-sm-4 pictures">
-                                <img src={require("../culture.png")} style={{height: 150}} />
-                                <h3 style={{marginTop: 50}}>Share Culture</h3>
-                                <p>
-                                    ParkUpp lets you list your<br/>
-                                    driveway so drivers can<br/>
-                                    find parking anywhere in<br/>
-                                    the city
-                                </p>
+                            <div class="col-lg-4 pictures">
+                                <div >
+                                    <img src={require("../culture.png")} style={{height: 130}} />
+                                    <h3 style={{marginTop: 50}}>Share Culture</h3>
+                                    <p>
+                                        ParkUpp lets you list your<br/>
+                                        driveway so drivers can<br/>
+                                        find parking anywhere in<br/>
+                                        the city
+                                    </p>
+                                </div>
                             </div>                            
                         </div>
 
@@ -138,24 +144,28 @@ export default class Landing extends Component {
                     <div style={{paddingBottom: 50, backgroundColor: "#2bbbad"}}>
 
                         <Element name="driver" className="element" >
-                            <h1 style={{color: "white", fontSize: 50}}>Why ParkUpp?</h1>
+                            <h1 style={{color: "white", fontSize: 50}}>How it Works</h1>
                         </Element>
 
                         <div class="row" style={{marginTop: 50, color: "white"}}>
 
-                            <div class="col-sm-4 ">
-                                <img src={require("../search.png")} style={{height: 150}} /> 
-                                <h3 style={{marginTop: 50}}>Search</h3>                                
+                            <div class="col-lg-4 ">
+                                <div >
+                                    <img src={require("../search.png")} style={{height: 120}} /> 
+                                    <h3 style={{marginTop: 50}}>Search</h3>                                
+                                </div>
                             </div>
 
-                            <div class="col-sm-4 pictures">
-                                <img src={require("../parking.png")} style={{height: 150}} />
+                            <div class="col-lg-4 pictures">
+                                <img src={require("../parking.png")} style={{height: 120}} />
                                 <h3 style={{marginTop: 50}}>Park</h3>                             
                             </div>
-
-                            <div class="col-sm-4 pictures">
-                                <img src={require("../pay.png")} style={{height: 150}} />
-                                <h3 style={{marginTop: 50}}>Pay</h3>                            
+                            
+                            <div class="col-lg-4 pictures">
+                                <div >
+                                    <img src={require("../pay.png")} style={{height: 120}} />
+                                    <h3 style={{marginTop: 50}}>Pay</h3>                            
+                                </div>
                             </div>
                         </div>  
                            
@@ -166,24 +176,28 @@ export default class Landing extends Component {
                     <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#aaa8a5"}}>
                         
                         <Element name="owner" className="element" >
-                            <h1 style={{color: "white", fontSize: 50}}>Why ParkUpp?</h1>
+                            <h1 style={{color: "white", fontSize: 50}}>How it Works</h1>
                         </Element>
 
                         <div class="row" style={{marginTop: 50, color: "white"}}>
-
-                            <div class="col-sm-4">
-                                <img src={require("../list.png")} style={{height: 150}} /> 
-                                <h3 style={{marginTop: 50}}>List</h3>                                
+                            
+                            <div class="col-lg-4">
+                                <div >
+                                    <img src={require("../list.png")} style={{height: 120}} /> 
+                                    <h3 style={{marginTop: 50}}>List</h3>                                
+                                </div>
                             </div>
 
-                            <div class="col-sm-4 pictures">
-                                <img src={require("../accept.png")} style={{height: 150}} />
+                            <div class="col-lg-4 pictures">
+                                <img src={require("../accept.png")} style={{height: 120}} />
                                 <h3 style={{marginTop: 50}}>Accept</h3>                             
                             </div>
-
-                            <div class="col-sm-4 pictures">
-                                <img src={require("../get_paid.png")} style={{height: 150}} />
-                                <h3 style={{marginTop: 50}}>Get Paid</h3>                            
+                            
+                            <div class="col-lg-4 pictures">
+                                <div  >
+                                    <img src={require("../get_paid.png")} style={{height: 120}} />
+                                    <h3 style={{marginTop: 50}}>Get Paid</h3>                            
+                                </div>
                             </div>
                         </div>  
                            
