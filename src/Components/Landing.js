@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Input, Button, Fa, Card, CardBody, ModalFooter } from 'mdbreact';
 import Background from '../parkupp_gif.png';
+import Ionicon from 'react-ionicons'
 
 
 
@@ -239,8 +240,8 @@ export default class Landing extends Component {
                             <hr style={{borderColor: "white", width: "50%", marginTop: 100}}/>    
 
                             <div style={{marginTop: 50}}>
-                                <p>Support. | Contact us. | Terms & Conditions. | Privacy Policy. | Careers. </p>
-                                <p>© Copyright 2018 ParkUpp. All rights reserved</p>
+                                <p>Support | Contact us | Terms & Conditions | Privacy Policy | Careers </p>
+                                <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
                             </div>                    
                         </div>
                     </div>

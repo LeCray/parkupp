@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Ionicon from 'react-ionicons'
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -38,8 +39,15 @@ export default class Header extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
                           <NavItem>
-                              <NavLink to="#">About</NavLink>
+                              <NavLink to="#">About Us</NavLink>
                           </NavItem>                         
+                        </NavbarNav>
+                        <NavbarNav right>
+                            <NavItem>
+                                <Ionicon icon="logo-instagram" fontSize="35px" color="white" style={{marginRight: 20}}/>
+                                <Ionicon icon="logo-twitter" fontSize="35px" color="white" style={{marginRight: 20}}/>
+                                <Ionicon icon="md-mail" fontSize="35px" color="white" style={{marginRight: 50}}/>
+                            </NavItem> 
                         </NavbarNav>
                         
                     </Collapse>
