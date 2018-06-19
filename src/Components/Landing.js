@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Input, Button, Fa, Card, CardBody, ModalFooter } from 'mdbreact';
 import Background from '../parkupp_gif.png';
 import Ionicon from 'react-ionicons'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 
@@ -85,10 +86,10 @@ export default class Landing extends Component {
                     </div>
                     
                     {/* WHY PARKUPP */}
-                    <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
+                    <div style={{paddingBottom: 50, backgroundColor: "#2bbbad"}}>
                         <h1 style={{color: "white", fontSize: 50}}>Why ParkUpp?</h1>
 
-                        <div class="row" style={{marginTop: 100, color: "white"}}>
+                        <div class="row" style={{marginTop: 50, color: "white"}}>
                             <div class="col-sm-4">
                                 <img src={require("../time.png")} style={{height: 150}} /> 
                                 <h3 style={{marginTop: 50}}>Save Time</h3>
@@ -119,12 +120,12 @@ export default class Landing extends Component {
                         <div class="row" style={{marginTop: 50, color: "white", paddingLeft: 30, paddingRight: 30}}>
                             <div class="col-sm-2 offset-sm-4" >
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
-                                    <h4>DRIVER</h4>
+                                    <Link activeClass="active" to="driver" spy={true} smooth={true} duration={500}><h4>DRIVER</h4></Link>
                                 </div>
                             </div>
                             <div class="col-sm-2 owner">
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
-                                    <h4>OWNER</h4>
+                                    <Link activeClass="active" to="owner" spy={true} smooth={true} duration={500}><h4>OWNER</h4></Link>
                                 </div>
                             </div>
                         </div>
@@ -134,10 +135,13 @@ export default class Landing extends Component {
                     </div>
 
                     {/* HOW IT WORKS 1*/}
-                    <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
-                        <h1 style={{color: "white", fontSize: 50}}>Why ParkUpp?</h1>
+                    <div style={{paddingBottom: 50, backgroundColor: "#2bbbad"}}>
 
-                        <div class="row" style={{marginTop: 100, color: "white"}}>
+                        <Element name="driver" className="element" >
+                            <h1 style={{color: "white", fontSize: 50}}>Why ParkUpp?</h1>
+                        </Element>
+
+                        <div class="row" style={{marginTop: 50, color: "white"}}>
 
                             <div class="col-sm-4 ">
                                 <img src={require("../search.png")} style={{height: 150}} /> 
@@ -160,9 +164,12 @@ export default class Landing extends Component {
 
                     {/* HOW IT WORKS 2*/} 
                     <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#aaa8a5"}}>
-                        <h1 style={{color: "white", fontSize: 50}}>Why ParkUpp?</h1>
+                        
+                        <Element name="owner" className="element" >
+                            <h1 style={{color: "white", fontSize: 50}}>Why ParkUpp?</h1>
+                        </Element>
 
-                        <div class="row" style={{marginTop: 100, color: "white"}}>
+                        <div class="row" style={{marginTop: 50, color: "white"}}>
 
                             <div class="col-sm-4">
                                 <img src={require("../list.png")} style={{height: 150}} /> 
@@ -186,9 +193,12 @@ export default class Landing extends Component {
                     {/* ABOUT US*/} 
                     <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#121a5e", color: "white"}}>
                         <div class="container" style={{padding: 20}}>
-                            <h1 style={{fontSize: 50}}>About Us</h1>
 
-                            <p style={{marginTop: 70, fontSize: 20}}>
+                            <Element name="about" className="element" >
+                                <h1 style={{fontSize: 50}}>About Us</h1>
+                            </Element>
+
+                            <p style={{marginTop: 50, fontSize: 20}}>
                                 At the ParkUpp family, we wake up everyday to solve some of the land<br/>
                                 allocation issues that the world is facing. <br/>
                                 <br/>
@@ -218,7 +228,7 @@ export default class Landing extends Component {
                                 <div class="row">
                                     <div class="col-sm-4 offset-sm-4">
                                   
-                                        <div className="text-white">                                      
+                                        <div className="text-white" style={{padding: 30}}>                                      
                                             <Input label="Name"  type="text"/>
                                             <Input label="Email Address" group type="email" validate/>
                                             
@@ -227,9 +237,9 @@ export default class Landing extends Component {
                                                 <Button color={this.state.owner? "yellow" : "default"} onClick={this.owner}>OWNER</Button>                                                
                                             </div>
                                    
-                                            <Row className="d-flex align-items-center mb-4" style={{marginTop: 20}}>
+                                            <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
                                                 <div className="text-center mb-3 col-md-12">
-                                                    <Button color="yellow" rounded type="button" className="btn-block z-depth-1">Sign Up</Button>
+                                                    <Button color="yellow" rounded type="button" className="btn btn-block z-depth-1">Sign Up</Button>
                                                 </div>
                                             </Row>                                      
                                         </div>                                      

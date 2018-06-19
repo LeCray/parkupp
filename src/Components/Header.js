@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Ionicon from 'react-ionicons'
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -39,7 +40,7 @@ export default class Header extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
                           <NavItem>
-                              <NavLink to="#">About Us</NavLink>
+                               <Link activeClass="active" to="about" spy={true} smooth={true} duration={500}><NavLink to="#">About Us</NavLink></Link>
                           </NavItem>                         
                         </NavbarNav>
                         <NavbarNav right>
