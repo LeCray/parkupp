@@ -120,12 +120,12 @@ export default class Landing extends Component {
                         <div class="row" style={{marginTop: 50, color: "white", paddingLeft: 30, paddingRight: 30}}>
                             <div class="col-sm-2 offset-sm-4" >
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
-                                    <Link activeClass="active" to="driver" spy={true} smooth={true} duration={500}><h4>DRIVER</h4></Link>
+                                    <Link activeClass="active" to="driver" offset={-50} spy={true} smooth={true} duration={2000}><h4>DRIVER</h4></Link>
                                 </div>
                             </div>
                             <div class="col-sm-2 owner">
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
-                                    <Link activeClass="active" to="owner" spy={true} smooth={true} duration={500}><h4>OWNER</h4></Link>
+                                    <Link activeClass="active" to="owner" offset={-50} spy={true} smooth={true} duration={2000}><h4>OWNER</h4></Link>
                                 </div>
                             </div>
                         </div>

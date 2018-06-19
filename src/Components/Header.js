@@ -40,7 +40,7 @@ export default class Header extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
                           <NavItem>
-                               <Link activeClass="active" to="about" spy={true} smooth={true} duration={500}><NavLink to="#">About Us</NavLink></Link>
+                               <Link activeClass="active" to="about" offset={-50} spy={true} smooth={true} duration={2000}><NavLink to="#">About Us</NavLink></Link>
                           </NavItem>                         
                         </NavbarNav>
                         <NavbarNav right>
