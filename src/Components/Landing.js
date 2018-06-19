@@ -209,7 +209,7 @@ export default class Landing extends Component {
                         </div>                       
                     </div>
 
-                    <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad", color: "white"}}>
+                    <div style={{paddingTop: 100, paddingBottom: 50, backgroundColor: "#2bbbad", color: "white"}}>
                         <div class="container">
                             <h1 style={{fontSize: 50}}>Sign Up to ParkUpp</h1>
                                                                                 
@@ -218,7 +218,7 @@ export default class Landing extends Component {
                                     <div class="col-sm-4 offset-sm-4">
                                   
                                         <div className="text-white">                                      
-                                            <Input label="Name" group type="text" validate />
+                                            <Input label="Name"  type="text"/>
                                             <Input label="Email Address" group type="email" validate/>
                                             
                                             <div style={{textAlign: "center"}} >                                                
