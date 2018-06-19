@@ -62,7 +62,7 @@ export default class Landing extends Component {
                 <div style={{textAlign: "center"}}>
 
                     {/* PARKUPP */}
-                    <div style={{paddingTop: 200, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
+                    <div class="parkupp" style={{paddingTop: 100, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
                         <h1 style={{color: "white", fontSize: 100}}><strong>ParkUpp</strong></h1><br/>
                         <h2 style={{color: "white", fontSize: 30}}><strong>Reimagine. Parking.</strong></h2>
 
@@ -81,7 +81,7 @@ export default class Landing extends Component {
                             </div>
                         </div>
 
-                        <hr style={{borderColor: "white", width: 120, marginTop: 200}}/>
+                        <hr class="line" style={{borderColor: "white", width: 120, marginTop: 100}}/>
                     </div>
                     
                     {/* WHY PARKUPP */}
@@ -116,7 +116,7 @@ export default class Landing extends Component {
                             </div>                            
                         </div>
 
-                        <div class="row" style={{marginTop: 50, color: "white"}}>
+                        <div class="row" style={{marginTop: 50, color: "white", paddingLeft: 30, paddingRight: 30}}>
                             <div class="col-sm-2 offset-sm-4" >
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
                                     <h4>DRIVER</h4>
