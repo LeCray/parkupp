@@ -66,7 +66,7 @@ export default class Landing extends Component {
                 <div style={{textAlign: "center"}}>
 
                     {/* PARKUPP */}
-                    <div class="parkupp" style={{paddingTop: 100, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
+                    <div class="parkupp" style={{paddingTop: 100, paddingBottom: 50, backgroundColor: "#2bbbad", height: "100vh", border: "1px solid red"}}>
                         <h1 style={{color: "white", fontSize: 60}}><strong>ParkUpp</strong></h1><br/>
                         <h2 style={{color: "white", fontSize: 25}}><strong>Reimagine. Parking.</strong></h2>
 
@@ -86,10 +86,11 @@ export default class Landing extends Component {
                         </div>
 
                         <hr class="line" style={{borderColor: "white", width: 120, marginTop: 100}}/>
+                        <Ionicon onClick={() => scrollToComponent(this.how_it_works, { offset: 0, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
                     </div>
                     
                     {/* WHY PARKUPP */}
-                    <div style={{paddingBottom: 50, backgroundColor: "#2bbbad"}}>
+                    <div ref={(section) => { this.how_it_works = section; }} style={{height: "100vh", paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
                         <h1 style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
 
                         <div class="row" style={{marginTop: 50, color: "white"}}>
@@ -130,9 +131,7 @@ export default class Landing extends Component {
                             <div class="col-sm-2 offset-sm-4" >
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
                                     <h4 onClick={() => scrollToComponent(this.driver, { offset: -50, align: 'top', duration: 1500})}>DRIVER</h4>
-                                </div>
-
-                                
+                                </div>                                
                             </div>
                             <div class="col-sm-2 owner">
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
@@ -145,13 +144,11 @@ export default class Landing extends Component {
                         
                     </div>
 
-                    {/* HOW IT WORKS 1*/}
+                    {/* HOW IT WORKS 2*/}
                     
-                    <div style={{paddingBottom: 50, backgroundColor: "#2bbbad"}}>
-
-                       {/*<Element name="driver" className="element" >*/}
-                            <h1 className='driver' ref={(section) => { this.driver = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
-                        {/*</Element>*/}
+                    <div style={{height: "100vh", paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
+                       
+                        <h1 className='driver' ref={(section) => { this.driver = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>                        
 
                         <div class="row" style={{marginTop: 50, color: "white"}}>
 
@@ -175,11 +172,12 @@ export default class Landing extends Component {
                             </div>
                         </div>  
                            
-                        <hr style={{borderColor: "white", width: 120, marginTop: 100}}/>                        
+                        <hr style={{borderColor: "white", width: 120, marginTop: 150}}/>                        
+                        <Ionicon onClick={() => scrollToComponent(this.how_it_works_two, { offset: 0, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
                     </div>
 
                     {/* HOW IT WORKS 2*/} 
-                    <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#aaa8a5"}}>
+                    <div ref={(section) => { this.how_it_works_two = section; }} style={{height: "100vh", paddingTop: 50, paddingBottom: 50, backgroundColor: "#aaa8a5"}}>
                         
                         {/*<Element name="owner" className="element" >*/}
                             <h1 className='owner' ref={(section) => { this.owner = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
@@ -207,12 +205,13 @@ export default class Landing extends Component {
                             </div>
                         </div>  
                            
-                        <hr style={{borderColor: "white", width: 120, marginTop: 100}}/>                        
+                        <hr style={{borderColor: "white", width: 120, marginTop: 150}}/> 
+                        <Ionicon onClick={() => scrollToComponent(this.sign_up, { offset: 0, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>                       
                     </div>
 
                     
 
-                    <div style={{paddingTop: 100, paddingBottom: 50, backgroundColor: "#2bbbad", color: "white"}}>
+                    <div ref={(section) => { this.sign_up = section; }} style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad", color: "white"}}>
                         <div class="container">
                             <h1 style={{fontSize: 30}}><strong>Sign Up to ParkUpp</strong></h1>
                                                                                 
@@ -221,13 +220,20 @@ export default class Landing extends Component {
                                     <div class="col-lg-4 offset-lg-4">
                                   
                                         <div className="text-white" style={{padding: 30}}>                                      
-                                            <Input label="Name"  type="text"/>
+                                            <Input label="First Name"  type="text"/>
+                                            <Input label="Last Name"  type="text"/>
                                             <Input label="Email Address" group type="email" validate/>
                                             
                                             <div style={{textAlign: "center"}} >                                                
                                                 <Button color={this.state.driver? "yellow" : "default"} onClick={this.driver}>DRIVER</Button>                                                                                               
                                                 <Button color={this.state.owner? "yellow" : "default"} onClick={this.owner}>OWNER</Button>                                                
                                             </div>
+                                            
+                                            
+                                            <Input label="Tel" type="text"/>
+                                            <Input label="Password"  type="text"/>
+                                            <Input label="Confirm Password"  type="text"/>
+
                                    
                                             <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
                                                 <div className="text-center mb-3 col-md-12">
