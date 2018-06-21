@@ -45,17 +45,17 @@ export default class Header extends React.Component {
                         <NavbarNav left>
                             <NavItem>
                                 <Link to="/" style={{color: "white"}}>Home</Link>
-                                <Link to="About_Us" style={{color: "white", marginLeft: 15}}>About Us</Link>
+                                <Link to="About_Us" style={{color: "white", marginLeft: 15, marginRight: 5}}>About Us</Link>
                             </NavItem>  
 
                             <Dropdown isOpen = { this.state.dropdownOpen } toggle = { this.toggle } size="sm">
-                                <DropdownToggle nav caret style={{marginTop: -8, marginLeft: 10, color: "white"}}>More</DropdownToggle>
+                                <DropdownToggle nav caret style={{marginTop: -8, marginLeft: 0, color: "white"}}>More</DropdownToggle>
                                 <DropdownMenu>
-                                    <DropdownItem><Link to="/Support" style={{ color: '#FFF' }}>Support </Link></DropdownItem>
                                     <DropdownItem><Link to="/Contact_Us" style={{ color: '#FFF' }}>Contact us </Link></DropdownItem>
+                                    <DropdownItem><Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link></DropdownItem>
+                                    <DropdownItem><Link to="/Support" style={{ color: '#FFF' }}>Support </Link></DropdownItem>
                                     <DropdownItem><Link to="/Terms_Conditions" style={{ color: '#FFF' }}>Terms & Conditions </Link> </DropdownItem>
                                     <DropdownItem><Link to="/Privacy_Policy" style={{ color: '#FFF' }}>Privacy Policy </Link></DropdownItem>
-                                    <DropdownItem><Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link></DropdownItem>
                                 </DropdownMenu>
                             </Dropdown> 
 
