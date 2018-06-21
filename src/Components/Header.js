@@ -41,7 +41,7 @@ export default class Header extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
                           <NavItem>
-                               <Link to="About" style={{color: "white"}}>About Us</Link>
+                               <Link to="About_Us" style={{color: "white"}}>About Us</Link>
                           </NavItem>                         
                         </NavbarNav>
                         <NavbarNav right>
