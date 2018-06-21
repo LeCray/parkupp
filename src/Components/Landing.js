@@ -32,7 +32,8 @@ export default class Landing extends Component {
         this.state = {
             value: '',
             driver: false,
-            owner: false
+            owner: false,
+            height: ""
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -58,15 +59,19 @@ export default class Landing extends Component {
         this.setState({owner: true, driver: false})
     }
 
+    componentWillMount(){
+        this.setState({height: window.innerHeight + 'px'});
+      }
+
 
 	render() {		
 		return(  
 			<div style={{overflow: "hidden"}}>				
-                <img src={require("../parkupp.gif")} style={{width: "100%"}} /> 
+                <img src={require("../parkupp.gif")} style={{width: "120%"}} /> 
                 <div style={{textAlign: "center"}}>
 
                     {/* PARKUPP */}
-                    <div class="parkupp" style={{paddingTop: 100, paddingBottom: 50, backgroundColor: "#2bbbad", height: "100vh", border: "1px solid red"}}>
+                    <div class="parkupp height" style={{paddingTop: 100, paddingBottom: 50, backgroundColor: "#2bbbad", height: "100%"}}>
                         <h1 style={{color: "white", fontSize: 60}}><strong>ParkUpp</strong></h1><br/>
                         <h2 style={{color: "white", fontSize: 25}}><strong>Reimagine. Parking.</strong></h2>
 
@@ -85,12 +90,12 @@ export default class Landing extends Component {
                             </div>
                         </div>
 
-                        <hr class="line" style={{borderColor: "white", width: 120, marginTop: 100}}/>
+                        <hr class="line margin" style={{borderColor: "white", width: 120, marginTop: 100}}/>
                         <Ionicon onClick={() => scrollToComponent(this.how_it_works, { offset: 0, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
                     </div>
                     
                     {/* WHY PARKUPP */}
-                    <div ref={(section) => { this.how_it_works = section; }} style={{height: "100vh", paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
+                    <div class="height" ref={(section) => { this.how_it_works = section; }} style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
                         <h1 style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
 
                         <div class="row" style={{marginTop: 50, color: "white"}}>
@@ -130,25 +135,25 @@ export default class Landing extends Component {
                         <div class="row" style={{marginTop: 50, color: "white", paddingLeft: 30, paddingRight: 30}}>
                             <div class="col-sm-2 offset-sm-4" >
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
-                                    <h4 onClick={() => scrollToComponent(this.driver, { offset: -50, align: 'top', duration: 1500})}>DRIVER</h4>
+                                    <h4 onClick={() => scrollToComponent(this.driver_section, { offset: -50, align: 'top', duration: 1500})}>DRIVER</h4>
                                 </div>                                
                             </div>
                             <div class="col-sm-2 owner">
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
-                                    <h4 onClick={() => scrollToComponent(this.owner, { offset: -50, align: 'top', duration: 1500})}>OWNER</h4>
+                                    <h4 onClick={() => scrollToComponent(this.owner_section, { offset: -50, align: 'top', duration: 1500})}>OWNER</h4>
                                 </div>
                             </div>
                         </div>
                         
-                        <hr style={{borderColor: "white", width: 120, marginTop: 100}}/>
+                        <hr class="margin" style={{borderColor: "white", width: 120, marginTop: 100}}/>
                         
                     </div>
 
                     {/* HOW IT WORKS 2*/}
                     
-                    <div style={{height: "100vh", paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
+                    <div class="height" style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
                        
-                        <h1 className='driver' ref={(section) => { this.driver = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>                        
+                        <h1 className='driver' ref={(section) => { this.driver_section = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>                        
 
                         <div class="row" style={{marginTop: 50, color: "white"}}>
 
@@ -177,10 +182,10 @@ export default class Landing extends Component {
                     </div>
 
                     {/* HOW IT WORKS 2*/} 
-                    <div ref={(section) => { this.how_it_works_two = section; }} style={{height: "100vh", paddingTop: 50, paddingBottom: 50, backgroundColor: "#aaa8a5"}}>
+                    <div class="height" ref={(section) => { this.how_it_works_two = section; }} style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
                         
                         {/*<Element name="owner" className="element" >*/}
-                            <h1 className='owner' ref={(section) => { this.owner = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
+                            <h1 className='owner' ref={(section) => { this.owner_section = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
                         {/*</Element>*/}
 
                         <div class="row" style={{marginTop: 50, color: "white"}}>

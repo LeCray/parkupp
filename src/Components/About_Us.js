@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import Ionicon from 'react-ionicons'
+import { Link } from 'react-router-dom'
 
 import {
   Collapse,
@@ -22,15 +23,13 @@ export default class About_Us extends Component {
 
     render() {   
     return(  
-        <div style={{backgroundColor: "#2bbbad", height: "120vh", 
-                        color: "white", paddingTop: 50}}>
-
-            <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad", color: "white"}}>
+        <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 10}}>
+        
+            <div style={{paddingBottom: 50, backgroundColor: "#2bbbad", color: "white"}}>
                 <div class="container" style={{padding: 20}}>
-
-                    {/*<Element name="about" className="element" >*/}
-                        <h1 style={{fontSize: 30}}>About Us</h1>
-                    {/*</Element>*/}
+                    <Link to="/" style={{ color: '#FFF' }}><Ionicon icon="md-arrow-back" fontSize="35px" color="white" style={{marginRight: 20}}/></Link>
+                
+                    <h1 style={{fontSize: 30, marginTop: 20}}>About Us</h1>                    
 
                     <p style={{marginTop: 50, fontSize: 20}}>
                         At the ParkUpp family, we wake up everyday to solve some of the land<br/>
