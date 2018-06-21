@@ -22,14 +22,17 @@ export default class Terms_Conditions extends Component {
 
 	render() {		
 		return(  
-			<div style={{backgroundColor: "#2bbbad", border: "1px solid red", height: "100vh", 
-                        color: "white", paddingTop: 100, textAlign: "center"}}>
+			<div style={{backgroundColor: "#2bbbad", height: "120vh", 
+                        color: "white", paddingTop: 50}}>
 
-                <div style={{textAlign: "center"}}>
+                <div style={{textAlign: "center", marginBottom: 50}}>
                     <h1>Ts & Cs</h1>
                     <p>Long and boring but important stuff</p>
                 </div>
-                <div style={{marginTop: 50, backgroundColor: "white", height: "50%", color: "black", padding: 50, overflow: "scroll", border: "1px solid red"}}>
+
+                
+                <div style={{backgroundColor: "white", height: "70%", width: "70%", color: "black",
+                             padding: 50, overflow: "scroll", alignSelf: "center", margin: "0 auto"}}>
                 
                     Terms & Conditions
                 
@@ -49,6 +52,7 @@ The information you provide must be accurate and complete. You may not impersona
 
 
                 </div>
+            
 
 				
 			</div>
