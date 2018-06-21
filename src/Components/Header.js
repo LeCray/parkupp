@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 import Ionicon from 'react-ionicons'
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+//import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import scrollToComponent from 'react-scroll-to-component';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -32,15 +33,15 @@ export default class Header extends React.Component {
         return (
             
                 <Navbar navbar-fixed-top color="default-color" dark expand="md" scrolling style={{paddingLeft: 50}}>
-                    <NavbarBrand href="/">
-                         <img src={require("../parkupp_logo.png")} height="50"/>                         
+                    <NavbarBrand>
+                        <Link to="/"><img src={require("../parkupp_logo.png")} height="50"/></Link>                                                 
                     </NavbarBrand>
 
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav left>
                           <NavItem>
-                               <Link activeClass="active" to="about" offset={-50} spy={true} smooth={true} duration={2000}><NavLink to="#">About Us</NavLink></Link>
+                               <Link to="About" style={{color: "white"}}>About Us</Link>
                           </NavItem>                         
                         </NavbarNav>
                         <NavbarNav right>

@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { Input, Button, Fa, Card, CardBody, ModalFooter } from 'mdbreact';
 import Background from '../parkupp_gif.png';
 import Ionicon from 'react-ionicons'
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+//import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import scrollToComponent from 'react-scroll-to-component';
+
+import { Link } from 'react-router-dom'
 
 
 
@@ -126,12 +129,14 @@ export default class Landing extends Component {
                         <div class="row" style={{marginTop: 50, color: "white", paddingLeft: 30, paddingRight: 30}}>
                             <div class="col-sm-2 offset-sm-4" >
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
-                                    <Link activeClass="active" to="driver" offset={-50} spy={true} smooth={true} duration={2000}><h4>DRIVER</h4></Link>
+                                    <h4 onClick={() => scrollToComponent(this.driver, { offset: -50, align: 'top', duration: 1500})}>DRIVER</h4>
                                 </div>
+
+                                
                             </div>
                             <div class="col-sm-2 owner">
                                 <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
-                                    <Link activeClass="active" to="owner" offset={-50} spy={true} smooth={true} duration={2000}><h4>OWNER</h4></Link>
+                                    <h4 onClick={() => scrollToComponent(this.owner, { offset: -50, align: 'top', duration: 1500})}>OWNER</h4>
                                 </div>
                             </div>
                         </div>
@@ -141,11 +146,12 @@ export default class Landing extends Component {
                     </div>
 
                     {/* HOW IT WORKS 1*/}
+                    
                     <div style={{paddingBottom: 50, backgroundColor: "#2bbbad"}}>
 
-                        <Element name="driver" className="element" >
-                            <h1 style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
-                        </Element>
+                       {/*<Element name="driver" className="element" >*/}
+                            <h1 className='driver' ref={(section) => { this.driver = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
+                        {/*</Element>*/}
 
                         <div class="row" style={{marginTop: 50, color: "white"}}>
 
@@ -175,9 +181,9 @@ export default class Landing extends Component {
                     {/* HOW IT WORKS 2*/} 
                     <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#aaa8a5"}}>
                         
-                        <Element name="owner" className="element" >
-                            <h1 style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
-                        </Element>
+                        {/*<Element name="owner" className="element" >*/}
+                            <h1 className='owner' ref={(section) => { this.owner = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
+                        {/*</Element>*/}
 
                         <div class="row" style={{marginTop: 50, color: "white"}}>
                             
@@ -208,9 +214,9 @@ export default class Landing extends Component {
                     <div style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#121a5e", color: "white"}}>
                         <div class="container" style={{padding: 20}}>
 
-                            <Element name="about" className="element" >
+                            {/*<Element name="about" className="element" >*/}
                                 <h1 style={{fontSize: 30}}>About Us</h1>
-                            </Element>
+                            {/*</Element>*/}
 
                             <p style={{marginTop: 50, fontSize: 20}}>
                                 At the ParkUpp family, we wake up everyday to solve some of the land<br/>
@@ -264,7 +270,13 @@ export default class Landing extends Component {
                             <hr style={{borderColor: "white", width: "75%", marginTop: 100}}/>    
 
                             <div style={{marginTop: 20}}>
-                                <p>Support | Contact us | Terms & Conditions | Privacy Policy | Careers </p>
+                                <p>
+                                    <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
+                                    | <Link to="/Contact_Us" style={{ color: '#FFF' }}>Contact us </Link>  
+                                    | <Link to="/Terms_Conditions" style={{ color: '#FFF' }}>Terms & Conditions </Link> 
+                                    | <Link to="/Privacy_Policy" style={{ color: '#FFF' }}>Privacy Policy </Link>
+                                    | <Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link>
+                                </p>
                                 <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
                             </div>                    
                         </div>
