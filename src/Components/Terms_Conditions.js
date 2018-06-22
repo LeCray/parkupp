@@ -32,7 +32,7 @@ export default class Terms_Conditions extends Component {
 
                 
                 <div style={{backgroundColor: "white", height: "70%", width: "70%", color: "black",
-                             padding: 50, overflow: "scroll", alignSelf: "center", margin: "0 auto"}}>
+                             padding: 50, overflow: "scroll", alignSelf: "center", margin: "0 auto", "-webkit-overflow-scrolling": "touch"}}>
                 
                 
                     <h2>Terms & Conditions</h2>
