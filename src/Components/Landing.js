@@ -68,7 +68,7 @@ export default class Landing extends Component {
                     {/* PARKUPP */}
                     <div class="parkupp height" style={{paddingTop: 100, paddingBottom: 50, backgroundColor: "#2bbbad", height: "100%"}}>
                         <h1 style={{color: "white", fontSize: 60}}><strong>ParkUpp</strong></h1><br/>
-                        <h2 style={{color: "white", fontSize: 25}}><strong>Reimagine. Parking.</strong></h2>
+                        <h2 style={{color: "white", fontSize: 25}}><strong>The Art of Sharing</strong></h2>
 
                         <div class="row" style={{marginTop: 60}}>
                             <div class="col-sm-6 col-md-4 offset-md-2 col-lg-2 offset-lg-4">
@@ -86,12 +86,12 @@ export default class Landing extends Component {
                         </div>
 
                         <hr class="line margin" style={{borderColor: "white", width: 120, marginTop: 100}}/>
-                        <Ionicon onClick={() => scrollToComponent(this.how_it_works, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
+                        <Ionicon onClick={() => scrollToComponent(this.why_parkupp, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
                     </div>
                     
                     {/* WHY PARKUPP */}
-                    <div class="height" ref={(section) => { this.how_it_works = section; }} style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "white"}}>
-                        <h1 style={{color: "black", fontSize: 30}}><strong>How it Works</strong></h1>
+                    <div class="height" ref={(section) => { this.why_parkupp = section; }} style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "white"}}>
+                        <h1 style={{color: "black", fontSize: 30}}><strong>Why Parkupp</strong></h1>
 
                         <div class="row" style={{marginTop: 50, color: "black"}}>
                             <div class="col-lg-4">
