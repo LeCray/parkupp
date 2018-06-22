@@ -184,7 +184,7 @@ export default class Privacy_Policy extends Component {
 
             <hr style={{borderColor: "white", width: "75%", marginTop: 100}}/>    
 
-            <div style={{marginTop: 20, textAlign: "center"}}>
+            <div class="container" style={{marginTop: 20, textAlign: "center"}}>
                 <p>
                     <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
                     | <Link to="/Contact_Us" style={{ color: '#FFF' }}>Contact us </Link>  
