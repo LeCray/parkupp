@@ -22,7 +22,7 @@ export default class Privacy_Policy extends Component {
 
 	render() {   
     return(  
-        <div style={{backgroundColor: "#2bbbad", height: "120vh", color: "white", paddingTop: 50, fontFamily: "Arial"}}>
+        <div style={{backgroundColor: "#2bbbad", height: "120vh", color: "white", paddingTop: 150, fontFamily: "Arial"}}>
                         
             <div style={{textAlign: "center", marginBottom: 50}}>
                 <h1>Privacy Policy</h1>
