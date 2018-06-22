@@ -66,9 +66,9 @@ export default class Landing extends Component {
                 <div style={{textAlign: "center"}}>
 
                     {/* PARKUPP */}
-                    <div class="parkupp height" style={{paddingTop: 100, paddingBottom: 50, backgroundColor: "#2bbbad", height: "100%"}}>
+                    <div class="parkupp height" style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad", height: "100%"}}>
                         <h1 style={{color: "white", fontSize: 60}}><strong>ParkUpp</strong></h1><br/>
-                        <h2 style={{color: "white", fontSize: 25}}><strong>The Art of Sharing</strong></h2>
+                        <h2 style={{color: "white", fontSize: 25, marginTop: -20, fontStyle: "italic"}}><strong>The Art of Sharing</strong></h2>
 
                         <div class="row" style={{marginTop: 60}}>
                             <div class="col-sm-6 col-md-4 offset-md-2 col-lg-2 offset-lg-4">
