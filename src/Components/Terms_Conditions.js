@@ -31,7 +31,7 @@ export default class Terms_Conditions extends Component {
                 </div>
 
                 
-                <div style={{backgroundColor: "white", height: "70%", width: "70%", color: "black",
+                <div style={{backgroundColor: "white", height: "70%", width: "90%", color: "black",
                              padding: 50, overflow: "scroll", alignSelf: "center", margin: "0 auto", "-webkit-overflow-scrolling": "touch"}}>
                 
                 

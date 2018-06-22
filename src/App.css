@@ -101,6 +101,8 @@
 }
 
 
+
+
   @media (max-width: 576px) {
   .pictures {
     margin-top:  50px;
@@ -126,9 +128,8 @@
   #lefty {
     text-align: center;
   }
-  .margin {
-    margin-top: 100px;
-  }  
+
+
 }
 
   

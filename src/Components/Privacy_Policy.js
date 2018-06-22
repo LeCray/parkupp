@@ -31,8 +31,8 @@ export default class Privacy_Policy extends Component {
                 </div>
 
                 
-                <div style={{backgroundColor: "white", height: "70%", width: "70%", color: "black",
-                             padding: 50, overflow: "scroll", alignSelf: "center", margin: "0 auto"}}>
+                <div style={{backgroundColor: "white", height: "70%", width: "90%", color: "black",
+                             padding: 50, overflow: "scroll", alignSelf: "center", margin: "0 auto", "-webkit-overflow-scrolling": "touch"}}>
                 
                 
                     <h2>Privacy Policy</h2>
