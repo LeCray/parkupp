@@ -26,7 +26,7 @@ export default class Support extends Component {
     return(  
         <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100vh", fontFamily: "Arial"}}>
         
-            <div style={{paddingBottom: 50, backgroundColor: "#2bbbad", color: "white"}}>
+            <div style={{backgroundColor: "#2bbbad", color: "white"}}>
                 <div class="container" style={{padding: 20}}>
                     <Link to="/" style={{ color: '#FFF' }}><Ionicon icon="md-arrow-back" fontSize="35px" color="white" style={{marginRight: 20}}/></Link>
                 
@@ -51,7 +51,18 @@ export default class Support extends Component {
                         </div>
                     </section> 
                        
-                    <hr style={{borderColor: "white", width: 120, marginTop: 100}}/> 
+                    <hr style={{borderColor: "white", width: "75%", marginTop: 150}}/> 
+
+                    <div style={{marginTop: 20, textAlign: "center"}}>
+                        <p>
+                            <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
+                            | <Link to="/Contact_Us" style={{ color: '#FFF' }}>Contact us </Link>  
+                            | <Link to="/Terms_Conditions" style={{ color: '#FFF' }}>Terms & Conditions </Link> 
+                            | <Link to="/Privacy_Policy" style={{ color: '#FFF' }}>Privacy Policy </Link>
+                            | <Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link>
+                        </p>
+                        <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
+                    </div> 
                 </div>                       
             </div>
         </div>

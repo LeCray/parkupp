@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom'
 
 import {
   Collapse,
@@ -22,7 +22,7 @@ export default class Privacy_Policy extends Component {
 
 	render() {   
     return(  
-        <div style={{backgroundColor: "#2bbbad", height: "120vh", color: "white", paddingTop: 150, fontFamily: "Arial"}}>
+        <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 150, fontFamily: "Arial"}}>
                         
             <div style={{textAlign: "center", marginBottom: 50}}>
                 <h1>Privacy Policy</h1>
@@ -30,7 +30,7 @@ export default class Privacy_Policy extends Component {
             </div>
 
             
-            <div style={{backgroundColor: "white", height: "70%", width: "90%", color: "black",
+            <div style={{backgroundColor: "white", height: "70vh", width: "90%", color: "black",
                          padding: 50, overflow: "scroll", alignSelf: "center", margin: "0 auto", "-webkit-overflow-scrolling": "touch", marginTop: 50}}>
             
             
@@ -181,6 +181,19 @@ export default class Privacy_Policy extends Component {
                 Any queries or concerns about privacy on this website should be sent by email to info@parkupp.co.za 
 
             </div>
+
+            <hr style={{borderColor: "white", width: "75%", marginTop: 100}}/>    
+
+            <div style={{marginTop: 20, textAlign: "center"}}>
+                <p>
+                    <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
+                    | <Link to="/Contact_Us" style={{ color: '#FFF' }}>Contact us </Link>  
+                    | <Link to="/Terms_Conditions" style={{ color: '#FFF' }}>Terms & Conditions </Link> 
+                    | <Link to="/Privacy_Policy" style={{ color: '#FFF' }}>Privacy Policy </Link>
+                    | <Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link>
+                </p>
+                <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
+            </div>  
         </div>
 	)}
 
