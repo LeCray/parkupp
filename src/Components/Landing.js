@@ -130,12 +130,12 @@ export default class Landing extends Component {
                         <div class="row" style={{marginTop: 50, color: "black", paddingLeft: 30, paddingRight: 30}}>
                             <div class="col-sm-2 offset-sm-4" >
                                 <div style={{border: "2px solid #2bbbad", borderRadius: 30, padding: 10}}> 
-                                    <h4 onClick={() => scrollToComponent(this.driver_section, { offset: -80, align: 'top', duration: 1500})}>DRIVER</h4>
+                                    <h4 onClick={() => scrollToComponent(this.driver_section, { offset: -100, align: 'top', duration: 1500})}>DRIVER</h4>
                                 </div>                                
                             </div>
                             <div class="col-sm-2 owner">
                                 <div style={{border: "2px solid #2bbbad", borderRadius: 30, padding: 10}}> 
-                                    <h4 onClick={() => scrollToComponent(this.owner_section, { offset: -80, align: 'top', duration: 1500})}>OWNER</h4>
+                                    <h4 onClick={() => scrollToComponent(this.owner_section, { offset: -100, align: 'top', duration: 1500})}>OWNER</h4>
                                 </div>
                             </div>
                         </div>
