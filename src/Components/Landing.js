@@ -61,8 +61,8 @@ export default class Landing extends Component {
 
 	render() {		
 		return(  
-			<div style={{overflow: "hidden"}}>				
-                <img src={require("../parkupp.gif")} style={{width: "120%"}} /> 
+			<div style={{overflow: "hidden", paddingTop: 70, fontFamily: "Calibri"}}>				
+                <img src={require("../parkupp.gif")} style={{width: "100%"}} /> 
                 <div style={{textAlign: "center"}}>
 
                     {/* PARKUPP */}
@@ -86,14 +86,14 @@ export default class Landing extends Component {
                         </div>
 
                         <hr class="line margin" style={{borderColor: "white", width: 120, marginTop: 100}}/>
-                        <Ionicon onClick={() => scrollToComponent(this.how_it_works, { offset: 0, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
+                        <Ionicon onClick={() => scrollToComponent(this.how_it_works, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
                     </div>
                     
                     {/* WHY PARKUPP */}
-                    <div class="height" ref={(section) => { this.how_it_works = section; }} style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
-                        <h1 style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
+                    <div class="height" ref={(section) => { this.how_it_works = section; }} style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "white"}}>
+                        <h1 style={{color: "black", fontSize: 30}}><strong>How it Works</strong></h1>
 
-                        <div class="row" style={{marginTop: 50, color: "white"}}>
+                        <div class="row" style={{marginTop: 50, color: "black"}}>
                             <div class="col-lg-4">
                                 <div class="text-md-right">
                                     <img src={require("../time.png")} style={{height: 130}} /> 
@@ -127,20 +127,20 @@ export default class Landing extends Component {
                             </div>                            
                         </div>
 
-                        <div class="row" style={{marginTop: 50, color: "white", paddingLeft: 30, paddingRight: 30}}>
+                        <div class="row" style={{marginTop: 50, color: "black", paddingLeft: 30, paddingRight: 30}}>
                             <div class="col-sm-2 offset-sm-4" >
-                                <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
-                                    <h4 onClick={() => scrollToComponent(this.driver_section, { offset: -50, align: 'top', duration: 1500})}>DRIVER</h4>
+                                <div style={{border: "2px solid #2bbbad", borderRadius: 30, padding: 10}}> 
+                                    <h4 onClick={() => scrollToComponent(this.driver_section, { offset: -80, align: 'top', duration: 1500})}>DRIVER</h4>
                                 </div>                                
                             </div>
                             <div class="col-sm-2 owner">
-                                <div style={{border: "2px solid yellow", borderRadius: 30, padding: 10}}> 
-                                    <h4 onClick={() => scrollToComponent(this.owner_section, { offset: -50, align: 'top', duration: 1500})}>OWNER</h4>
+                                <div style={{border: "2px solid #2bbbad", borderRadius: 30, padding: 10}}> 
+                                    <h4 onClick={() => scrollToComponent(this.owner_section, { offset: -80, align: 'top', duration: 1500})}>OWNER</h4>
                                 </div>
                             </div>
                         </div>
                         
-                        <hr class="margin" style={{borderColor: "white", width: 120, marginTop: 100}}/>
+                        <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: 100}}/>
                         
                     </div>
 
@@ -173,17 +173,17 @@ export default class Landing extends Component {
                         </div>  
                            
                         <hr style={{borderColor: "white", width: 120, marginTop: 150}}/>                        
-                        <Ionicon onClick={() => scrollToComponent(this.how_it_works_two, { offset: 0, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
+                        <Ionicon onClick={() => scrollToComponent(this.how_it_works_two, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
                     </div>
 
                     {/* HOW IT WORKS 2*/} 
-                    <div class="height" ref={(section) => { this.how_it_works_two = section; }} style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
+                    <div class="height" ref={(section) => { this.how_it_works_two = section; }} style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "white"}}>
                         
-                        {/*<Element name="owner" className="element" >*/}
-                            <h1 className='owner' ref={(section) => { this.owner_section = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>
-                        {/*</Element>*/}
+                        
+                        <h1 className='owner' ref={(section) => { this.owner_section = section; }} style={{color: "black", fontSize: 30}}><strong>How it Works</strong></h1>
+                        
 
-                        <div class="row" style={{marginTop: 50, color: "white"}}>
+                        <div class="row" style={{marginTop: 50, color: "black"}}>
                             
                             <div class="col-lg-4">
                                 <div class="text-md-right">
@@ -205,8 +205,8 @@ export default class Landing extends Component {
                             </div>
                         </div>  
                            
-                        <hr style={{borderColor: "white", width: 120, marginTop: 150}}/> 
-                        <Ionicon onClick={() => scrollToComponent(this.sign_up, { offset: 0, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>                       
+                        <hr style={{borderColor: "#2bbbad", width: 120, marginTop: 150}}/> 
+                        <Ionicon onClick={() => scrollToComponent(this.sign_up, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="#2bbbad"/>                       
                     </div>
 
                     
