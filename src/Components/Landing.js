@@ -51,13 +51,8 @@ export default class Landing extends Component {
         event.preventDefault();
     }
 
-    driver() {
-        console.log("It's running tho")
-        this.setState({driver: true, owner: false})
-    }
-    owner() {
-        this.setState({owner: true, driver: false})
-    }
+    driver() {this.setState({driver: !this.state.driver})}       
+    owner() {this.setState({owner: !this.state.owner})}            
 
     componentWillMount(){
         this.setState({height: window.innerHeight + 'px'});
@@ -222,12 +217,12 @@ export default class Landing extends Component {
                                                                                 
                             <section className="form-dark">
                                 <div class="row">
-                                    <div class="col-lg-4 offset-lg-4">
+                                    <div class="col-lg-6 offset-lg-3" style={{paddingLeft: 30, paddingRight: 30}}>
                                   
                                         <div className="text-white" style={{padding: 30}}>                                      
-                                            <Input label="First Name"  type="text"/>
-                                            <Input label="Last Name"  type="text"/>
-                                            <Input label="Email Address" group type="email" validate/>
+                                            <Input label="First Name"  type="text" style={{color: "white"}}/>
+                                            <Input label="Last Name"  type="text" style={{color: "white"}}/>
+                                            <Input label="Email Address" group type="email" style={{color: "white"}} validate/>
                                             
                                             <div style={{textAlign: "center"}} >                                                
                                                 <Button color={this.state.driver? "yellow" : "default"} onClick={this.driver}>DRIVER</Button>                                                                                               
@@ -235,9 +230,9 @@ export default class Landing extends Component {
                                             </div>
                                             
                                             
-                                            <Input label="Tel" type="text"/>
-                                            <Input label="Password"  type="text"/>
-                                            <Input label="Confirm Password"  type="text"/>
+                                            <Input label="Tel" type="text" style={{color: "white"}}/>
+                                            <Input label="Password"  type="text" style={{color: "white"}}/>
+                                            <Input label="Confirm Password"  type="text" style={{color: "white"}}/>
 
                                    
                                             <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
