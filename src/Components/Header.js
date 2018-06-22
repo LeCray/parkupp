@@ -35,7 +35,7 @@ export default class Header extends React.Component {
     render() {
         return (
             
-                <Navbar fixed="top" color="default-color" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Calibri"}}>
+                <Navbar fixed="top" color="default-color" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial"}}>
                     <NavbarBrand>
                         <Link to="/"><img src={require("../parkupp_logo.png")} height="50"/></Link>                                                 
                     </NavbarBrand>

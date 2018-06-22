@@ -23,7 +23,7 @@ export default class About_Us extends Component {
 
     render() {   
     return(  
-        <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 50, fontFamily: "Calibri"}}>
+        <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 50, fontFamily: "Arial"}}>
         
             <div style={{paddingBottom: 50, backgroundColor: "#2bbbad", color: "white", marginTop: 50}}>
                 <div class="container" style={{padding: 20}}>

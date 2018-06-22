@@ -22,7 +22,7 @@ export default class Terms_Conditions extends Component {
 
 	render() {		
 		return(  
-			<div style={{backgroundColor: "#2bbbad", height: "120vh",  color: "white", paddingTop: 50, fontFamily: "Calibri"}}>
+			<div style={{backgroundColor: "#2bbbad", height: "120vh",  color: "white", paddingTop: 50, fontFamily: "Arial"}}>
                        
 
                 <div style={{textAlign: "center", marginBottom: 50}}>
