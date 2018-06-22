@@ -58,6 +58,14 @@
 .form-dark .md-form input[type=email]:focus:not([readonly]) + label {
   color: yellow; }
 
+.form-dark .md-form input[type=number]:focus:not([readonly]) {
+  border-bottom: 1px solid yellow;
+  -webkit-box-shadow: 0 1px 0 0 yellow;
+  box-shadow: 0 1px 0 0 yellow; }
+
+.form-dark .md-form input[type=number]:focus:not([readonly]) + label {
+  color: yellow; }
+
 .form-dark .md-form textarea.md-textarea:focus:not([readonly]) {
   border-bottom: 1px solid yellow;
   -webkit-box-shadow: 0 1px 0 0 yellow;

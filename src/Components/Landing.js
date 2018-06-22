@@ -230,7 +230,7 @@ export default class Landing extends Component {
                                             </div>
                                             
                                             
-                                            <Input label="Tel" type="text" style={{color: "white"}}/>
+                                            <Input label="Tel" type="number" style={{color: "white"}}/>
                                             <Input label="Password"  type="text" style={{color: "white"}}/>
                                             <Input label="Confirm Password"  type="text" style={{color: "white"}}/>
 
