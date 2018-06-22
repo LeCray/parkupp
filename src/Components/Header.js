@@ -45,7 +45,7 @@ export default class Header extends React.Component {
                         <NavbarNav left>
                             <NavItem>
                                 <Link to="/" style={{color: "white"}}>Home</Link>
-                                <Link to="About_Us" style={{color: "white", marginLeft: 15, marginRight: 5}}>About Us</Link>                                
+                                <Link to="About_Us" style={{color: "white", marginLeft: 15, marginRight: 5}}>About us</Link>                                
                             </NavItem>  
 
                             <Dropdown isOpen = { this.state.dropdownOpen } toggle = { this.toggle } size="sm">
