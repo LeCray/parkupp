@@ -26,8 +26,7 @@ export default class Careers extends Component {
         <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100%", fontFamily: "Arial"}}>
         
             <div style={{backgroundColor: "#2bbbad", color: "white"}}>
-                <div class="container" style={{padding: 20}}>
-                    <Link to="/" style={{ color: '#FFF' }}><Ionicon icon="md-arrow-back" fontSize="35px" color="white" style={{marginRight: 20}}/></Link>
+                <div class="container" style={{padding: 20}}>                    
                 
                     <h1 style={{fontSize: 30, marginTop: 20}}>Careers</h1>  
                     <p style={{fontSize: 20}}>Wanna change the world with us?</p>                  

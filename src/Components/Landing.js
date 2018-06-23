@@ -68,7 +68,7 @@ export default class Landing extends Component {
                 <div style={{textAlign: "center", paddingTop: 100}}>
 
                     {/* PARKUPP */}
-                    <div class="parkupp height" style={{marginTop: "10%", marginBottom: 10, backgroundColor: "white", height: "100%"}}>
+                    <div class="parkupp height" style={{paddingBottom: 20, marginTop: "10%", marginBottom: 30, backgroundColor: "white", height: "100%"}}>
                         <h1 style={{color: "#32bca2", fontSize: 60}}><strong>ParkUpp</strong></h1><br/>
                         
 
@@ -93,10 +93,12 @@ export default class Landing extends Component {
                         <Ionicon onClick={() => scrollToComponent(this.why_parkupp, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="#32bca2"/>
                     </div>
 
-                    <div style={{position: "relative", textAlign: "center"}}>
+                    <div style={{position: "relative", marginTop: 20}}>
+                        
                         <img src={require("../car_three.jpg")} style={{height: "auto", width: "100%", background: "#000000" }} />
-
-                        <h2 style={{position: "absolute", top: 300, left: 500, color: "white", fontSize: 50}}>Sign Up Now</h2>                                      
+                        
+                        <h2 style={{position: "absolute", top: 300, color: "white", fontSize: 50}}></h2>                                      
+                        
                     </div>
                     
                     {/* WHY PARKUPP */}

@@ -41,6 +41,8 @@
 
 .form-dark .md-form label {
   color: #2bbbad; }
+.form-light .md-form label {
+  color: #fff; }
 
 .form-dark .md-form input[type=text]:focus:not([readonly]) {
   border-bottom: 1px solid yellow;

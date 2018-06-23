@@ -26,8 +26,7 @@ export default class Contact_Us extends Component {
         <div style={{backgroundColor: "#2bbbad", paddingTop: 100, color: "white", height: "100vh", fontFamily: "Arial"}}>
         
             <div style={{backgroundColor: "#2bbbad", color: "white"}}>
-                <div class="container" style={{padding: 20}}>
-                    <Link to="/" style={{ color: '#FFF' }}><Ionicon icon="md-arrow-back" fontSize="35px" color="white" style={{marginRight: 20}}/></Link>
+                <div class="container" style={{padding: 20}}>                    
                 
                     <h1 style={{fontSize: 30, marginTop: 20}}>Contact Us</h1>  
                                       
