@@ -44,8 +44,9 @@ export default class Header extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>
                             <NavItem>   
+                                <Link to="/List" style={{color: "white", marginLeft: 15, marginRight: 5}}>List your parking</Link> 
                                 <Link to="/Sign_Up" style={{color: "white", marginLeft: 15, marginRight: 5}}>Sign up</Link>                                                             
-                                <Link to="About_Us" style={{color: "white", marginLeft: 15, marginRight: 5}}>About us</Link>                                
+                                <Link to="/About_Us" style={{color: "white", marginLeft: 15, marginRight: 5}}>About us</Link>                                
                             </NavItem>  
 
                             <Dropdown isOpen = { this.state.dropdownOpen } toggle = { this.toggle } size="sm">

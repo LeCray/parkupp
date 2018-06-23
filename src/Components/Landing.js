@@ -63,35 +63,41 @@ export default class Landing extends Component {
 		return(  
 			<div style={{overflow: "hidden", fontFamily: "Arial"}}>				
                 <img src={require("../parkupp.gif")} style={{width: "100%"}} /> 
-                <div style={{textAlign: "center"}}>
+                <div style={{textAlign: "center", paddingTop: 100}}>
 
                     {/* PARKUPP */}
-                    <div class="parkupp height" style={{paddingBottom: 50, backgroundColor: "#32bca2", height: "100%"}}>
-                        <h1 style={{color: "white", fontSize: 60}}><strong>ParkUpp</strong></h1><br/>
-                        <h2 style={{color: "white", fontSize: 25, marginTop: -20, fontStyle: "italic"}}><strong>The Art of Sharing</strong></h2>
+                    <div class="parkupp height" style={{marginTop: "10%", marginBottom: "10%", backgroundColor: "white", height: "100%"}}>
+                        <h1 style={{color: "#32bca2", fontSize: 60}}><strong>ParkUpp</strong></h1><br/>
+                        
 
                         <div class="row" style={{marginTop: 60}}>
                             <div class="col-sm-6 col-md-4 offset-md-2 col-lg-2 offset-lg-4">
                                 <div >
                                     <h2 style={{color: "yellow"}}>1 235 789</h2>
-                                    <h4 style={{color: "white"}}>Shared Driveways</h4>   
+                                    <h4 style={{color: "#32bca2"}}>Shared Driveways</h4>   
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4 col-lg-2 parkers">
                                 <div>
                                     <h2 style={{color: "yellow"}}>100 245 365</h2>
-                                    <h4 style={{color: "white"}}>Sharing Parkers</h4>   
+                                    <h4 style={{color: "#32bca2"}}>Sharing Parkers</h4>   
                                 </div>
                             </div>
                         </div>
 
-                        <hr class="line margin" style={{borderColor: "white", width: 120, marginTop: 100}}/>
-                        <Ionicon onClick={() => scrollToComponent(this.why_parkupp, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
+                        <hr class="line margin" style={{borderColor: "#32bca2", width: 120, marginTop: 100}}/>
+                        <Ionicon onClick={() => scrollToComponent(this.why_parkupp, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="#32bca2"/>
+                    </div>
+
+                    <div style={{position: "relative", textAlign: "center"}}>
+                        <img src={require("../car_three.jpg")} style={{height: "auto", width: "100%", background: "#000000" }} />
+
+                        <h2 style={{position: "absolute", top: 300, left: 500, color: "white", fontSize: 50}}>Sign Up Now</h2>                                      
                     </div>
                     
                     {/* WHY PARKUPP */}
-                    <div class="height" ref={(section) => { this.why_parkupp = section; }} style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "white"}}>
-                        <h1 style={{color: "black", fontSize: 30}}><strong>Why Parkupp</strong></h1>
+                    <div class="height"  style={{height: "100%", paddingTop: 150, paddingBottom: 50, backgroundColor: "white"}}>
+                        <h1 ref={(section) => { this.why_parkupp = section; }} style={{color: "black", fontSize: 30}}><strong>Why Parkupp</strong></h1>
 
                         <div class="row" style={{marginTop: 50, color: "black"}}>
                             <div class="col-lg-4">
@@ -146,69 +152,18 @@ export default class Landing extends Component {
 
                     {/* HOW IT WORKS 2*/}
                     
-                    <div class="height" style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "#32bca2"}}>
+                    <div class="height" style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "white"}}>
                        
-                        <h1 className='driver' ref={(section) => { this.driver_section = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>                        
-
-                        <div class="row" style={{marginTop: 50, color: "white"}}>
-
-                            <div class="col-lg-4 ">
-                                <div class="text-md-right">
-                                    <img src={require("../search.png")} style={{height: 120}} /> 
-                                    <h5 style={{marginTop: 50}}><strong>Search</strong></h5>                                
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 pictures">
-                                <img src={require("../parking.png")} style={{height: 120}} />
-                                <h5 style={{marginTop: 50}}><strong>Park</strong></h5>                             
-                            </div>
-                            
-                            <div class="col-lg-4 pictures">
-                                <div class="text-md-left">
-                                    <img src={require("../pay.png")} style={{height: 120}} />
-                                    <h5 style={{marginTop: 50}}><strong>Pay</strong></h5>                            
-                                </div>
-                            </div>
-                        </div>  
+                        <h1 className='driver' ref={(section) => { this.driver_section = section; }} style={{color: "#32bca2", fontSize: 30}}><strong>How it Works</strong></h1>                        
+  
                            
-                        <hr style={{borderColor: "white", width: 120, marginTop: 150}}/>                        
-                        <Ionicon onClick={() => scrollToComponent(this.how_it_works_two, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="white"/>
+                        <hr style={{borderColor: "#32bca2", width: 120, marginTop: 150}}/>                        
+                       
                     </div>
 
-                    {/* HOW IT WORKS 2*/} 
-                    <div class="height" ref={(section) => { this.how_it_works_two = section; }} style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "white"}}>
-                        
-                        
-                        <h1 className='owner' ref={(section) => { this.owner_section = section; }} style={{color: "black", fontSize: 30}}><strong>How it Works</strong></h1>
-                        
-
-                        <div class="row" style={{marginTop: 50, color: "black"}}>
-                            
-                            <div class="col-lg-4">
-                                <div class="text-md-right">
-                                    <img src={require("../list.png")} style={{height: 120}} /> 
-                                    <h5 style={{marginTop: 50}}><strong>List</strong></h5>                                
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 pictures">
-                                <img src={require("../accept.png")} style={{height: 120}} />
-                                <h5 style={{marginTop: 50}}><strong>Accept</strong></h5>                             
-                            </div>
-                            
-                            <div class="col-lg-4 pictures">
-                                <div  class="text-md-left">
-                                    <img src={require("../get_paid.png")} style={{height: 120}} />
-                                    <h5 style={{marginTop: 50}}><strong>Get Paid</strong></h5>                            
-                                </div>
-                            </div>
-                        </div>  
-                           
-                        <hr style={{borderColor: "#2bbbad", width: 120, marginTop: 150}}/> 
-                        <Ionicon onClick={() => scrollToComponent(this.sign_up, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="#2bbbad"/>                       
+                   <div style={{position: "relative"}}>
+                        <img src={require("../car_two.jpg")} style={{height: "auto", width: "100%", background: "#000000" }} />                                      
                     </div>
-
                     
 
                     <div ref={(section) => { this.sign_up = section; }} style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#32bca2", color: "white"}}>

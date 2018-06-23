@@ -9,6 +9,7 @@ import Privacy_Policy from './Privacy_Policy';
 import Careers from './Careers';
 import About_Us from './About_Us';
 import Sign_Up from './Sign_Up';
+import List from './List';
 
 
 const Main = () => (
@@ -22,6 +23,7 @@ const Main = () => (
     	<Route path="/Careers" component={Careers}/>
         <Route path="/About_Us" component={About_Us}/>     
         <Route path="/Sign_Up" component={Sign_Up}/>
+        <Route path="/List" component={List}/>
     </Switch>
   </main>
 )
