@@ -35,16 +35,16 @@ export default class Header extends React.Component {
     render() {
         return (
             
-                <Navbar fixed="top" color="default-color" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial"}}>
+                <Navbar transparent fixed="top" color="transparent" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial", backgroundColor: "transparent"}}>
                     <NavbarBrand>
                         <Link to="/"><img src={require("../parkupp_logo.png")} height="50"/></Link>                                                 
                     </NavbarBrand>
 
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
-                        <NavbarNav left>
-                            <NavItem>
-                                <Link to="/" style={{color: "white"}}>Home</Link>
+                        <NavbarNav right>
+                            <NavItem>   
+                                <Link to="/Sign_Up" style={{color: "white", marginLeft: 15, marginRight: 5}}>Sign up</Link>                                                             
                                 <Link to="About_Us" style={{color: "white", marginLeft: 15, marginRight: 5}}>About us</Link>                                
                             </NavItem>  
 
@@ -59,15 +59,7 @@ export default class Header extends React.Component {
                                 </DropdownMenu>
                             </Dropdown> 
 
-                        </NavbarNav>
-                        <NavbarNav right>
-                            <NavItem>
-                                <Ionicon icon="logo-instagram" fontSize="35px" color="white" style={{marginRight: 20}}/>
-                                <Ionicon icon="logo-twitter" fontSize="35px" color="white" style={{marginRight: 20}}/>
-                                <Ionicon icon="md-mail" fontSize="35px" color="white" style={{marginRight: 50}}/>
-                            </NavItem> 
-                        </NavbarNav>
-                        
+                        </NavbarNav>                                
                     </Collapse>
                 </Navbar>
             

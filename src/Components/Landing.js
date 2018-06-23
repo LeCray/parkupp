@@ -61,12 +61,12 @@ export default class Landing extends Component {
 
 	render() {		
 		return(  
-			<div style={{overflow: "hidden", paddingTop: 70, fontFamily: "Arial"}}>				
+			<div style={{overflow: "hidden", fontFamily: "Arial"}}>				
                 <img src={require("../parkupp.gif")} style={{width: "100%"}} /> 
                 <div style={{textAlign: "center"}}>
 
                     {/* PARKUPP */}
-                    <div class="parkupp height" style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad", height: "100%"}}>
+                    <div class="parkupp height" style={{paddingBottom: 50, backgroundColor: "#32bca2", height: "100%"}}>
                         <h1 style={{color: "white", fontSize: 60}}><strong>ParkUpp</strong></h1><br/>
                         <h2 style={{color: "white", fontSize: 25, marginTop: -20, fontStyle: "italic"}}><strong>The Art of Sharing</strong></h2>
 
@@ -146,7 +146,7 @@ export default class Landing extends Component {
 
                     {/* HOW IT WORKS 2*/}
                     
-                    <div class="height" style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad"}}>
+                    <div class="height" style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "#32bca2"}}>
                        
                         <h1 className='driver' ref={(section) => { this.driver_section = section; }} style={{color: "white", fontSize: 30}}><strong>How it Works</strong></h1>                        
 
@@ -211,39 +211,11 @@ export default class Landing extends Component {
 
                     
 
-                    <div ref={(section) => { this.sign_up = section; }} style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#2bbbad", color: "white"}}>
+                    <div ref={(section) => { this.sign_up = section; }} style={{paddingTop: 50, paddingBottom: 50, backgroundColor: "#32bca2", color: "white"}}>
                         <div class="container">
-                            <h1 style={{fontSize: 30}}><strong>Sign Up to ParkUpp</strong></h1>
+                            
                                                                                 
-                            <section className="form-dark">
-                                <div class="row">
-                                    <div class="col-lg-6 offset-lg-3" style={{paddingLeft: 30, paddingRight: 30}}>
-                                  
-                                        <div className="text-white" style={{padding: 30}}>                                      
-                                            <Input label="First Name"  type="text" style={{color: "white"}}/>
-                                            <Input label="Last Name"  type="text" style={{color: "white"}}/>
-                                            <Input label="Email Address" group type="email" style={{color: "white"}} validate/>
-                                            
-                                            <div style={{textAlign: "center"}} >                                                
-                                                <Button color={this.state.driver? "yellow" : "default"} onClick={this.driver}>DRIVER</Button>                                                                                               
-                                                <Button color={this.state.owner? "yellow" : "default"} onClick={this.owner}>OWNER</Button>                                                
-                                            </div>
-                                            
-                                            
-                                            <Input label="Tel" type="number" style={{color: "white"}}/>
-                                            <Input label="Password"  type="text" style={{color: "white"}}/>
-                                            <Input label="Confirm Password"  type="text" style={{color: "white"}}/>
-
-                                   
-                                            <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
-                                                <div className="text-center mb-3 col-md-12">
-                                                    <Button color="yellow" rounded type="button" className="btn btn-block z-depth-1">Sign Up</Button>
-                                                </div>
-                                            </Row>                                      
-                                        </div>                                      
-                                    </div>
-                                </div>
-                            </section>                              
+                                                       
                                 
                             <hr style={{borderColor: "white", width: "75%", marginTop: 100}}/>    
 
