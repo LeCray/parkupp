@@ -9,7 +9,7 @@ import Main from './Components/Main'
 
 const App = () => (
   <div>
-    <Header />
+    <Header />    
     <Main />
   </div>
 )

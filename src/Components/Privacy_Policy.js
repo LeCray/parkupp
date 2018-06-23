@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
+  //Collapse,
+  //Navbar,
+  //NavbarToggler,
+  //NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
+  //NavItem,
+  //NavLink,
   Container,
   Row,
   Col,
@@ -19,12 +20,45 @@ import {
 
 
 export default class Privacy_Policy extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            value: '',
+            driver: false,
+            owner: false,
+            height: ""
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.driver = this.driver.bind(this);
+        this.owner = this.owner.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
+
+    handleSubmit(event) {
+        alert('A name was submitted: ' + this.state.value);
+        event.preventDefault();
+    }
+
+    driver() {this.setState({driver: !this.state.driver})}       
+    owner() {this.setState({owner: !this.state.owner})}            
+
+    componentWillMount(){
+        this.setState({height: window.innerHeight + 'px'});
+      }
 
 	render() {   
     return(  
+        
+       
         <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 150, fontFamily: "Arial"}}>
                         
             <div style={{textAlign: "center", marginBottom: 50}}>
+                <img src={require("../privacy_policy.png")} style={{height: 100, marginBottom: 10}} /> 
                 <h1>Privacy Policy</h1>
                 <p>We don't like to break your trust</p>
             </div>
@@ -195,6 +229,7 @@ export default class Privacy_Policy extends Component {
                 <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
             </div>  
         </div>
+    
 	)}
 
 }

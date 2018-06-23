@@ -112,18 +112,6 @@ export default class Landing extends Component {
                                 </div>
                             </div>
                             <div class="col-lg-4 pictures">
-                                
-                                <img src={require("../pay_easy.png")} style={{height: 130}} />
-                                <h5 style={{marginTop: 50}}><strong>Pay Easy</strong></h5>
-                                <p>
-                                    Users can find their spot<br/>
-                                    and pay for it with the<br/>
-                                    app and cut out any cash<br/>
-                                    exchange
-                                </p>
-                                
-                            </div>
-                            <div class="col-lg-4 pictures">
                                 <div>
                                     <img src={require("../culture.png")} style={{height: 130}} />
                                     <h5 style={{marginTop: 50}}><strong>Share Culture</strong></h5>
@@ -135,6 +123,18 @@ export default class Landing extends Component {
                                     </p>
                                 </div>
                             </div>                            
+                            <div class="col-lg-4 pictures">
+                                
+                                <img src={require("../pay_easy.png")} style={{height: 130}} />
+                                <h5 style={{marginTop: 50}}><strong>Pay Easy</strong></h5>
+                                <p>
+                                    Users can find their spot<br/>
+                                    and pay for it with the<br/>
+                                    app and cut out any cash<br/>
+                                    exchange
+                                </p>
+                                
+                            </div>
                         </div>
 
                         <div class="row" style={{marginTop: 50, color: "black", paddingLeft: 30, paddingRight: 30,justifyContent: "center" }}>                            
