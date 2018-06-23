@@ -23,11 +23,12 @@ export default class Careers extends Component {
 
     render() {   
     return(  
-        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100%", fontFamily: "Arial"}}>
+        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100%", fontFamily: "Arial", textAlign: "center"}}>
         
             <div style={{backgroundColor: "#2bbbad", color: "white"}}>
-                <div class="container" style={{padding: 20}}>                    
-                
+                <div class="container" style={{padding: 20}}>    
+
+                    <img src={require("../careers.png")} style={{height: 100, marginBottom: 10}} /> 
                     <h1 style={{fontSize: 30, marginTop: 20}}>Careers</h1>  
                     <p style={{fontSize: 20}}>Wanna change the world with us?</p>                  
 
