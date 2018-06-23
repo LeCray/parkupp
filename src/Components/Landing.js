@@ -76,14 +76,14 @@ export default class Landing extends Component {
                             <div class="col-sm-6 col-md-4 offset-md-2 col-lg-2 offset-lg-4">
                                 <div >
                                     <img src={require("../location.png")} style={{height: 80, marginBottom: 10}}/> 
-                                    <h2 style={{color: "yellow"}}>33</h2>
+                                    <h2 style={{color: "#e6c131"}}>33</h2>
                                     <h4 style={{color: "#32bca2"}}>Shared Locations</h4>   
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4 col-lg-2 parkers">
                                 <div>
                                     <img src={require("../parkers.png")} style={{height: 80, marginBottom: 10}}/> 
-                                    <h2 style={{color: "yellow"}}>256</h2>
+                                    <h2 style={{color: "#e6c131"}}>256</h2>
                                     <h4 style={{color: "#32bca2"}}>Sharing Parkers</h4>   
                                 </div>
                             </div>
