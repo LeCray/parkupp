@@ -43,7 +43,7 @@ export default class GreenHeader extends React.Component {
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } color="#2bbbad"/>}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>
-                          <NavItem active>
+                          <NavItem>
                               <NavLink to="/List" onClick={this.onClick} style={{color: "#2bbbad"}}>List your parking</NavLink>
                           </NavItem>
                           <NavItem>
@@ -54,7 +54,7 @@ export default class GreenHeader extends React.Component {
                           </NavItem>
                           <NavItem>
                               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
-                              <DropdownToggle nav caret style={{color: "#2bbbad"}}>Dropdown</DropdownToggle>
+                              <DropdownToggle nav caret style={{color: "#2bbbad"}}>More</DropdownToggle>
                               <DropdownMenu>
                                   <DropdownItem><Link to="/Contact_Us" onClick={this.onClick} style={{color: "#2bbbad"}}>Contact us</Link></DropdownItem>
                                   <DropdownItem><Link to="/Careers" onClick={this.onClick} style={{color: "#2bbbad"}}>Careers</Link></DropdownItem>
