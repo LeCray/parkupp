@@ -54,8 +54,10 @@ export default class Support extends Component {
       }
 
     render() {   
-    return(          
-        <div style={{backgroundColor: "white", color: "#2bbbad", paddingTop: 100, height: "100vh", fontFamily: "Arial"}}>
+    return(        
+        <div>                    
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>  
+        <div style={{backgroundColor: "white", color: "#2bbbad", paddingTop: 100, height: "100vh", fontFamily: "Quicksand"}}>
         
             <div >
                 <div class="container" style={{padding: 20}}>                    
@@ -97,6 +99,7 @@ export default class Support extends Component {
                 </div>                       
             </div>
         </div>
+    </div>
         
     )}
 }

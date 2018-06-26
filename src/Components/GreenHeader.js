@@ -26,7 +26,7 @@ export default class GreenHeader extends React.Component {
             collapse: !this.state.collapse            
         });
         this.state.color ? setTimeout(() => {this.setState({color: !this.state.color})}, 500) : this.setState({color: !this.state.color})
-            
+        
         
     }
 
@@ -36,7 +36,10 @@ export default class GreenHeader extends React.Component {
         });
     }
 
+
     render() {
+
+
         return (
             this.state.color? 
             <div>

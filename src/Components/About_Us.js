@@ -23,7 +23,9 @@ export default class About_Us extends Component {
 
     render() {   
     return(  
-        <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 50, fontFamily: "Arial"}}>
+        <div>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+        <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 50, fontFamily: "Quicksand"}}>
         
             <div class="container" style={{backgroundColor: "#2bbbad", color: "white", marginTop: 50}}>
                 <div class="row">
@@ -71,5 +73,6 @@ export default class About_Us extends Component {
                 <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
             </div> 
         </div>
+    </div>
     )}
 }

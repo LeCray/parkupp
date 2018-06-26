@@ -23,7 +23,9 @@ export default class Contact_Us extends Component {
 
     render() {   
     return(  
-        <div style={{backgroundColor: "#2bbbad", paddingTop: 100, color: "white", height: "100vh", fontFamily: "Arial", textAlign: "center"}}>
+        <div>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+        <div style={{backgroundColor: "#2bbbad", paddingTop: 100, color: "white", height: "100vh", fontFamily: "Quicksand", textAlign: "center"}}>
         
             <div style={{backgroundColor: "#2bbbad", color: "white"}}>
                 <div class="container" style={{padding: 20}}>                    
@@ -66,5 +68,6 @@ export default class Contact_Us extends Component {
                 </div>                       
             </div>
         </div>
+    </div>
     )}
 }

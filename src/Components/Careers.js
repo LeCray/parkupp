@@ -23,7 +23,9 @@ export default class Careers extends Component {
 
     render() {   
     return(  
-        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100%", fontFamily: "Arial", textAlign: "center"}}>
+        <div>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100%", fontFamily: "Quicksand", textAlign: "center"}}>
         
             <div style={{backgroundColor: "#2bbbad", color: "white"}}>
                 <div class="container" style={{padding: 20}}>    
@@ -55,5 +57,6 @@ export default class Careers extends Component {
                 </div>                       
             </div>
         </div>
+    </div>
     )}
 }

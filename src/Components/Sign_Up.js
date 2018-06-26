@@ -56,17 +56,18 @@ export default class Sign_Up extends Component {
 
     render() {   
     return(  
-        <div>            
-        <div style={{backgroundColor: "white", height: "100%", color: "white", paddingTop: 50, fontFamily: "Arial"}}>
+        <div>                    
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+        <div style={{backgroundColor: "white", height: "100%", paddingTop: 50, fontFamily: "Quicksand"}}>
         
-            <div style={{color: "white", marginTop: 50}}>
+            <div style={{color: "#2bbbad", marginTop: 50}}>
                 <div class="container" style={{padding: 20}}>
                 <h1 style={{fontSize: 30}}><strong>Sign Up to ParkUpp</strong></h1>
                    <section className="form-dark">
                         <div class="row">
-                            <div class="col-lg-6" style={{paddingLeft: 30, paddingRight: 30}}>
+                            <div class="col-lg-5" style={{paddingRight: 30}}>
                           
-                                <div className="text-white" style={{padding: 30}}>                                      
+                                <div className="text-white" >                                      
                                     <Input label="First Name"  type="text" style={{color: "white"}}/>
                                     <Input label="Last Name"  type="text" style={{color: "white"}}/>
                                     <Input label="Email Address" group type="email" style={{color: "white"}} validate/>
@@ -89,7 +90,7 @@ export default class Sign_Up extends Component {
                                     </Row>                                      
                                 </div>                                      
                             </div>
-                            <div class="col-lg-6" style={{padding: 20, paddingBottom: 100}}>
+                            <div class="col-lg-6" style={{marginLeft: 30, padding: 20, paddingBottom: 100}}>
                                 <img src={require("../car_four.jpg")} style={{width: "100%", opacity: 0.8}} /> 
                             </div>
                         </div>

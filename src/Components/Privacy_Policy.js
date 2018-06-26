@@ -53,9 +53,10 @@ export default class Privacy_Policy extends Component {
 
 	render() {   
     return(  
-        
+        <div>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
        
-        <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 150, fontFamily: "Arial"}}>
+        <div ref={(section) => { this.top = section; }} style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 150, fontFamily: "Quicksand"}}>
                         
             <div style={{textAlign: "center", marginBottom: 50}}>
                 <img src={require("../privacy_policy.png")} style={{height: 100, marginBottom: 10}} /> 
@@ -229,6 +230,7 @@ export default class Privacy_Policy extends Component {
                 <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
             </div>  
         </div>
+    </div>
     
 	)}
 

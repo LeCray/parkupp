@@ -154,7 +154,7 @@ export default class Landing extends Component {
                     
                     <div class="height" style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "white"}}>
                        
-                        <h1 className='driver' ref={(section) => { this.driver_section = section; }} style={{color: "#32bca2", fontSize: 30}}><strong>How it Works</strong></h1>                        
+                        <h1 className='driver' ref={(section) => { this.driver_section = section; }} style={{color: "#32bca2", fontSize: 30}}><strong>VIDEO COMING SOON!</strong></h1>                        
 
                            
                         <hr style={{borderColor: "#32bca2", width: 120, marginTop: 150}}/>                        

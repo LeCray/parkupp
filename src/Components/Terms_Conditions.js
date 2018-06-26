@@ -23,7 +23,9 @@ export default class Terms_Conditions extends Component {
 
 	render() {		
 		return(  
-			<div style={{backgroundColor: "#2bbbad", height: "100%",  color: "white", paddingTop: 150, fontFamily: "Arial"}}>
+            <div>                    
+            <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+			<div style={{backgroundColor: "#2bbbad", height: "100%",  color: "white", paddingTop: 150, fontFamily: "Quicksand"}}>
                        
 
                 <div style={{textAlign: "center", marginBottom: 50}}>
@@ -409,12 +411,13 @@ export default class Terms_Conditions extends Component {
                         <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
                         | <Link to="/Contact_Us" style={{ color: '#FFF' }}>Contact us </Link>  
                         | <Link to="/Terms_Conditions" style={{ color: '#FFF' }}>Terms & Conditions </Link> 
-                        | <Link to="/Privacy_Policy" style={{ color: '#FFF' }}>Privacy Policy </Link>
+                        | <Link to="/Privacy_Policy" style={{ color: '#FFF' }} >Privacy Policy </Link>
                         | <Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link>
                     </p>
                     <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
                 </div>              				
 			</div>
+        </div>
 		)
 	}
 
