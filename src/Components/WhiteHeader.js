@@ -23,9 +23,9 @@ export default class GreenHeader extends React.Component {
 
     onClick(){
         this.setState({
-            collapse: !this.state.collapse,
-            color: !this.state.color
+            collapse: !this.state.collapse,            
         });
+        this.state.color ? setTimeout(() => {this.setState({color: !this.state.color})}, 500) : this.setState({color: !this.state.color})
     }
 
     toggle() {
