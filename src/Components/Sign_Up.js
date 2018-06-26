@@ -56,36 +56,7 @@ export default class Sign_Up extends Component {
 
     render() {   
     return(  
-        <div>
-            <Navbar transparent fixed="top" color="transparent" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial", backgroundColor: "transparent"}}>
-                <NavbarBrand>
-                    <Link to="/"><img src={require("../parkupp_logo_green.png")} height="50"/></Link>                                                 
-                </NavbarBrand>
-
-                { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
-                <Collapse isOpen = { this.state.collapse } navbar>
-                    <NavbarNav right>
-                        <NavItem>   
-                            <Link to="/List" style={{color: "#2bbbad", marginLeft: 15, marginRight: 5}}>List your parking</Link> 
-                            <Link to="/Sign_Up" style={{color: "#2bbbad", marginLeft: 15, marginRight: 5}}>Sign up</Link>                                                             
-                            <Link to="/About_Us" style={{color: "#2bbbad", marginLeft: 15, marginRight: 5}}>About us</Link>                                
-                        </NavItem>  
-
-                        <Dropdown isOpen = { this.state.dropdownOpen } toggle = { this.toggle } size="sm">
-                            <DropdownToggle nav caret style={{marginTop: -8, marginLeft: 0, color: "#2bbbad"}}>More</DropdownToggle>
-                            <DropdownMenu>
-                                <DropdownItem><Link to="/Contact_Us" style={{ color: '#2bbbad' }}>Contact us </Link></DropdownItem>
-                                <DropdownItem><Link to="/Careers" style={{ color: '#2bbbad' }}>Careers </Link></DropdownItem>
-                                <DropdownItem><Link to="/Support" style={{ color: '#2bbbad' }}>Support </Link></DropdownItem>
-                                <DropdownItem><Link to="/Terms_Conditions" style={{ color: '#2bbbad' }}>Terms & Conditions </Link> </DropdownItem>
-                                <DropdownItem><Link to="/Privacy_Policy" style={{ color: '#2bbbad' }}>Privacy Policy </Link></DropdownItem>
-                            </DropdownMenu>
-                        </Dropdown> 
-
-                    </NavbarNav>                                
-                </Collapse>
-            </Navbar>
-
+        <div>            
         <div style={{backgroundColor: "white", height: "100%", color: "white", paddingTop: 50, fontFamily: "Arial"}}>
         
             <div style={{color: "white", marginTop: 50}}>

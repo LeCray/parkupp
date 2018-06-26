@@ -3,13 +3,13 @@ import { render } from 'react-dom'
 import logo from './logo.svg';
 import './App.css';
 
-import Header from './Components/Header';
+import Headers from './Components/Headers';
 import Main from './Components/Main'
 
 
 const App = () => (
   <div>
-    <Header />    
+    <Headers />    
     <Main />
   </div>
 )

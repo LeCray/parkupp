@@ -148,8 +148,10 @@
   #lefty {
     text-align: center;
   }
+}
 
-
+.burger{
+background-image: url("burger.png") !important;
 }
 
   
