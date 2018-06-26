@@ -40,7 +40,8 @@ export default class GreenHeader extends React.Component {
         return (
             this.state.color? 
             <div>
-                <Navbar transparent fixed="top" color="transparent" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial", backgroundColor: this.state.color? "#2bbbad": "transparent"}}>
+                <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+                <Navbar transparent fixed="top" color="transparent" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Quicksand", backgroundColor: this.state.color? "#2bbbad": "transparent"}}>
                     <NavbarBrand>
                         <Link to="/"><img src={require("../parkupp_logo.png")} height="50"/></Link>                                                 
                     </NavbarBrand>
@@ -75,7 +76,8 @@ export default class GreenHeader extends React.Component {
             </div>
             :
             <div>
-                <Navbar transparent fixed="top" color="transparent" light expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial", backgroundColor: this.state.color? "#2bbbad": "transparent"}}>
+                <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+                <Navbar transparent fixed="top" color="transparent" light expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Quicksand", backgroundColor: this.state.color? "#2bbbad": "transparent"}}>
                     <NavbarBrand>
                         <Link to="/"><img src={require("../parkupp_logo_green.png")} height="50"/></Link>                                                 
                     </NavbarBrand>

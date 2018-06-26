@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Input, Button, Fa, Card, CardBody, ModalFooter } from 'mdbreact';
-import Background from '../parkupp_gif.png';
+
 import Ionicon from 'react-ionicons'
 //import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import scrollToComponent from 'react-scroll-to-component';
+
+
 
 
 import { Link } from 'react-router-dom'
@@ -62,8 +64,10 @@ export default class Landing extends Component {
 
 
 	render() {		
-		return(  
-			<div style={{overflow: "hidden", fontFamily: "Arial"}}>				
+		return(
+            <div>  
+            <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>			
+            <div style={{overflow: "hidden", fontFamily: "Quicksand"}}> 
                 <img src={require("../parkupp.gif")} style={{width: "100%"}} /> 
                 <div style={{textAlign: "center", paddingTop: 100}}>
 
@@ -77,14 +81,14 @@ export default class Landing extends Component {
                                 <div >
                                     <img src={require("../location.png")} style={{height: 80, marginBottom: 10}}/> 
                                     <h2 style={{color: "#e6c131"}}>33</h2>
-                                    <h4 style={{color: "#32bca2"}}>Shared Locations</h4>   
+                                    <h4 style={{color: "#32bca2"}}>Shared<br/>Locations</h4>   
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4 col-lg-2 parkers">
                                 <div>
                                     <img src={require("../parkers.png")} style={{height: 80, marginBottom: 10}}/> 
                                     <h2 style={{color: "#e6c131"}}>256</h2>
-                                    <h4 style={{color: "#32bca2"}}>Sharing Parkers</h4>   
+                                    <h4 style={{color: "#32bca2"}}>Sharing<br/>Parkers</h4>   
                                 </div>
                             </div>
                         </div>
@@ -93,11 +97,8 @@ export default class Landing extends Component {
                         <Ionicon onClick={() => scrollToComponent(this.why_parkupp, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="#32bca2"/>
                     </div>
 
-                    <div style={{position: "relative", marginTop: 20}}>
-                        
-                        <img src={require("../car_three.jpg")} style={{height: "auto", width: "100%", background: "#000000" }} />
-                        
-                        <h2 style={{position: "absolute", top: 300, color: "white", fontSize: 50}}></h2>                                      
+                    <div class="imgBackground" style={{flex: 1, flexDirection: "column", paddingTop: "15%"}}>
+                        <Link to="/Sign_Up"><h2 style={{color: "white", fontSize: 50}}>SIGN UP NOW</h2></Link>                                      
                         
                     </div>
                     
@@ -189,6 +190,7 @@ export default class Landing extends Component {
 
                 </div>    			
             </div>
+        </div>
 		)
 	}
 
