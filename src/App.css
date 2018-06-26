@@ -161,5 +161,17 @@
     height: 500px;    
 }
 
+@media (max-width: 750px) {
+  .sneakers {
+    height:  300px;
+  }
+}
+ @media (max-width: 576px) {
+  .sneakers {
+    height:  200px;
+  }
+}
+
+
 
   

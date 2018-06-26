@@ -96,14 +96,15 @@ export default class Landing extends Component {
                         <hr class="line margin" style={{borderColor: "#32bca2", width: 120, marginTop: 100}}/>
                         <Ionicon onClick={() => scrollToComponent(this.why_parkupp, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="#32bca2"/>
                     </div>
-
-                    <div class="imgBackground" style={{flex: 1, flexDirection: "column", paddingTop: "15%"}}>
-                        <Link to="/Sign_Up"><h2 style={{color: "white", fontSize: 50}}>SIGN UP NOW</h2></Link>                                      
-                        
+                    
+                    
+                    <div class="imgBackground sneakers" style={{flex: 1, flexDirection: "column", paddingTop: "15%"}}>
+                        <Link to="/Sign_Up"><h2 style={{color: "white", fontSize: 30}}>SIGN UP NOW</h2></Link>                                                              
                     </div>
+
                     
                     {/* WHY PARKUPP */}
-                    <div class="height"  style={{height: "100%", paddingTop: 150, paddingBottom: 50, backgroundColor: "white"}}>
+                    <div class="height"  style={{height: "100%", paddingTop: 100, paddingBottom: 50, backgroundColor: "white"}}>
                         <h1 ref={(section) => { this.why_parkupp = section; }} style={{color: "black", fontSize: 30}}><strong>Why Parkupp</strong></h1>
 
                         <div class="row" style={{marginTop: 50, color: "black"}}>
