@@ -98,7 +98,7 @@ export default class Landing extends Component {
                     </div>
                     
                     
-                    <div class="imgBackground sneakers" style={{flex: 1, flexDirection: "column", paddingTop: "15%"}}>
+                    <div class="imgBackground sneakers" style={{flex: 1, flexDirection: "column", paddingTop: "16%"}}>
                         <Link to="/Sign_Up"><h2 style={{color: "white", fontSize: 30}}>SIGN UP NOW</h2></Link>                                                              
                     </div>
 
