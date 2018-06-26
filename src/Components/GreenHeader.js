@@ -14,7 +14,8 @@ export default class GreenHeader extends React.Component {
         this.state = {
             collapse: false,
             isWideEnough: false,
-            dropdownOpen: false
+            dropdownOpen: false,
+            color: false,            
         };
     this.onClick = this.onClick.bind(this);
     this.toggle = this.toggle.bind(this);
@@ -23,6 +24,7 @@ export default class GreenHeader extends React.Component {
     onClick(){
         this.setState({
             collapse: !this.state.collapse,
+            color: !this.state.color
         });
     }
 
@@ -34,27 +36,28 @@ export default class GreenHeader extends React.Component {
 
     render() {
         return (
-            <div >
-                <Navbar transparent fixed="top" color="transparent" light expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial", backgroundColor: "transparent"}}>
+            this.state.color? 
+            <div>
+                <Navbar transparent fixed="top" color="transparent" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial", backgroundColor: this.state.color? "#2bbbad": "transparent"}}>
                     <NavbarBrand>
-                        <Link to="/"><img src={require("../parkupp_logo_green.png")} height="50"/></Link>                                                 
+                        <Link to="/">{this.state.color? <img src={require("../parkupp_logo.png")} height="50"/> : <img src={require("../parkupp_logo_green.png")} height="50"/>} </Link>                                                 
                     </NavbarBrand>
 
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } color="#2bbbad"/>}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>
                           <NavItem>
-                              <NavLink to="/List" onClick={this.onClick} style={{color: "#2bbbad"}}>List your parking</NavLink>
+                              <NavLink to="/List" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List your parking</NavLink>
                           </NavItem>
                           <NavItem>
-                              <NavLink to="/Sign_Up" onClick={this.onClick} style={{color: "#2bbbad"}}>Sign up</NavLink>
+                              <NavLink to="/Sign_Up" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Sign up</NavLink>
                           </NavItem>
                           <NavItem>
-                              <NavLink to="/About_Us" onClick={this.onClick} style={{color: "#2bbbad"}}>About us</NavLink>
+                              <NavLink to="/About_Us" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>About us</NavLink>
                           </NavItem>
                           <NavItem>
                               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
-                              <DropdownToggle nav caret style={{color: "#2bbbad"}}>More</DropdownToggle>
+                              <DropdownToggle nav caret style={{color: this.state.color?"#fff":"#2bbbad"}}>More</DropdownToggle>
                               <DropdownMenu>
                                   <DropdownItem><Link to="/Contact_Us" onClick={this.onClick} style={{color: "#2bbbad"}}>Contact us</Link></DropdownItem>
                                   <DropdownItem><Link to="/Careers" onClick={this.onClick} style={{color: "#2bbbad"}}>Careers</Link></DropdownItem>
@@ -68,6 +71,42 @@ export default class GreenHeader extends React.Component {
                     </Collapse>
                 </Navbar>
             </div>
+            :
+            <div>
+                <Navbar transparent fixed="top" color="transparent" light expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial", backgroundColor: this.state.color? "#2bbbad": "transparent"}}>
+                    <NavbarBrand>
+                        <Link to="/">{this.state.color? <img src={require("../parkupp_logo.png")} height="50"/> : <img src={require("../parkupp_logo_green.png")} height="50"/>} </Link>                                                 
+                    </NavbarBrand>
+
+                    { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } color="#2bbbad"/>}
+                    <Collapse isOpen = { this.state.collapse } navbar>
+                        <NavbarNav right>
+                          <NavItem>
+                              <NavLink to="/List" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List your parking</NavLink>
+                          </NavItem>
+                          <NavItem>
+                              <NavLink to="/Sign_Up" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Sign up</NavLink>
+                          </NavItem>
+                          <NavItem>
+                              <NavLink to="/About_Us" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>About us</NavLink>
+                          </NavItem>
+                          <NavItem>
+                              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
+                              <DropdownToggle nav caret style={{color: this.state.color?"#fff":"#2bbbad"}}>More</DropdownToggle>
+                              <DropdownMenu>
+                                  <DropdownItem><Link to="/Contact_Us" onClick={this.onClick} style={{color: "#2bbbad"}}>Contact us</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Careers" onClick={this.onClick} style={{color: "#2bbbad"}}>Careers</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Support" onClick={this.onClick} style={{color: "#2bbbad"}}>Support</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClick} style={{color: "#2bbbad"}}>Terms and Conditions</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Privacy_Policy" onClick={this.onClick} style={{color: "#2bbbad"}}>Privacy Policy</Link></DropdownItem>
+                              </DropdownMenu>
+                              </Dropdown>
+                          </NavItem>
+                        </NavbarNav>                        
+                    </Collapse>
+                </Navbar>
+            </div>
+            
         );
     }
 }

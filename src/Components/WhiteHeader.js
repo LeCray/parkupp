@@ -14,7 +14,8 @@ export default class GreenHeader extends React.Component {
         this.state = {
             collapse: false,
             isWideEnough: false,
-            dropdownOpen: false
+            dropdownOpen: false,
+            color: false
         };
     this.onClick = this.onClick.bind(this);
     this.toggle = this.toggle.bind(this);
@@ -23,6 +24,7 @@ export default class GreenHeader extends React.Component {
     onClick(){
         this.setState({
             collapse: !this.state.collapse,
+            color: !this.state.color
         });
     }
 
@@ -35,7 +37,7 @@ export default class GreenHeader extends React.Component {
     render() {
         return (
             
-                <Navbar transparent fixed="top" color="transparent" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial", backgroundColor: "transparent"}}>
+                <Navbar transparent fixed="top" color="transparent" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Arial", backgroundColor: this.state.color? "#2bbbad": "transparent"}}>
                     <NavbarBrand>
                         <Link to="/"><img src={require("../parkupp_logo.png")} height="50"/></Link>                                                 
                     </NavbarBrand>
