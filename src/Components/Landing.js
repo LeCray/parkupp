@@ -10,7 +10,8 @@ import scrollToComponent from 'react-scroll-to-component';
 
 import { Link } from 'react-router-dom'
 
-import { Player } from 'video-react';
+import ReactPlayer from 'react-player';
+import YouTubePlayer from 'react-player/lib/players/YouTube'
 
 
 import {
@@ -37,7 +38,8 @@ export default class Landing extends Component {
             value: '',
             driver: false,
             owner: false,
-            height: ""
+            height: "",
+            playing: false
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -66,6 +68,7 @@ export default class Landing extends Component {
 	render() {		
 		return(
             <div>  
+            <link rel="stylesheet" href="/css/video-react.css" />
             <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>			
             <div style={{overflow: "hidden", fontFamily: "Quicksand"}}> 
                 <img src={require("../parkupp.gif")} style={{width: "100%"}} /> 
@@ -143,24 +146,29 @@ export default class Landing extends Component {
 
                         <div class="row" style={{marginTop: 50, color: "black", paddingLeft: 30, paddingRight: 30,justifyContent: "center" }}>                            
                             <div style={{border: "2px solid #2bbbad", borderRadius: 30, padding: 20}}> 
-                                <h4 style={{fontSize: 20}} onClick={() => scrollToComponent(this.driver_section, { offset: -100, align: 'top', duration: 1500})}>HOW IT WORKS</h4>
+                                <h4 style={{fontSize: 20}} onClick={() => scrollToComponent(this.how_it_works, { offset: -100, align: 'top', duration: 1500})}>HOW IT WORKS</h4>
                             </div>                                                                                  
                         </div>
                         
-                        <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: 100}}/>
-                        
+                        <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: 100}}/>                        
                     </div>
 
                     {/* HOW IT WORKS 2*/}
                     
-                    <div class="height" style={{height: "100%", paddingTop: 50, paddingBottom: 50, backgroundColor: "white"}}>
-                       
-                        <h1 className='driver' ref={(section) => { this.driver_section = section; }} style={{color: "#32bca2", fontSize: 30}}><strong>VIDEO COMING SOON!</strong></h1>                        
-
-                           
-                        <hr style={{borderColor: "#32bca2", width: 120, marginTop: 150}}/>                        
-                       
-                    </div>
+                                                              
+                    <h1 ref={(section) => { this.how_it_works = section; }} style={{color: "black", fontSize: 30, marginBottom: 50}}><strong>How it works</strong></h1>                                          
+                    <div class="video" style={{margin: "0 auto",  backgroundColor: "white", paddingBottom: 50}}>
+                        <YouTubePlayer
+                          url='https://youtu.be/sBKBlfAWGEg'
+                          className='react-player'
+                          onReady
+                          controls
+                          width='100%'
+                          height='100%'
+                        />  
+                    </div>                                                
+                    
+                    <hr style={{borderColor: "#32bca2", width: 120, marginBottom: 50}}/>                        
 
                    <div style={{position: "relative"}}>
                         <img src={require("../car_two.jpg")} style={{height: "auto", width: "100%", background: "#000000" }} />                                      

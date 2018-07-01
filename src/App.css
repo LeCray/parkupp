@@ -161,6 +161,11 @@
     height: 500px;    
 }
 
+.video {
+  height: 400px; 
+  width: 700px
+}
+
 @media (max-width: 750px) {
   .sneakers {
     height:  300px;
@@ -170,7 +175,14 @@
   .sneakers {
     height:  200px;
   }
+  .video {
+    height:  200px;
+    width:  400px;
+  }
 }
+
+
+
 
 
 

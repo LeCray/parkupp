@@ -34,28 +34,16 @@ export default class About_Us extends Component {
                         <h1 style={{fontSize: 30, marginTop: 20}}>About Us</h1>                    
 
                         <p style={{marginTop: 50, fontSize: 20}}>
-                            At ParkUpp, we are a family of young, diverse, creative and somewhat
-                            quirky individuals setting out to solve the nightmare that is urban
-                            parking.                        
-                            <br/><br/>
-                            The ParkUpp idea was born out of a simple observation, where we
-                            noticed the incredible amount of under-utilised private parking spaces
-                            in areas where demand for parking was particularly high.
-                            <br/><br/>
-                            ParkUpp has created an effective peer-to-peer marketplace that
-                            connects homeowners with idle driveways, garages and unused
-                            parking spaces to drivers who are in need of parking.                            
-                            When you purchase a vehicle, it never crosses your mind that your car
-                            will be parked 95% of the time.
-                            <br/><br/>
-                            In stating that, we all know that with owning a vehicle comes the
-                            responsibility and more often than not the unwanted headache of
-                            attempting to find a parking space, especially in those densely
-                            populated urban areas.                            
-                            But, no need to worry any more! Riding on the wave of a sharing
-                            economy, ParkUpp now offers a simple yet ingenious and ubiquitous
-                            service that solves your parking hassle whilst unlocking a new source
-                            of income for homeowners.
+                        At ParkUpp, we are a family of young, diverse, creative and somewhat quirky 
+                        individuals who love solving worldly problems.
+                        
+                        The ParkUpp idea came about when we noticed the amount of idle driveways in areas where demand for parking was high while drivers struggled to find parking.
+                        <br/><br/>
+                        ParkUpp has created an efficient peer-to-peer marketplace that connects owners with idle driveways, garages and unused parking spaces to drivers who need parking. 
+
+                        We all know that driving a car comes with having to park it somewhere and more often there’s a hassle to find a parking space, especially in high traffic areas. 
+                        <br/><br/>
+                        But, worry no more! ParkUpp now offers a simple yet ubiquitous service that solves your parking problems.
 
                         </p>                       
                     </div>             
