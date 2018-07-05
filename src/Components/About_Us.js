@@ -20,6 +20,9 @@ import {
 
 
 export default class About_Us extends Component {
+  componentDidMount() {
+      window.scrollTo(0, 0)
+    }
 
     render() {   
     return(  
@@ -49,7 +52,7 @@ export default class About_Us extends Component {
                     </div>             
                 </div>                  
             </div>
-            <div style={{marginTop: 20, textAlign: "center"}}>
+            <div style={{marginTop: 20, textAlign: "center", padding: 25}}>
                 <hr style={{borderColor: "white", width: "75%", marginTop: 150}}/> 
                 <p>
                     <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>

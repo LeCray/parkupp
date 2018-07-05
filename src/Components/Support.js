@@ -53,6 +53,10 @@ export default class Support extends Component {
         this.setState({height: window.innerHeight + 'px'});
       }
 
+    componentDidMount() {
+      window.scrollTo(0, 0)
+    }
+
     render() {   
     return(        
         <div>                    
@@ -86,18 +90,18 @@ export default class Support extends Component {
                        
                     <hr style={{borderColor: "white", width: "75%", marginTop: 150}}/> 
 
-                    <div style={{marginTop: 20, textAlign: "center"}}>
-                        <p>
-                            <Link to="/Support" style={{ color: '#2bbbad' }}>Support </Link>
-                            | <Link to="/Contact_Us" style={{ color: '#2bbbad' }}>Contact us </Link>  
-                            | <Link to="/Terms_Conditions" style={{ color: '#2bbbad' }}>Terms & Conditions </Link> 
-                            | <Link to="/Privacy_Policy" style={{ color: '#2bbbad' }}>Privacy Policy </Link>
-                            | <Link to="/Careers" style={{ color: '#2bbbad' }}>Careers </Link>
-                        </p>
-                        <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
-                    </div> 
                 </div>                       
             </div>
+            <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
+                <p>
+                    <Link to="/Support" style={{ color: '#FFF' }}>Support |</Link>
+                    <Link to="/Contact_Us" style={{ color: '#FFF' }}> Contact us |</Link>  
+                    <Link to="/Terms_Conditions" style={{ color: '#FFF' }}> Terms & Conditions |</Link> 
+                    <Link to="/Privacy_Policy" style={{ color: '#FFF' }}> Privacy Policy |</Link>
+                    <Link to="/Careers" style={{ color: '#FFF' }}> Careers </Link>
+                </p>
+                <p style={{color: "white"}}>© Copyright 2018 ParkUpp. All rights reserved</p>                                
+            </div> 
         </div>
     </div>
         

@@ -64,6 +64,10 @@ export default class Landing extends Component {
         this.setState({height: window.innerHeight + 'px'});
       }
 
+    componentDidMount() {
+      window.scrollTo(0, 0)
+    }
+
 
 	render() {		
 		return(
@@ -101,11 +105,11 @@ export default class Landing extends Component {
                     </div>
                     
                     
-                    <div class="imgBackground sneakers" style={{flex: 1, flexDirection: "column", paddingTop: "18%", color: "white"}}>
+                    <div class="imgBackground sneakers" style={{flex: 1, flexDirection: "column", paddingTop: "15%", color: "white"}}>
                         <Link to="/Sign_Up"><h2 style={{fontSize: 30, color: "white"}}>SIGN UP NOW</h2></Link>
                         <h6>
                             STAND A CHANCE TO WIN A R1500 VOUCHER<br/> 
-                            BY SUBMITTING A COOL SLOGAN
+                            BY SUBMITTING A <Link to="/Slogan" style={{color: "white"}}><u>COOL SLOGAN</u></Link>
                         </h6>                                                              
                     </div>
 

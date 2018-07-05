@@ -28,6 +28,14 @@ export default class GreenHeader extends React.Component {
         this.state.color ? setTimeout(() => {this.setState({color: !this.state.color})}, 500) : this.setState({color: !this.state.color})
     }
 
+
+    onClickAbout(){
+      this.setState({
+            collapse: !this.state.collapse            
+        });       
+                                
+    }
+
     toggle() {
         this.setState({
             dropdownOpen: !this.state.dropdownOpen
@@ -53,7 +61,7 @@ export default class GreenHeader extends React.Component {
                               <NavLink to="/Sign_Up" onClick={this.onClick} style={{fontStyle:"bold"}}>Sign up</NavLink>
                           </NavItem>
                           <NavItem>
-                              <NavLink to="/About_Us" onClick={this.onClick}>About us</NavLink>
+                              <NavLink to="/About_Us" onClick={this.onClickAbout}>About us</NavLink>
                           </NavItem>
                           <NavItem>
                               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>

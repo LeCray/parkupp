@@ -29,7 +29,9 @@ export default class Sign_Up extends Component {
             value: '',
             driver: false,
             owner: false,
-            height: ""
+            height: "",
+            width: window.innerWidth,
+            mobile: false
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -52,7 +54,14 @@ export default class Sign_Up extends Component {
 
     componentWillMount(){
         this.setState({height: window.innerHeight + 'px'});
+        if (this.state.width < 576) {
+            this.setState({mobile: true});
+        }
       }
+
+    componentDidMount() {
+      window.scrollTo(0, 0)
+    }
 
     render() {   
     return(  
@@ -90,9 +99,15 @@ export default class Sign_Up extends Component {
                                     </Row>                                      
                                 </div>                                      
                             </div>
-                            <div class="col-lg-6" style={{marginLeft: 30, padding: 20, paddingBottom: 100}}>
-                                <img src={require("../car_four.jpg")} style={{width: "100%", opacity: 0.8}} /> 
-                            </div>
+                            {this.state.mobile? 
+                                <div>
+                                </div>
+                            :
+                                <div class="col-lg-6" style={{marginLeft: 30, paddingBottom: 100}}>
+                                    <img src={require("../car_four.jpg")} style={{width: "100%"}} /> 
+                                </div>
+
+                            }
                         </div>
                     </section> 
 
@@ -101,17 +116,17 @@ export default class Sign_Up extends Component {
                     
                 </div>                       
             </div>
+            <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
+                <p>
+                    <Link to="/Support" style={{ color: '#FFF' }}>Support |</Link>
+                    <Link to="/Contact_Us" style={{ color: '#FFF' }}> Contact us |</Link>  
+                    <Link to="/Terms_Conditions" style={{ color: '#FFF' }}> Terms & Conditions |</Link> 
+                    <Link to="/Privacy_Policy" style={{ color: '#FFF' }}> Privacy Policy |</Link>
+                    <Link to="/Careers" style={{ color: '#FFF' }}> Careers </Link>
+                </p>
+                <p style={{color: "white"}}>© Copyright 2018 ParkUpp. All rights reserved</p>                                
+            </div>  
         </div>
-        <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", paddingTop: 20, paddingBottom: 30}}>
-            <p>
-                <Link to="/Support" style={{ color: '#FFF' }}>Support |</Link>
-                <Link to="/Contact_Us" style={{ color: '#FFF' }}> Contact us |</Link>  
-                <Link to="/Terms_Conditions" style={{ color: '#FFF' }}> Terms & Conditions |</Link> 
-                <Link to="/Privacy_Policy" style={{ color: '#FFF' }}> Privacy Policy |</Link>
-                <Link to="/Careers" style={{ color: '#FFF' }}> Careers </Link>
-            </p>
-            <p style={{color: "white"}}>© Copyright 2018 ParkUpp. All rights reserved</p>                                
-        </div>  
     </div>
     )}
 }

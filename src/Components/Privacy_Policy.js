@@ -51,6 +51,10 @@ export default class Privacy_Policy extends Component {
         this.setState({height: window.innerHeight + 'px'});
       }
 
+    componentDidMount() {
+      window.scrollTo(0, 0)
+    }
+
 	render() {   
     return(  
         <div>
