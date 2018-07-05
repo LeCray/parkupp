@@ -409,7 +409,7 @@ export default class Terms_Conditions extends Component {
 
                 <hr style={{borderColor: "white", width: "75%", marginTop: 100}}/>    
 
-                <div class="container" style={{marginTop: 20, textAlign: "center"}}>
+                <div style={{marginTop: 20, textAlign: "center", padding: 25}}>
                     <p>
                         <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
                         | <Link to="/Contact_Us" style={{ color: '#FFF' }}>Contact us </Link>  
