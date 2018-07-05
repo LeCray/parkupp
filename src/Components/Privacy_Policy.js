@@ -54,7 +54,7 @@ export default class Privacy_Policy extends Component {
 	render() {   
     return(  
         <div>
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
        
         <div ref={(section) => { this.top = section; }} style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 150, fontFamily: "Quicksand"}}>
                         

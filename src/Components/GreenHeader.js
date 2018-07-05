@@ -15,7 +15,8 @@ export default class GreenHeader extends React.Component {
             collapse: false,
             isWideEnough: false,
             dropdownOpen: false,
-            color: false,            
+            color: false,    
+            width: window.innerWidth        
         };
     this.onClick = this.onClick.bind(this);
     this.toggle = this.toggle.bind(this);
@@ -25,9 +26,9 @@ export default class GreenHeader extends React.Component {
         this.setState({
             collapse: !this.state.collapse            
         });
-        this.state.color ? setTimeout(() => {this.setState({color: !this.state.color})}, 500) : this.setState({color: !this.state.color})
-        
-        
+        if (this.state.width <= 576) {
+          this.state.color ? setTimeout(() => {this.setState({color: !this.state.color})}, 500) : this.setState({color: !this.state.color})                  
+        }              
     }
 
     toggle() {
@@ -51,10 +52,10 @@ export default class GreenHeader extends React.Component {
 
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } color="#2bbbad"/>}
                     <Collapse isOpen = { this.state.collapse } navbar>
-                        <NavbarNav right>
+                        <NavbarNav right>   
                           <NavItem>
-                              <NavLink to="/List" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List your parking</NavLink>
-                          </NavItem>
+                              <NavLink to="/Slogan" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Submit your slogan</NavLink>
+                          </NavItem>       
                           <NavItem>
                               <NavLink to="/Sign_Up" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Sign up</NavLink>
                           </NavItem>
@@ -89,7 +90,7 @@ export default class GreenHeader extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>
                           <NavItem>
-                              <NavLink to="/List" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List your parking</NavLink>
+                              <NavLink to="/Slogan" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Submit your slogan</NavLink>
                           </NavItem>
                           <NavItem>
                               <NavLink to="/Sign_Up" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Sign up</NavLink>

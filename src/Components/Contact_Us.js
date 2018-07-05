@@ -24,7 +24,7 @@ export default class Contact_Us extends Component {
     render() {   
     return(  
         <div>
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
         <div style={{backgroundColor: "#2bbbad", paddingTop: 100, color: "white", height: "100vh", fontFamily: "Quicksand", textAlign: "center"}}>
         
             <div style={{backgroundColor: "#2bbbad", color: "white"}}>

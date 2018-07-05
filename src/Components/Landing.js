@@ -69,7 +69,7 @@ export default class Landing extends Component {
 		return(
             <div>  
             <link rel="stylesheet" href="/css/video-react.css" />
-            <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>			
+            <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>			
             <div style={{overflow: "hidden", fontFamily: "Quicksand"}}> 
                 <img src={require("../parkupp.gif")} style={{width: "100%"}} /> 
                 <div style={{textAlign: "center", paddingTop: 100}}>
@@ -101,8 +101,12 @@ export default class Landing extends Component {
                     </div>
                     
                     
-                    <div class="imgBackground sneakers" style={{flex: 1, flexDirection: "column", paddingTop: "18%"}}>
-                        <Link to="/Sign_Up"><h2 style={{color: "white", fontSize: 30}}>SIGN UP NOW</h2></Link>                                                              
+                    <div class="imgBackground sneakers" style={{flex: 1, flexDirection: "column", paddingTop: "18%", color: "white"}}>
+                        <Link to="/Sign_Up"><h2 style={{fontSize: 30, color: "white"}}>SIGN UP NOW</h2></Link>
+                        <h6>
+                            STAND A CHANCE TO WIN A R1500 VOUCHER<br/> 
+                            BY SUBMITTING A COOL SLOGAN
+                        </h6>                                                              
                     </div>
 
                     

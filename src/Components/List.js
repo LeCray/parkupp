@@ -25,7 +25,7 @@ export default class List extends Component {
     render() {   
     return(  
         <div>
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
         <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100vh", fontFamily: "Arial"}}>
         
             <div style={{backgroundColor: "#2bbbad", color: "white", textAlign: "center"}}>

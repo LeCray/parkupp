@@ -57,7 +57,7 @@ export default class Sign_Up extends Component {
     render() {   
     return(  
         <div>                    
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
         <div style={{backgroundColor: "white", height: "100%", paddingTop: 50, fontFamily: "Quicksand"}}>
         
             <div style={{color: "#2bbbad", marginTop: 50}}>

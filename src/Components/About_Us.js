@@ -24,7 +24,7 @@ export default class About_Us extends Component {
     render() {   
     return(  
         <div>
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
         <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 50, fontFamily: "Quicksand"}}>
         
             <div class="container" style={{backgroundColor: "#2bbbad", color: "white", marginTop: 50}}>
