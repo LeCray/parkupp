@@ -53,7 +53,7 @@ export default class Slogan extends Component {
                 </div>  
             </div> 
     
-            <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
+            <div style={{marginTop: 70, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
                 <p>
                     <Link to="/Support" style={{ color: '#FFF' }}>Support |</Link>
                     <Link to="/Contact_Us" style={{ color: '#FFF' }}> Contact us |</Link>  
