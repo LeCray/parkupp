@@ -185,24 +185,20 @@ export default class Landing extends Component {
                     
 
                     <div ref={(section) => { this.sign_up = section; }} style={{paddingBottom: 20, backgroundColor: "#32bca2", color: "white"}}>
-                        <div class="container">
-                            
-                                                                                
-                                                       
-                                
-                            <hr style={{borderColor: "white", width: "75%", marginTop: 0}}/>    
+      
+                        <hr style={{borderColor: "white", width: "75%", marginTop: 0}}/>    
 
-                            <div style={{marginTop: 20}}>
-                                <p>
-                                    <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
-                                    | <Link to="/Contact_Us" style={{ color: '#FFF' }}>Contact us </Link>  
-                                    | <Link to="/Terms_Conditions" style={{ color: '#FFF' }}>Terms & Conditions </Link> 
-                                    | <Link to="/Privacy_Policy" style={{ color: '#FFF' }}>Privacy Policy </Link>
-                                    | <Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link>
-                                </p>
-                                <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
-                            </div>                    
-                        </div>
+                        <div style={{marginTop: 20, padding: 25, marginTop: -20}}>
+                            <p>
+                                <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
+                                | <Link to="/Contact_Us" style={{ color: '#FFF' }}>Contact us </Link>  
+                                | <Link to="/Terms_Conditions" style={{ color: '#FFF' }}>Terms & Conditions </Link> 
+                                | <Link to="/Privacy_Policy" style={{ color: '#FFF' }}>Privacy Policy </Link>
+                                | <Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link>
+                            </p>
+                            <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
+                        </div>                    
+                        
                     </div>
 
 
