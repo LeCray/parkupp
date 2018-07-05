@@ -171,6 +171,7 @@ export default class Landing extends Component {
                           className='react-player'
                           onReady
                           controls
+                          loop
                           width='100%'
                           height='100%'
                         />  
