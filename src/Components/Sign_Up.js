@@ -71,10 +71,10 @@ export default class Sign_Up extends Component {
         
             <div style={{color: "#2bbbad", marginTop: 50}}>
                 <div class="container" style={{padding: 20}}>
-                <h1 style={{fontSize: 30}}><strong>Sign Up to ParkUpp</strong></h1>
                    <section className="form-dark">
                         <div class="row">
-                            <div class="col-lg-5" style={{paddingRight: 30}}>
+                            <div class="col-lg-6 offset-lg-3" style={{paddingRight: 30, textAlign: "center"}}>
+                                <h1 style={{fontSize: 30}}><strong>Sign Up to ParkUpp</strong></h1>
                           
                                 <div className="text-white" >                                      
                                     <Input label="First Name"  type="text" style={{color: "white"}}/>
@@ -90,6 +90,13 @@ export default class Sign_Up extends Component {
                                     <Input label="Tel" type="number" style={{color: "white"}}/>
                                     <Input label="Password"  type="text" style={{color: "white"}}/>
                                     <Input label="Confirm Password"  type="text" style={{color: "white"}}/>
+                                    <Input label="Type your cool slogan here..."  type="text" style={{color: "white"}}/>
+
+                                    <h6 style={{color: "#2bbbad", fontSize: 12}}> *Increase your chance of winning by following our social media account</h6>
+                                    <div style={{flexDirection: "row"}}>                                        
+                                        <a href="https://twitter.com/_parkupp?lang=en" target="_blank" style={{marginRight: 5}}><Ionicon icon="logo-twitter" fontSize="20px" color="#2bbbad"/></a>
+                                        <a href="https://www.instagram.com/_parkupp/?hl=en" target="_blank"><Ionicon icon="logo-instagram" fontSize="20px" color="#2bbbad"/></a>                                        
+                                    </div>
 
                            
                                     <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
@@ -98,16 +105,7 @@ export default class Sign_Up extends Component {
                                         </div>
                                     </Row>                                      
                                 </div>                                      
-                            </div>
-                            {this.state.mobile? 
-                                <div>
-                                </div>
-                            :
-                                <div class="col-lg-6" style={{marginLeft: 30, paddingBottom: 100}}>
-                                    <img src={require("../car_four.jpg")} style={{width: "100%"}} /> 
-                                </div>
-
-                            }
+                            </div>                            
                         </div>
                     </section> 
 

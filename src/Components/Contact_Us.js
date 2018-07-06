@@ -43,14 +43,21 @@ export default class Contact_Us extends Component {
                                 <u>happychappy@parkupp.co.za</u> 
                                 <br/><br/>                                                 
                                 Sad Email: <br/>
-                                <u>feelingblue@parkupp.co.za</u> 
-                                <br/><br/>
-                                Address:<br/>
-                                9 Portswood Rd, V& A Waterfront <br/>
-                                Cape Town <br/>
-                                Western Cape <br/>
-                                8001 <br/>
-                                South Africa <br/>
+                                <u>thisucks@parkupp.co.za</u> 
+                                <br/>
+                                <div style={{marginTop: 35, flexDirection: "row"}}>
+                                    <Ionicon icon="logo-facebook" fontSize="35px" color="#fff"/>
+                                    <Ionicon icon="logo-instagram" fontSize="35px" color="#fff"/>
+                                    <Ionicon icon="md-mail" fontSize="35px" color="#fff"/>
+                                </div>
+                                <div style={{marginTop: 30}}>
+                                    Address:<br/>
+                                    9 Portswood Rd, V& A Waterfront <br/>
+                                    Cape Town <br/>
+                                    Western Cape <br/>
+                                    8001 <br/>
+                                    South Africa <br/>
+                                </div>
                             </p>
                         </div>
 

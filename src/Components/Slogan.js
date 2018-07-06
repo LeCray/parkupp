@@ -40,7 +40,8 @@ export default class Slogan extends Component {
                         <div class="col-lg-6 offset-lg-3">
                            <section className="form-dark" >                                                                
                                 <div className="text-white">                                      
-                                    <Input label="Type your cool slogan here..."  type="text" style={{color: "#2bbbad"}}/>                                                       
+                                    <Input label="Type your cool slogan here..."  type="text" style={{color: "#2bbbad"}}/>
+                                    <Input label="Email"  type="text" style={{color: "#2bbbad"}}/>                                                       
                                     <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
                                         <div className="text-center mb-3 col-md-12">
                                             <Button color="yellow" rounded type="button" className="btn btn-block z-depth-1">Submit</Button>

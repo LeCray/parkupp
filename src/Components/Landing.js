@@ -39,7 +39,9 @@ export default class Landing extends Component {
             driver: false,
             owner: false,
             height: "",
-            playing: false
+            playing: false,
+            width: window.innerWidth,
+            mobile: false
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -62,6 +64,10 @@ export default class Landing extends Component {
 
     componentWillMount(){
         this.setState({height: window.innerHeight + 'px'});
+
+        if (this.state.width <= 576) {
+          this.setState({mobile: true})
+        } 
       }
 
     componentDidMount() {
@@ -107,9 +113,11 @@ export default class Landing extends Component {
                     
                     <div class="imgBackground sneakers" style={{flex: 1, flexDirection: "column", paddingTop: "15%", color: "white"}}>
                         <Link to="/Sign_Up"><h2 style={{fontSize: 30, color: "white"}}>SIGN UP NOW</h2></Link>
-                        <h6>
-                            STAND A CHANCE TO WIN A R1500 VOUCHER<br/> 
-                            BY SUBMITTING A <Link to="/Slogan" style={{color: "white"}}><u>COOL SLOGAN</u></Link>
+                        <h6 style={{fontSize: this.state.mobile? 13: 20}}>
+                            STAND A CHANCE TO WIN A R1500 CAR SERVICE VOUCHER<br/> 
+                            BY WATCHING <u onClick={() => scrollToComponent(this.how_it_works, { offset: -100, align: 'top', duration: 1500})}>HOW IT WORKS</u>, 
+                            <Link to="/Sign_Up" style={{color: "white"}}> <u>SIGNING UP</u></Link> AND <br/>
+                            SUBMITTING A COOL SLOGAN<br/>                            
                         </h6>                                                              
                     </div>
 
