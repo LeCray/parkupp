@@ -43,7 +43,7 @@ export default class Careers extends Component {
                     and share a cup of coffee :)
                 </p>                                    
             </div>   
-            <hr style={{borderColor: "white", width: "70%", marginTop: 150}}/> 
+            <hr style={{borderColor: "white", width: "70%", marginTop: 200}}/> 
             <div style={{marginTop: 20, textAlign: "center", padding: 25, marginTop: -20}}>
                 <p>
                     <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
