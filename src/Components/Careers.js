@@ -28,7 +28,7 @@ export default class Careers extends Component {
     return(  
         <div>
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
-        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100vh", fontFamily: "Quicksand", textAlign: "center"}}>
+        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100%", fontFamily: "Quicksand", textAlign: "center"}}>
                     
             <div class="container" style={{padding: 20}}>    
                 <img src={require("../careers.png")} style={{height: 100, marginBottom: 10}} /> 
@@ -43,7 +43,7 @@ export default class Careers extends Component {
                     and share a cup of coffee :)
                 </p>                                    
             </div>   
-            <hr style={{borderColor: "white", width: "70%", marginTop: 150}}/>
+            <hr style={{borderColor: "white", width: "70%", marginTop: 150}}/> 
             <div style={{marginTop: 20, textAlign: "center", padding: 25, marginTop: -20}}>
                 <p>
                     <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
