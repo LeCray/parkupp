@@ -124,14 +124,14 @@ export default class Landing extends Component {
                     
                     {/* WHY PARKUPP */}
                     <div class="height"  style={{height: "100%", paddingTop: 100, paddingBottom: 50, backgroundColor: "white"}}>
-                        <h1 ref={(section) => { this.why_parkupp = section; }} style={{color: "black", fontSize: 30}}><strong>Why Parkupp</strong></h1>
+                        <h1 ref={(section) => { this.why_parkupp = section; }} style={{color: "black", fontSize: 30}}><strong>Shared Parking for a Global Community</strong></h1>
 
                         <div class="row" style={{marginTop: 50, color: "black"}}>
                             <div class="col-lg-4">
                                 <div >
                                     <img src={require("../time.png")} style={{height: 130}} /> 
-                                    <h5 style={{marginTop: 50}}><strong>Save Time</strong></h5>
-                                    <p>ParkUpp wherever you go</p>
+                                    <h5 style={{marginTop: 50}}><strong>Find Parking</strong></h5>
+                                    <p style={{paddingLeft: 20, paddingRight: 20}}>Stop driving around tirelessly finding parking. Search on the app and book your time</p>
                                 </div>
                             </div>
                             <div class="col-lg-4 pictures">
@@ -159,6 +159,44 @@ export default class Landing extends Component {
                                 
                             </div>
                         </div>
+                        
+                        <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: 100}}/>
+                        <div class="height"  style={{height: "100%", paddingTop: 100, paddingBottom: 50, backgroundColor: "white"}}>
+                            <h1 style={{color: "black", fontSize: 30, marginBottom: 50}}><strong>ParkUpp Works on Trust and Safety</strong></h1>
+
+                            <div class="row" style={{marginTop: 50, color: "black"}}>
+                                <div class="col-lg-4">
+                                    <div >
+                                        <img src={require("../star.png")} style={{height: 130}} /> 
+                                        <h5 style={{marginTop: 50}}><strong>Vetting</strong></h5>
+                                        <p style={{paddingLeft: 20, paddingRight: 20}}>
+                                            Owners of driveways and parking lots including drivers are vetted through detailed profiles, 
+                                            peer-to-peer rating and confirmed verification
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 pictures">
+                                    <div>
+                                        <img src={require("../lock.png")} style={{height: 130}} />
+                                        <h5 style={{marginTop: 50}}><strong>Sharing with Trust</strong></h5>
+                                        <p style={{paddingLeft: 20, paddingRight: 20}}>
+                                           ParkUpp verifies each user and owner profile 
+                                           while payments are made through a secure payment gateway
+                                        </p>
+                                    </div>
+                                </div>                            
+                                <div class="col-lg-4 pictures">
+                                    
+                                    <img src={require("../support.png")} style={{height: 130}} />
+                                    <h5 style={{marginTop: 50}}><strong>24/7 Support</strong></h5>
+                                    <p style={{textAlign: "center", paddingLeft: 20, paddingRight: 20}}>
+                                       We have a world class support team and a chat bot ready to help you around the clock.
+                                    </p>
+                                    
+                                </div>
+                            </div>
+                        </div>        
+
 
                         <div class="row" style={{marginTop: 50, color: "black", paddingLeft: 30, paddingRight: 30,justifyContent: "center" }}>                            
                             <div style={{border: "2px solid #2bbbad", borderRadius: 30, padding: 20}}> 
