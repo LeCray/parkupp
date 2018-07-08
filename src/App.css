@@ -161,6 +161,13 @@
     height: 500px;    
 }
 
+.girlBackground {
+    background-image: url('./girl.jpg');
+    background-repeat: no-repeat;
+    background-size:100% auto;
+    height: 400px;    
+}
+
 .video {
   height: 400px; 
   width: 700px

@@ -204,7 +204,7 @@ export default class Landing extends Component {
                             </div>                                                                                  
                         </div>
                         
-                        <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: 100}}/>                        
+                        <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: 50}}/>                        
                     </div>
 
                     {/* HOW IT WORKS 2*/}

@@ -62,9 +62,8 @@ export default class Contact_Us extends Component {
                         </div>
 
                     </div>
-                       
-
-                </div>                       
+                </div>   
+                                    
                 <hr style={{borderColor: "white", width: "70%", marginTop: 150}}/> 
                 <div style={{marginTop: 20, textAlign: "center", padding: 25, marginTop: -20}}>
                     <p>
