@@ -46,7 +46,7 @@ export default class Parking extends Component {
             
             {this.state.mobile?
             <div style={{fontFamily: "Quicksand"}}>
-                <div class="moreBackground" style={{flex: 1,  paddingTop: "25%", color: "white", textAlign: "center"}}>
+                <div class="moreBackground" style={{flex: 1,  paddingTop: "25%", color: "white", textAlign: "center"    }}>
                     <h4>Get paid with ParkUpp</h4>                                            
                 </div>
                 <p class="container" style={{marginTop: 20, paddingLeft: 40, paddingRight: 40, textAlign: "center"}}>
@@ -70,23 +70,23 @@ export default class Parking extends Component {
             
             <div class="container" style={{marginTop: 50, paddingLeft: 40, paddingRight: 40, fontFamily: "Quicksand"}}>
                 <div class="row" style={{color: "black"}}>
-                    <div class="col-lg-4" style={{padding: 20}}>                                            
-                        <h5><strong>Why ParkUpp</strong></h5>
+                    <div class="col-lg-4" >                                            
+                        <h4><strong>Why ParkUpp</strong></h4>
                         <p>
                             No matter what kind of parking you have, ParkUpp is a simple and secure way to 
                             earn money and reach millions of drivers looking for golden parking spots.
                         </p>                        
                     </div>
-                    <div class="col-lg-4 pictures" style={{padding: 20}}>                                    
-                        <h5><strong>You are in charge</strong></h5>
+                    <div class="col-lg-4 parkingScreen">
+                        <h4><strong>You are in charge</strong></h4>
                         <p >
                             With ParkUpp, you have full control of who you let into your parking lot by 
                             accepting and rejecting bookings, prices and availability of your parking. 
                             You handle the entire process.
                         </p>                       
                     </div>                            
-                    <div class="col-lg-4 pictures" style={{padding: 20}}>                                        
-                        <h5><strong>We are secure</strong></h5>
+                    <div class="col-lg-4 parkingScreen">                                        
+                        <h4><strong>We are secure</strong></h4>
                         <p>
                             ParkUpp vets everyone who parks in your driveway or parking lot. 
                             We have an online community and support 24/7.
@@ -299,7 +299,7 @@ export default class Parking extends Component {
             </div>
                 
             <div style={{paddingBottom: 20, backgroundColor: "#32bca2", color: "white", textAlign: "center", marginTop: 100}}>
-                <div style={{marginTop: 20, padding: 25, marginTop: -20}}>
+                <div style={{marginTop: 20, padding: 25, marginTop: -20, fontFamily: "Quicksand"}}>
                     <p>
                         <Link to="/Support" style={{ color: '#FFF' }}>Support </Link>
                         | <Link to="/Contact_Us" style={{ color: '#FFF' }}>Contact us </Link>  

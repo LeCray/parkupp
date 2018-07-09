@@ -68,10 +68,10 @@ export default class GreenHeader extends React.Component {
                               <DropdownToggle nav caret>Menu</DropdownToggle>
                               <DropdownMenu>
                                   <DropdownItem><Link to="/Contact_Us" onClick={this.onClickAgain}><b>Contact us</b></Link></DropdownItem>
-                                  <DropdownItem><Link to="/Careers" onClick={this.onClick}>Careers</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Careers" onClick={this.onClickAgain}>Careers</Link></DropdownItem>
                                   <DropdownItem><Link to="/Support" onClick={this.onClick}>Support</Link></DropdownItem>
-                                  <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClick}>Terms and Conditions</Link></DropdownItem>
-                                  <DropdownItem><Link to="/Privacy_Policy" onClick={this.onClick}>Privacy Policy</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClickAgain}>Terms and Conditions</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Privacy_Policy" onClick={this.onClickAgain}>Privacy Policy</Link></DropdownItem>
                               </DropdownMenu>
                               </Dropdown>
                           </NavItem>
