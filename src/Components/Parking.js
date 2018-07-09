@@ -43,18 +43,32 @@ export default class Parking extends Component {
     return(  
         <div style={{height: "100%", "overflow-x": "hidden"}}>
             <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
-            <div class="girlBackground sneakers" style={{flex: 1,  paddingTop: 200, paddingLeft: 150, flexDirection: "column", color: "white", fontFamily: "Quicksand"}}>                
-                <div>
-                    <h4>Get paid with ParkUpp</h4>
-                    <p>
-                        Whether you have an existing parking facility, 
-                        long term parking or an idle driveway.<br/> 
-                        ParkUpp helps you find users for your parking.
-                    </p>
-                </div>                                 
-            </div>
             
-            <div class="container" style={{marginTop: 50, fontFamily: "Quicksand"}}>
+            {this.state.mobile?
+            <div style={{fontFamily: "Quicksand"}}>
+                <div class="moreBackground" style={{flex: 1,  paddingTop: "25%", color: "white", textAlign: "center"}}>
+                    <h4>Get paid with ParkUpp</h4>                                            
+                </div>
+                <p class="container" style={{marginTop: 20, paddingLeft: 40, paddingRight: 40, textAlign: "center"}}>
+                    Whether you have an existing parking facility, 
+                    long term parking or an idle driveway.<br/> 
+                    ParkUpp helps you find users for your parking.
+                </p>
+            </div>
+            :
+                <div class="girlBackground woman" style={{flex: 1,  paddingTop: "15%", paddingLeft: 150, color: "white", fontFamily: "Quicksand"}}>                
+                    <div>
+                        <h4>Get paid with ParkUpp</h4>
+                        <p>
+                            Whether you have an existing parking facility, 
+                            long term parking or an idle driveway.<br/> 
+                            ParkUpp helps you find users for your parking.
+                        </p>
+                    </div>                                 
+                </div>
+            }
+            
+            <div class="container" style={{marginTop: 50, paddingLeft: 40, paddingRight: 40, fontFamily: "Quicksand"}}>
                 <div class="row" style={{color: "black"}}>
                     <div class="col-lg-4" style={{padding: 20}}>                                            
                         <h5><strong>Why ParkUpp</strong></h5>
@@ -80,10 +94,14 @@ export default class Parking extends Component {
                         
                     </div>
                 </div>
-            
-                <h1 style={{marginTop: 25}}> How to share your parking</h1>
                 
-                 {this.state.mobile?
+                {this.state.mobile?
+                    <h2 style={{marginTop: 25}}> How to share your parking</h2>
+                :
+                    <h1 style={{marginTop: 25}}> How to share your parking</h1>
+                }   
+                
+                {this.state.mobile?
                     <div>
                         <div class="row" style={{marginTop: 30}}>                
                             <div class="col-sm-12">  
@@ -184,59 +202,100 @@ export default class Parking extends Component {
                 }
                 
 
-            
-                <h1 style={{marginTop: 50}}> ParkUpp works on safety</h1>
-
-                <div class="row" style={{marginTop: 80}}>
-                    <div class="col-lg-4">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <img src={require("../badge.png")} class="img-fluid"/>
+                {this.state.mobile?
+                    <h2 style={{marginTop: 50}}> ParkUpp works on safety</h2>
+                :
+                    <h1 style={{marginTop: 50}}> ParkUpp works on safety</h1>
+                }
+                
+                {this.state.mobile?
+                    <div>
+                        <div style={{marginTop: 30}}>
+                            <img src={require("../badge.png")} class="align-top" style={{height: 50, marginRight: 10, display: "inline-block"}}/>
+                            <div style={{display: "inline-block"}}> 
+                                <h5 ><strong>Host<br/>Guarantee</strong></h5>
                             </div>
-                            <div class="col-lg-8" style={{paddingTop: 5}}>
-                                <h5><strong>Host<br/>Guarantee</strong></h5>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <p style={{padding: 20}}>
+                            <p style={{marginTop: 15}}>
                                 In rare event of accidental damage, ParkUpp has you covered for 3rd party liability.
                                 Peace of mind at no extra charge
                             </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 pictures">
-                        <div class="row">
-                            <div class="col-lg-3">                        
-                                <img src={require("../shield.png")} class="img-fluid"/> 
+                        </div>                                                                                                    
+
+                        <div style={{marginTop: 60}}>
+                            <img src={require("../shield.png")} class="align-top" style={{height: 50, marginRight: 10, display: "inline-block"}}/>
+                            <div style={{display: "inline-block"}}> 
+                                 <h5><strong>Owner Protection<br/>Insurance</strong></h5>
                             </div>
-                            <div class="col-lg-8" style={{paddingTop: 5}}>
-                                <h5><strong>Owner Protection<br/>Insurance</strong></h5>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <p style={{padding: 20}}>
+                            <p style={{marginTop: 15}}>
                                 If your guests get hurt or cause property damage, our Owner Protection Insurance 
                                 protects you from liability, included free for every ParkUpp owner
                             </p>
-                        </div>
-                    </div>                            
-                    <div class="col-lg-4 pictures"> 
-                        <div class="row">
-                            <div class="col-lg-3"> 
-                                <img src={require("../trust.png")} class="img-fluid"/>  
+                        </div>                                                            
+                        
+                        <div style={{marginTop: 60}}>
+                            <img src={require("../trust.png")} class="align-top" style={{height: 50, marginRight: 10, display: "inline-block"}}/>
+                            <div style={{display: "inline-block"}}> 
+                                 <h5><strong>Trust<br/>system</strong></h5>
                             </div>
-                            <div class="col-lg-8" style={{paddingTop: 5}}>                                 
-                                <h5><strong>Trust<br/>system</strong></h5>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <p style={{padding: 20}}>
-                               All ParkUpp drivers must submit a profile photo and verify their phone & email. Owner can also require a government ID. 
-                               Drivers and owners each publish reviews after check out keeping everyone accountable and respectful.
+                            <p style={{marginTop: 15}}>
+                                All ParkUpp drivers must submit a profile photo and verify their phone & email. 
+                                Owner can also require a government ID. 
+                                Drivers and owners each publish reviews after check out keeping everyone accountable and respectful.
                             </p>
-                        </div>                        
+                        </div>                                                                                                 
+                    </div>                 
+                :
+                    <div class="row" style={{marginTop: 80}}>
+                        <div class="col-lg-4">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <img src={require("../badge.png")} class="img-fluid"/>
+                                </div>
+                                <div class="col-lg-8" style={{paddingTop: 5}}>
+                                    <h5><strong>Host<br/>Guarantee</strong></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p style={{padding: 20}}>
+                                    In rare event of accidental damage, ParkUpp has you covered for 3rd party liability.
+                                    Peace of mind at no extra charge
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 pictures">
+                            <div class="row">
+                                <div class="col-lg-3">                        
+                                    <img src={require("../shield.png")} class="img-fluid"/> 
+                                </div>
+                                <div class="col-lg-8" style={{paddingTop: 5}}>
+                                    <h5><strong>Owner Protection<br/>Insurance</strong></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p style={{padding: 20}}>
+                                    If your guests get hurt or cause property damage, our Owner Protection Insurance 
+                                    protects you from liability, included free for every ParkUpp owner
+                                </p>
+                            </div>
+                        </div>                            
+                        <div class="col-lg-4 pictures"> 
+                            <div class="row">
+                                <div class="col-lg-3"> 
+                                    <img src={require("../trust.png")} class="img-fluid"/>  
+                                </div>
+                                <div class="col-lg-8" style={{paddingTop: 5}}>                                 
+                                    <h5><strong>Trust<br/>system</strong></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <p style={{padding: 20}}>
+                                   All ParkUpp drivers must submit a profile photo and verify their phone & email. Owner can also require a government ID. 
+                                   Drivers and owners each publish reviews after check out keeping everyone accountable and respectful.
+                                </p>
+                            </div>                        
+                        </div>
                     </div>
-                </div>
+                }
             </div>
                 
             <div style={{paddingBottom: 20, backgroundColor: "#32bca2", color: "white", textAlign: "center", marginTop: 100}}>

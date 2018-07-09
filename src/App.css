@@ -168,6 +168,13 @@
     height: 400px;    
 }
 
+.moreBackground {
+    background-image: url('./more_girl.jpg');
+    background-repeat: no-repeat;
+    background-size:100% auto;
+    height: 200px;    
+}
+
 .video {
   height: 400px; 
   width: 700px
@@ -185,6 +192,9 @@
   .video {
     height:  200px;
     width:  400px;
+  }
+  .woman {
+    height:  400px;
   }
 }
 
