@@ -21,6 +21,19 @@ import {
 
 
 export default class Parking extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {            
+            width: window.innerWidth,
+            mobile: false
+        };
+    }
+    
+    componentWillMount(){
+        if (this.state.width <= 576) {
+          this.setState({mobile: true})
+        } 
+    }
 
     componentDidMount() {
       window.scrollTo(0, 0)
@@ -69,86 +82,159 @@ export default class Parking extends Component {
                 </div>
             
                 <h1 style={{marginTop: 25}}> How to share your parking</h1>
+                
+                 {this.state.mobile?
+                    <div>
+                        <div class="row" style={{marginTop: 30}}>                
+                            <div class="col-sm-12">  
+                                <img src={require("../listing_woman.jpg")} class="img-fluid"/> 
+                            </div>
+                        </div>                               
+                        <div style={{padding: 15}}>
+                            <h3><span style={{fontSize: 50, color: "#2bbbad", marginRight: 10}}><b>1</b></span><b>List your space</b></h3>
+                            <p>
+                               Free and easy, list the number of bays, times available, 
+                                rates charged and don’t forget to upload high quality pictures to make your space attractive.
+                            </p>
+                        </div>                    
+                    </div>
+                :
+                    <div class="row" style={{marginTop: 80}}>
+                        <div class="col-lg-1" style={{textAlign: "right"}}>
+                            <h1 style={{fontSize: 80, color: "#2bbbad"}}><b>1</b></h1>
+                        </div>
+                        <div class="col-lg-5 " style={{padding: 15}}>
+                            <h3><b>List your space</b></h3>
+                            <p>
+                                Free and easy, list the number of bays, times available, 
+                                rates charged and don’t forget to upload high quality pictures to make your space attractive.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img src={require("../listing_woman.jpg")} class="img-fluid"/> 
+                        </div>                    
+                    </div>
+                }
+                
+                {this.state.mobile?
+                    <div>
+                        <div class="row" style={{marginTop: 30}}>                
+                            <div class="col-sm-12">  
+                                <img src={require("../parking_car.jpg")} class="img-fluid"/> 
+                            </div>
+                        </div>                               
+                        <div style={{padding: 15}}>
+                            <h3><span style={{fontSize: 50, color: "#2bbbad", marginRight: 10}}><b>2</b></span><b>Allow Access</b></h3>
+                            <p>
+                                For access controlled parking facilities, install LPR technology linked to our
+                                system where parkers can enter using their licence plates. 
+                                For single driveways or parking bays, simply leave parkupp enabled QR code at gate for users to tag and check-in.
+                            </p>
+                        </div>                    
+                    </div>
+                :
+                    <div class="row" style={{marginTop: 80}}>                
+                        <div class="col-lg-5">  
+                            <img src={require("../parking_car.jpg")} class="img-fluid"/> 
+                        </div>
+                        <div class="col-lg-1" style={{textAlign: "right"}}>
+                            <h1 style={{fontSize: 80, color: "#2bbbad"}}><b>2</b></h1>
+                        </div>
+                        <div class="col-lg-5" style={{padding: 15}}>                                        
+                            <h3><b>Allow Access</b></h3>
+                            <p>
+                                For access controlled parking facilities, install LPR technology linked to our
+                                system where parkers can enter using their licence plates. 
+                                For single driveways or parking bays, simply leave parkupp enabled QR code at gate for users to tag and check-in.
+                            </p>
+                        </div>
+                    </div>
+                }
 
-                <div class="row" style={{marginTop: 80}}>
-                    <div class="col-lg-1" style={{textAlign: "right"}}>
-                        <h1 style={{fontSize: 80, color: "#2bbbad"}}><b>1</b></h1>
-                    </div>
-                    <div class="col-lg-5 " style={{padding: 15}}>
-                        <h3><b>List your space</b></h3>
-                        <p>
-                            Free and easy, list the number of bays, times available, 
-                            rates charged and don’t forget to upload high quality pictures to make your space attractive.
-                        </p>
-                    </div>
-                    <div class="col-lg-5">
-                        <img src={require("../listing_woman.jpg")} class="img-fluid"/> 
-                    </div>                    
-                </div>
 
-                <div class="row" style={{marginTop: 80}}>
-                    <div class="col-lg-5">  
-                        <img src={require("../parking_car.jpg")} class="img-fluid"/> 
+                {this.state.mobile?
+                    <div>
+                        <div class="row" style={{marginTop: 30}}>                
+                            <div class="col-sm-12">  
+                                <img src={require("../man_smiling.jpg")} class="img-fluid"/> 
+                            </div>
+                        </div>                               
+                        <div style={{padding: 15}}>
+                            <h3><span style={{fontSize: 50, color: "#2bbbad", marginRight: 10}}><b>3</b></span><b>Get Paid</b></h3>
+                            <p>
+                                Simply receive payment on your account through your our secure payment gateway
+                            </p>
+                        </div>                    
                     </div>
-                    <div class="col-lg-1" style={{textAlign: "right"}}>
-                        <h1 style={{fontSize: 80, color: "#2bbbad"}}><b>2</b></h1>
+                :
+                    <div class="row" style={{marginTop: 80}}>
+                        <div class="col-lg-1" style={{textAlign: "right"}}>
+                            <h1 style={{fontSize: 80, color: "#2bbbad"}}><b>3</b></h1>
+                        </div>
+                        <div class="col-lg-5" style={{padding: 15}}>                                            
+                            <h3><b>Get Paid</b></h3>
+                            <p>
+                                Simply receive payment on your account through your our secure payment gateway
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img src={require("../man_smiling.jpg")} class="img-fluid"/> 
+                        </div>
                     </div>
-                    <div class="col-lg-5" style={{padding: 15}}>                                        
-                        <h3><b>Allow Access</b></h3>
-                        <p>
-                            For access controlled parking facilities, install LPR technology linked to our
-                            system where parkers can enter using their licence plates. 
-                            For single driveways or parking bays, simply leave parkupp enabled QR code at gate for users to tag and check-in.
-                        </p>
-                    </div>
-                </div>
+                }
+                
 
-                <div class="row" style={{marginTop: 80}}>
-                    <div class="col-lg-1" style={{textAlign: "right"}}>
-                        <h1 style={{fontSize: 80, color: "#2bbbad"}}><b>3</b></h1>
-                    </div>
-                    <div class="col-lg-5" style={{padding: 15}}>                                            
-                        <h3><b>Get Paid</b></h3>
-                        <p>
-                            Simply receive payment on your account through your our secure payment gateway
-                        </p>
-                    </div>
-                    <div class="col-lg-5">
-                        <img src={require("../man_smiling.jpg")} class="img-fluid"/> 
-                    </div>
-                </div>
             
-                <h1 style={{marginLeft: 150, marginTop: 100}}> ParkUpp works on safety</h1>
+                <h1 style={{marginTop: 50}}> ParkUpp works on safety</h1>
 
-                <div class="row" style={{marginTop: 50, color: "black", paddingLeft: 150}}>
+                <div class="row" style={{marginTop: 80}}>
                     <div class="col-lg-4">
-                        <div >                        
-                            <img src={require("../badge.png")} style={{height: 50, display: "inline"}}/> 
-                            <h5 style={{display: "inline", marginLeft: 5}}><strong>Host Guarantee</strong></h5>
-                            <p style={{marginTop: 20}}>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <img src={require("../badge.png")} class="img-fluid"/>
+                            </div>
+                            <div class="col-lg-8" style={{paddingTop: 5}}>
+                                <h5><strong>Host<br/>Guarantee</strong></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p style={{padding: 20}}>
                                 In rare event of accidental damage, ParkUpp has you covered for 3rd party liability.
                                 Peace of mind at no extra charge
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-4 pictures">
-                        <div>                        
-                            <img src={require("../shield.png")} style={{height: 50, display: "inline"}}/> 
-                            <h5 style={{display: "inline", marginLeft: 5}}><strong>Owner Protection Insurance</strong></h5>
-                            <p style={{marginTop: 20}}>
+                        <div class="row">
+                            <div class="col-lg-3">                        
+                                <img src={require("../shield.png")} class="img-fluid"/> 
+                            </div>
+                            <div class="col-lg-8" style={{paddingTop: 5}}>
+                                <h5><strong>Owner Protection<br/>Insurance</strong></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p style={{padding: 20}}>
                                 If your guests get hurt or cause property damage, our Owner Protection Insurance 
                                 protects you from liability, included free for every ParkUpp owner
                             </p>
                         </div>
                     </div>                            
-                    <div class="col-lg-4 pictures" style={{paddingRight: 100}}>  
-                        <img src={require("../trust.png")} style={{height: 50, display: "inline"}}/>                                       
-                        <h5 style={{display: "inline", marginLeft: 5}}><strong>Trust system</strong></h5>
-                        <p style={{marginTop: 20}}>
-                           All ParkUpp drivers must submit a profile photo and verify their phone & email. Owner can also require a government ID. 
-                           Drivers and owners each publish reviews after check out keeping everyone accountable and respectful.
-                        </p>
-                        
+                    <div class="col-lg-4 pictures"> 
+                        <div class="row">
+                            <div class="col-lg-3"> 
+                                <img src={require("../trust.png")} class="img-fluid"/>  
+                            </div>
+                            <div class="col-lg-8" style={{paddingTop: 5}}>                                 
+                                <h5><strong>Trust<br/>system</strong></h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <p style={{padding: 20}}>
+                               All ParkUpp drivers must submit a profile photo and verify their phone & email. Owner can also require a government ID. 
+                               Drivers and owners each publish reviews after check out keeping everyone accountable and respectful.
+                            </p>
+                        </div>                        
                     </div>
                 </div>
             </div>
