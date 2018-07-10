@@ -141,9 +141,9 @@ export default class Terms_Conditions extends Component {
                     These Terms supplement (and are in addition to) the terms of our Privacy Policy. Our Privacy Policy explains what personal information we collect 
                     about you when you use the website/App, and you can view our Privacy Policy online by going to www.ParkUpp.com. 
                     Please note that when you agree to these Terms you shall be deemed also to have read, understood and agreed to our Privacy Policy in its entirety.
-                    Disclosures required i
+                    Disclosures required<br/>
                     Full name: ParkUpp Pty Ltd <br/>
-                    Physical address: 1 Annet Road, Johannesburg, 2000<br/>
+                    Physical address: 9 Portswood Rd, V& A Waterfront, Cape Town, 8001, Western Cape, South Africa<br/>
                     Website address: www.parkupp.co.za<br/>
                     Email address: info@parkupp.com<br/>
                     Registration number: 2016/322146/07<br/>
@@ -324,20 +324,20 @@ export default class Terms_Conditions extends Component {
                     <br/><br/>
                     
                     <h4><strong>Warranties</strong></h4>
-                    PARKUPP MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THE WEBSITE/APP OR THE INFORMATION, CONTENT, MATERIALS, AND/ OR 
-                    PRODUCTS AND SERVICES AVAILABLE VIA THE WEBSITE/APP. YOU EXPRESSLY AGREE THAT YOUR USE OF THIS WEBSITE/APP IS AT YOUR SOLE RISK.
+                    Parkupp makes no representations or warranties of any kind, express or implied, as to the operation of the website/app or the information, content, materials, and/ or 
+                    products and services available via the website/app. You expressly agree that your use of this website/app is at your sole risk.
                     <br/><br/>
-                    TO THE FULL EXTENT PERMISSIBLE BY APPLICABLE LAW WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND 
-                    FITNESS FOR A PARTICULAR PURPOSE. WE DO NOT WARRANT THAT THE WEBSITE/APP, ITS SERVERS, OR E-MAIL SENT FROM US OR THIRD PARTIES ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. 
-                    WE WILL NOT BE LIABLE IN ANY WAY FOR ANY DAMAGES OF ANY KIND ARISING FROM THE USE OF THE WEBSITE/APP OR THE PROVISION OF THE SERVICES, INCLUDING, BUT NOT LIMITED TO DIRECT, 
-                    INDIRECT, INCIDENTAL, PUNITIVE, AND CONSEQUENTIAL DAMAGES. 
+                    To the full extent permissible by applicable law we disclaim all warranties, express or implied, including, but not limited to, implied warranties of merchantability and 
+                    fitness for a particular purpose. We do not warrant that the website/app, its servers, or e-mail sent from us or third parties are free of viruses or other harmful components. 
+                    we will not be liable in any way for any damages of any kind arising from the use of the website/app or the provision of the services, including, but not limited to direct, 
+                    indirect, incidental, punitive, and consequential damages. 
                     <br/><br/>
-                    NEITHER PARKUPP, NOR OUR DIRECTORS, EMPLOYEES, OFFICERS, SUPPLIERS, SERVICE PROVIDERS, SUBSIDIARIES OR PARENT COMPANIES, MAKE ANY REPRESENTATIONS OR WARRANTIES OF ANY KIND 
-                    (INCLUDING BUT NOT LIMITED TO EXPRESS OR IMPLIED REPRESENTATIONS OR WARRANTIES, AS TO THE OPERATION OF THE WEBSITE/APP OR THE INFORMATION, CONTENT OR MATERIALS, AND/OR IN 
-                    RELAITON THE SERVICES ). YOU EXPRESSLY AGREE THAT YOUR USE OF THE WEBSITE/APP AND THE SERVICES IS AT YOUR SOLE RISK. 
+                    Neither parkupp, nor our directors, employees, officers, suppliers, service providers, subsidiaries or parent companies, make any representations or warranties of any kind 
+                    (including but not limited to express or implied representations or warranties, as to the operation of the website/app or the information, content or materials, and/or in 
+                    relaiton the services ). You expressly agree that your use of the website/app and the services is at your sole risk. 
                     <br/><br/>
-                    IN NO EVENT SHALL OUR DIRECTORS, EMPLOYEES, OFFICERS, SERVICE PROVIDERS, PARENT COMPANIES OR SUBSIDIARIES BE LIABLE FOR LOST PROFITS OR ANY SPECIAL, INCIDENTAL OR 
-                    CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH THE USE OF THE WEBSITE/APP, OUR SERVICES OR THE TERMS (HOWSOEVER ARISING, INCLUDING BUT NOT LIMITED TO NEGLIGENCE).
+                    In no event shall our directors, employees, officers, service providers, parent companies or subsidiaries be liable for lost profits or any special, incidental or 
+                    consequential damages arising out of or in connection with the use of the website/app, our services or the terms (howsoever arising, including but not limited to negligence).
                     
                     <br/><br/>
 

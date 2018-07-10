@@ -70,7 +70,7 @@ export default class Sign_Up extends Component {
         <div style={{backgroundColor: "white", height: "100%", paddingTop: 50, fontFamily: "Quicksand"}}>
         
             <div style={{color: "#2bbbad", marginTop: 50}}>
-                <div class="container" style={{padding: 20}}>
+                <div class="container" style={{padding: 40}}>
                    <section className="form-dark">
                         <div class="row">
                             <div class="col-lg-6 offset-lg-3" style={{paddingRight: 30, textAlign: "center"}}>

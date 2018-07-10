@@ -85,7 +85,8 @@ export default class Landing extends Component {
                 <div style={{textAlign: "center", paddingTop: 100}}>
 
                     {/* PARKUPP */}
-                    <div class="parkupp height" style={{paddingBottom: 20, marginTop: "10%", marginBottom: 30, backgroundColor: "white", height: "100%"}}>
+                    <div class="parkupp height" 
+                        style={{paddingBottom: 20, marginTop: "10%", marginBottom: 30, backgroundColor: "white", height: "100%", paddingLeft: 20, paddingRight: 20}}>
                         <h1 style={{color: "#32bca2", fontSize: 60}}><strong>ParkUpp</strong></h1><br/>
                         
 
@@ -123,7 +124,7 @@ export default class Landing extends Component {
 
                     
                     {/* WHY PARKUPP */}
-                    <div class="height"  style={{height: "100%", paddingTop: 100, paddingBottom: 50, backgroundColor: "white"}}>
+                    <div class="height"  style={{height: "100%", paddingTop: 100, paddingBottom: 50, backgroundColor: "white", paddingLeft: 20, paddingRight: 20}}>
                         <h1 ref={(section) => { this.why_parkupp = section; }} style={{color: "black", fontSize: 30}}><strong>Shared Parking for a Global Community</strong></h1>
 
                         <div class="row" style={{marginTop: 50, color: "black"}}>

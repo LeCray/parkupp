@@ -64,15 +64,15 @@ export default class Support extends Component {
         <div style={{backgroundColor: "white", color: "#2bbbad", paddingTop: 100, height: "100vh", fontFamily: "Quicksand"}}>
         
             <div >
-                <div class="container" style={{padding: 20}}>                    
+                <div class="container" style={{padding: 40}}>                    
                     
-                    <img src={require("../support.png")} style={{height: 100, marginBottom: 10}} /> 
-                    <h1 style={{fontSize: 30, marginTop: 20}}>Support</h1>  
-                    <p style={{fontSize: 20}}>Send us an mail and we will contact you</p>                  
-
                     <section className="form-dark">
                         <div class="row">
-                            <div class="col-lg-5">
+                            <div class="col-lg-6 offset-lg-3">
+                                <img src={require("../support.png")} style={{height: 100, marginBottom: 10}} /> 
+                                <h1 style={{fontSize: 30, marginTop: 20}}>Support</h1>  
+                                <p style={{fontSize: 20}}>Send us an mail and we will contact you</p>                  
+
                                                                                               
                                 <Input label="Name"  type="text" style={{color: "white"}}/>                                    
                                 <Input label="Email Address" group type="email" style={{color: "white"}} validate/>

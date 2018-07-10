@@ -31,7 +31,7 @@ export default class Contact_Us extends Component {
             <div style={{backgroundColor: "#2bbbad", paddingTop: 100, color: "white", height: "100%", fontFamily: "Quicksand", textAlign: "center"}}>
         
            
-                <div class="container" style={{padding: 20}}>                    
+                <div class="container" style={{padding: 40}}>                    
                     
                     <img src={require("../contact_us.png")} style={{height: 100, marginBottom: 10}} /> 
                     <h1 style={{fontSize: 30, marginTop: 20}}>Contact Us</h1>  
@@ -43,7 +43,7 @@ export default class Contact_Us extends Component {
                                 <u>happychappy@parkupp.co.za</u> 
                                 <br/><br/>                                                 
                                 Sad Email: <br/>
-                                <u>thisucks@parkupp.co.za</u> 
+                                <u>frowniebrownie@parkupp.co.za</u> 
                                 <br/>
                                 <div style={{marginTop: 35, flexDirection: "row"}}>
                                     <Ionicon icon="logo-facebook" fontSize="35px" color="#fff"/>

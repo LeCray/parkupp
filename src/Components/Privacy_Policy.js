@@ -65,7 +65,7 @@ export default class Privacy_Policy extends Component {
             <div style={{textAlign: "center", marginBottom: 50}}>
                 <img src={require("../privacy_policy.png")} style={{height: 100, marginBottom: 10}} /> 
                 <h1>Privacy Policy</h1>
-                <p>We don't like to break your trust</p>
+                <p>We all got trust issues</p>
             </div>
 
             

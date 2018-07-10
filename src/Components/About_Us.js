@@ -30,9 +30,9 @@ export default class About_Us extends Component {
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
         <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 50, fontFamily: "Quicksand"}}>
         
-            <div class="container" style={{backgroundColor: "#2bbbad", color: "white", marginTop: 50}}>
+            <div class="container" style={{backgroundColor: "#2bbbad", color: "white", marginTop: 50, padding: 40}}>
                 <div class="row">
-                    <div class="col-lg-8" style={{padding: 30}}>                    
+                    <div class="col-lg-8">                    
                     
                         <h1 style={{fontSize: 30, marginTop: 20}}>About Us</h1>                    
 
