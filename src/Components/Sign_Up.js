@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Ionicon from 'react-ionicons'
 import { Link } from 'react-router-dom'
-import { Input, Button, Fa, Card, CardBody, ModalFooter } from 'mdbreact';
+import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 
 import {
@@ -15,8 +15,7 @@ import {
   Container,
   Row,
   Col,
-  Jumbotron,
-  //Button
+  Jumbotron,  
 } from 'react-bootstrap';
 
 
@@ -37,13 +36,16 @@ export default class Sign_Up extends Component {
             email: "",
             tel: "",
             password: "",
-            confirm_password: ""
+            confirm_password: "",
+            showModal: false
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.toggleModal = this.toggleModal.bind(this);
         this.driver = this.driver.bind(this);
         this.owner = this.owner.bind(this);
+        this.handleShow = this.handleShow.bind(this);
     }
 
     componentWillMount(){
@@ -63,10 +65,15 @@ export default class Sign_Up extends Component {
     driver() {this.setState({driver: !this.state.driver})}       
     owner() {this.setState({owner: !this.state.owner})}
 
+    handleShow() {
+        this.setState({ show: true });
+      }
+
     handleSubmit() {        
 
         if (this.state.password !== this.state.confirm_password) {
             console.log("Passwords do not match")
+            this.toggleModal()
         } else {
             fetch("http://Preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users/new", {
                 method: "POST", 
@@ -90,6 +97,11 @@ export default class Sign_Up extends Component {
             })
             .done();
         }                       
+    }
+
+    toggleModal() {   
+        this.setState({showModal: !this.state.showModal})     
+        setTimeout(() => {this.setState({showModal: !this.state.showModal})}, 2000)
     }
 
     render() {   
@@ -169,7 +181,16 @@ export default class Sign_Up extends Component {
                             </div>                                      
                         </div>                            
                     </div>
-                </section>                                                                                         
+                </section>
+
+                <Button bsStyle="primary" bsSize="large" onClick={this.toggleModal}>
+                  Launch demo modal
+                </Button>
+
+                <Modal isOpen={this.state.showModal} toggle={this.toggleModal} side position="bottom-right">
+                    <ModalHeader toggle={this.toggleModal}>Passwords do not match</ModalHeader>                            
+                </Modal>       
+
             </div>
             <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
                 <p>
