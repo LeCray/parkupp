@@ -68,7 +68,12 @@ export default class Landing extends Component {
         if (this.state.width <= 576) {
           this.setState({mobile: true})
         } 
-      }
+                         
+        fetch('http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users')
+        .then(response => response.json())                                 
+        .then(response => console.log(response));
+            
+    }
 
     componentDidMount() {
       window.scrollTo(0, 0)
@@ -215,8 +220,7 @@ export default class Landing extends Component {
                     <div class="video" style={{margin: "0 auto",  backgroundColor: "white", paddingBottom: 50}}>
                         <YouTubePlayer
                           url='https://youtu.be/sBKBlfAWGEg'
-                          className='react-player'
-                          onReady
+                          className='react-player'                          
                           controls
                           loop
                           width='100%'

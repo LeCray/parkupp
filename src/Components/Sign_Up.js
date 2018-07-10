@@ -31,26 +31,20 @@ export default class Sign_Up extends Component {
             owner: false,
             height: "",
             width: window.innerWidth,
-            mobile: false
+            mobile: false,
+            first_name: "", 
+            last_name: "",
+            email: "",
+            tel: "",
+            password: "",
+            confirm_password: ""
         };
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.driver = this.driver.bind(this);
         this.owner = this.owner.bind(this);
     }
-
-    handleChange(event) {
-        this.setState({value: event.target.value});
-    }
-
-    handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.value);
-        event.preventDefault();
-    }
-
-    driver() {this.setState({driver: !this.state.driver})}       
-    owner() {this.setState({owner: !this.state.owner})}            
 
     componentWillMount(){
         this.setState({height: window.innerHeight + 'px'});
@@ -63,56 +57,119 @@ export default class Sign_Up extends Component {
       window.scrollTo(0, 0)
     }
 
+    handleInputChange (evt) {
+        this.setState({ [evt.target.name]: evt.target.value })
+    }
+    driver() {this.setState({driver: !this.state.driver})}       
+    owner() {this.setState({owner: !this.state.owner})}
+
+    handleSubmit() {        
+
+        if (this.state.password !== this.state.confirm_password) {
+            console.log("Passwords do not match")
+        } else {
+            fetch("http://Preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users/new", {
+                method: "POST", 
+                headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+                body: JSON.stringify({
+                    first_name: this.state.firstName,
+                    last_name: this.state.lastName,
+                    email: this.state.email,
+                    tel: this.state.tel,
+                    email: this.state.email, 
+                    password: this.state.password,                    
+                }), 
+
+            })
+            .then(response => response.json())
+            .then((responseData) => {
+                console.log(responseData);               
+            })
+            .catch((error) => {
+              console.error(error);
+            })
+            .done();
+        }                       
+    }
+
     render() {   
     return(  
         <div>                    
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
         <div style={{backgroundColor: "white", height: "100%", paddingTop: 50, fontFamily: "Quicksand"}}>
-        
-            <div style={{color: "#2bbbad", marginTop: 50}}>
-                <div class="container" style={{padding: 40}}>
-                   <section className="form-dark">
-                        <div class="row">
-                            <div class="col-lg-6 offset-lg-3" style={{paddingRight: 30, textAlign: "center"}}>
-                                <h1 style={{fontSize: 30}}><strong>Sign Up to ParkUpp</strong></h1>
-                          
-                                <div className="text-white" >                                      
-                                    <Input label="First Name"  type="text" style={{color: "white"}}/>
-                                    <Input label="Last Name"  type="text" style={{color: "white"}}/>
-                                    <Input label="Email Address" group type="email" style={{color: "white"}} validate/>
-                                    
-                                    <div style={{textAlign: "center"}} >                                                
-                                        <Button color={this.state.driver? "yellow" : "default"} onClick={this.driver}>DRIVER</Button>                                                                                               
-                                        <Button color={this.state.owner? "yellow" : "default"} onClick={this.owner}>OWNER</Button>                                                
-                                    </div>
-                                    
-                                    
-                                    <Input label="Tel" type="number" style={{color: "white"}}/>
-                                    <Input label="Password"  type="text" style={{color: "white"}}/>
-                                    <Input label="Confirm Password"  type="text" style={{color: "white"}}/>
-                                    <Input label="Type your cool slogan here..."  type="text" style={{color: "white"}}/>
-
-                                    <h6 style={{color: "#2bbbad", fontSize: 12}}> *Increase your chance of winning by following our social media accounts</h6>
-                                    <div style={{flexDirection: "row"}}>                                        
-                                        <a href="https://twitter.com/_parkupp?lang=en" target="_blank" style={{marginRight: 5}}><Ionicon icon="logo-twitter" fontSize="20px" color="#2bbbad"/></a>
-                                        <a href="https://www.instagram.com/_parkupp/?hl=en" target="_blank"><Ionicon icon="logo-instagram" fontSize="20px" color="#2bbbad"/></a>                                        
-                                    </div>
-
-                           
-                                    <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
-                                        <div className="text-center mb-3 col-md-12">
-                                            <Button color="yellow" rounded type="button" className="btn btn-block z-depth-1">Sign Up</Button>
-                                        </div>
-                                    </Row>                                      
-                                </div>                                      
-                            </div>                            
-                        </div>
-                    </section> 
-
                     
-                
-                    
-                </div>                       
+            <div className="container" style={{padding: 40, color: "#2bbbad", marginTop: 50}}>
+               <section className="form-dark">
+                    <div className="row">
+                        <div className="col-lg-6 offset-lg-3" style={{paddingRight: 30, textAlign: "center"}}>
+                            <h1 style={{fontSize: 30}}><strong>Sign Up to ParkUpp</strong></h1>
+
+                            <div>                                      
+                                <Input 
+                                    label="First Name" 
+                                    name="first_name" 
+                                    type="text" 
+                                    style={{color: "black"}} 
+                                    onChange={this.handleInputChange}/>
+                                <Input 
+                                    label="Last Name"  
+                                    name="last_name" 
+                                    type="text" 
+                                    style={{color: "black"}} 
+                                    onChange={this.handleInputChange}/>
+                                <Input 
+                                    label="Email Address" 
+                                    name="email" 
+                                    type="email" 
+                                    style={{color: "black"}} 
+                                    onChange={this.handleInputChange}/>
+                                
+                                <div style={{textAlign: "center"}} >                                                
+                                    <Button color={this.state.driver? "yellow" : "default"} onClick={this.driver}>DRIVER</Button>                                                                                               
+                                    <Button color={this.state.owner? "yellow" : "default"} onClick={this.owner}>OWNER</Button>                                                
+                                </div>
+                                                                
+                                <Input 
+                                    label="Tel" 
+                                    name="email" 
+                                    type="number" 
+                                    style={{color: "black"}} 
+                                    onChange={this.handleInputChange}/>
+                                <Input 
+                                    label="Password" 
+                                    name="password" 
+                                    type="text" 
+                                    style={{color: "black"}} 
+                                    onChange={this.handleInputChange}/>
+                                <Input 
+                                    label="Confirm Password" 
+                                    name="confirm_password" 
+                                    type="text" 
+                                    style={{color: "black"}} 
+                                    onChange={this.handleInputChange}/>
+                                <Input 
+                                    label="Type your cool slogan here..."  
+                                    name="slogan" 
+                                    type="text" 
+                                    style={{color: "black"}} 
+                                    onChange={this.handleInputChange}/>
+
+                                <h6 style={{color: "#2bbbad", fontSize: 12}}> *Increase your chance of winning by following our social media accounts</h6>
+                                <div style={{flexDirection: "row"}}>                                        
+                                    <a href="https://twitter.com/_parkupp?lang=en" target="_blank" style={{marginRight: 5}}><Ionicon icon="logo-twitter" fontSize="20px" color="#2bbbad"/></a>
+                                    <a href="https://www.instagram.com/_parkupp/?hl=en" target="_blank"><Ionicon icon="logo-instagram" fontSize="20px" color="#2bbbad"/></a>                                        
+                                </div>
+
+                       
+                                <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
+                                    <div className="text-center mb-3 col-md-12">
+                                        <Button color="yellow" rounded type="button" className="btn btn-block z-depth-1" onClick={this.handleSubmit}>Sign Up</Button>
+                                    </div>
+                                </Row>                                      
+                            </div>                                      
+                        </div>                            
+                    </div>
+                </section>                                                                                         
             </div>
             <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
                 <p>
