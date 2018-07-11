@@ -37,7 +37,9 @@ export default class Landing extends Component {
         this.state = {
             value: '',
             driver: false,
+            driverCount: "",            
             owner: false,
+            ownerCount: "",
             height: "",
             playing: false,
             width: window.innerWidth,
@@ -71,8 +73,12 @@ export default class Landing extends Component {
                          
         fetch('http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users')
         .then(response => response.json())                                 
-        .then(response => console.log(response));
+        .then((response) => {
+            console.log(response)
             
+
+        })
+            console.log(this.state.driverCount)
     }
 
     componentDidMount() {

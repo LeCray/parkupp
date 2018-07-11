@@ -38,12 +38,15 @@ export default class Sign_Up extends Component {
             tel: "",
             password: "",
             confirm_password: "",
-            showModal: false
+            showModal: false,
+            showValidationModal: false,
+            error: ""
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
+        this.toggleValidationModal = this.toggleValidationModal.bind(this);
         this.driver = this.driver.bind(this);
         this.owner = this.owner.bind(this);
         this.handleShow = this.handleShow.bind(this);
@@ -87,11 +90,11 @@ export default class Sign_Up extends Component {
         } else {
 
             await console.log(
-                "first_name:", this.state.first_name,
-                "last_name:", this.state.last_name,
+                "firstName:", this.state.first_name,
+                "lastName:", this.state.last_name,
                 "email:", this.state.email,
-                "user_type:", this.state.user_type,    
-                "tel:", this.state.tel,                
+                "userType:", this.state.user_type,    
+                "phoneNumber:", this.state.tel,                
                 "password:", this.state.password,
                 "slogan:", this.state.slogan
             )
@@ -100,19 +103,20 @@ export default class Sign_Up extends Component {
                 method: "POST", 
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({
-                    first_name: this.state.first_name,
-                    last_name: this.state.last_name,
+                    firstName: this.state.first_name,
+                    lastName: this.state.last_name,
                     email: this.state.email,
-                    user_type: this.state.user_type,    
-                    tel: this.state.tel,                    
-                    password: this.state.password,  
-                    slogan: this.state.slogan                  
+                    userType: this.state.user_type,    
+                    phoneNumber: this.state.tel,                    
+                    password: this.state.password,                      
                 }), 
 
             })
             .then(response => response.json())
             .then((responseData) => {
-                console.log(responseData);               
+                console.log(responseData);  
+                this.setState({error: responseData.error})
+                this.toggleValidationModal()
             })
             .catch((error) => {
               console.error(error);
@@ -124,6 +128,10 @@ export default class Sign_Up extends Component {
     toggleModal() {   
         this.setState({showModal: !this.state.showModal})     
         setTimeout(() => {this.setState({showModal: !this.state.showModal})}, 2000)
+    }
+
+    toggleValidationModal() {   
+        this.setState({showValidationModal: !this.state.showValidationModal})             
     }
 
     render() {   
@@ -208,7 +216,11 @@ export default class Sign_Up extends Component {
 
                 <Modal isOpen={this.state.showModal} toggle={this.toggleModal} side position="bottom-right">
                     <ModalBody style={{fontSize: 18, textAlign: "center"}} toggle={this.toggleModal}>PASSWORDS DON'T MATCH!</ModalBody>                            
-                </Modal>       
+                </Modal>   
+
+                <Modal isOpen={this.state.showValidationModal} toggle={this.toggleValidationModal} side position="bottom-right">
+                    <ModalBody style={{fontSize: 18, textAlign: "center"}} toggle={this.toggleValidationModal}>{this.state.error}</ModalBody>                            
+                </Modal>     
 
             </div>
             <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
