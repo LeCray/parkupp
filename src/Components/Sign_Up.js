@@ -3,6 +3,7 @@ import Ionicon from 'react-ionicons'
 import { Link } from 'react-router-dom'
 import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
+import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 import {
   //Collapse,
@@ -112,10 +113,14 @@ export default class Sign_Up extends Component {
                 }), 
 
             })
-            .then(response => response.json())
+            .then((response) => {
+                response.json()
+                console.log(response)
+            })
             .then((responseData) => {
                 console.log(responseData);  
-                this.setState({error: responseData.error})
+                <this className="setState">7error: responseData.error
+                </this>
                 this.toggleValidationModal()
             })
             .catch((error) => {
@@ -135,6 +140,7 @@ export default class Sign_Up extends Component {
     }
 
     render() {   
+    const { email } = this.state;
     return(  
         <div>                    
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
@@ -162,7 +168,7 @@ export default class Sign_Up extends Component {
                                 <Input 
                                     label="Email Address" 
                                     name="email" 
-                                    type="email" 
+                                    type="email"                                     
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
                                 
@@ -195,6 +201,7 @@ export default class Sign_Up extends Component {
                                     type="text" 
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
+                                
 
                                 <h6 style={{color: "#2bbbad", fontSize: 12}}> *Increase your chance of winning by following our social media accounts</h6>
                                 <div style={{flexDirection: "row"}}>                                        
