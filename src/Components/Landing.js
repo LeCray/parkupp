@@ -75,7 +75,7 @@ export default class Landing extends Component {
         .then(response => response.json())                                 
         .then((response) => {
             console.log(response)
-            
+                    
 
         })
             console.log(this.state.driverCount)
@@ -219,7 +219,7 @@ export default class Landing extends Component {
                         <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: 50}}/>                        
                     </div>
 
-                    {/* HOW IT WORKS 2*/}
+                    {/* HOW IT WORKS 2
                     
                                                               
                     <h1 ref={(section) => { this.how_it_works = section; }} style={{color: "black", fontSize: 30, marginBottom: 50}}><strong>How it works</strong></h1>                                          
@@ -234,7 +234,10 @@ export default class Landing extends Component {
                         />  
                     </div>                                                
                     
-                    <hr style={{borderColor: "#32bca2", width: 120, marginBottom: 50}}/>                        
+                    <hr style={{borderColor: "#32bca2", width: 120, marginBottom: 50}}/>   
+                    */}    
+
+                    <h4 ref={(section) => { this.how_it_works = section; }} style={{marginBottom: 100}}> VIDEO COMING SOON! </h4>
 
                    <div style={{position: "relative"}}>
                         <img src={require("../car_two.jpg")} style={{height: "auto", width: "100%", background: "#000000" }} />                                      

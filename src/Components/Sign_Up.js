@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 import { Input, Button, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
 import { Navbar, NavbarBrand, NavbarNav, NavbarToggler, Collapse, NavItem, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'mdbreact';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
+import { createMuiTheme } from 'material-ui/styles';
+import {withStyles, MuiThemeProvider} from 'material-ui/styles';
+import green from '@material-ui/core/colors/green';
 
 import {
   //Collapse,
@@ -41,7 +44,8 @@ export default class Sign_Up extends Component {
             confirm_password: "",
             showModal: false,
             showValidationModal: false,
-            error: ""
+            error: "",
+            disableBtn: false
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -51,6 +55,7 @@ export default class Sign_Up extends Component {
         this.driver = this.driver.bind(this);
         this.owner = this.owner.bind(this);
         this.handleShow = this.handleShow.bind(this);
+        this.disableBtn = this.disableBtn.bind(this);
     }
 
     componentWillMount(){
@@ -76,6 +81,8 @@ export default class Sign_Up extends Component {
       }
 
     async handleSubmit() {   
+                
+        this.disableBtn()
 
         if (this.state.driver && this.state.owner) {
             await this.setState({user_type: "both"})                
@@ -89,7 +96,7 @@ export default class Sign_Up extends Component {
             console.log("Passwords do not match")
             this.toggleModal()
         } else {
-
+/*
             await console.log(
                 "firstName:", this.state.first_name,
                 "lastName:", this.state.last_name,
@@ -99,7 +106,7 @@ export default class Sign_Up extends Component {
                 "password:", this.state.password,
                 "slogan:", this.state.slogan
             )
-                    
+  */                  
             fetch("http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users/new", {
                 method: "POST", 
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
@@ -113,15 +120,14 @@ export default class Sign_Up extends Component {
                 }), 
 
             })
-            .then((response) => {
-                response.json()
-                console.log(response)
-            })
+            .then(response => response.json())                                              
             .then((responseData) => {
-                console.log(responseData);  
-                <this className="setState">7error: responseData.error
-                </this>
+                //console.log(responseData.error.ValidationError);  
+                const data = responseData.error.split(":")
+                console.log("Password:", data[2].slice(0, 77))
+                this.setState({error: responseData.error})                
                 this.toggleValidationModal()
+                this.disableBtn()
             })
             .catch((error) => {
               console.error(error);
@@ -139,8 +145,15 @@ export default class Sign_Up extends Component {
         this.setState({showValidationModal: !this.state.showValidationModal})             
     }
 
+    disableBtn() {
+        this.setState({disableBtn: !this.state.disableBtn})
+    }
+
     render() {   
     const { email } = this.state;
+   
+
+    
     return(  
         <div>                    
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
@@ -168,7 +181,9 @@ export default class Sign_Up extends Component {
                                 <Input 
                                     label="Email Address" 
                                     name="email" 
-                                    type="email"                                     
+                                    type="email"  
+                                    validators={['required', 'isEmail']}    
+                                    errorMessages={['this field is required', 'email is not valid']}                               
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
                                 
@@ -201,7 +216,13 @@ export default class Sign_Up extends Component {
                                     type="text" 
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
+                               
+
+                                  
+                                                                  
+                                    
                                 
+
 
                                 <h6 style={{color: "#2bbbad", fontSize: 12}}> *Increase your chance of winning by following our social media accounts</h6>
                                 <div style={{flexDirection: "row"}}>                                        
@@ -212,7 +233,15 @@ export default class Sign_Up extends Component {
                        
                                 <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
                                     <div className="text-center mb-3 col-md-12">
-                                        <Button color="yellow" rounded type="button" className="btn btn-block z-depth-1" onClick={this.handleSubmit}>Sign Up</Button>
+                                        <Button 
+                                            color="yellow" 
+                                            rounded 
+                                            disabled={this.state.disableBtn}
+                                            type="button" 
+                                            className="btn btn-block z-depth-1" 
+                                            onClick={this.handleSubmit}>
+                                            Sign Up
+                                        </Button>
                                     </div>
                                 </Row>                                      
                             </div>                                      
@@ -244,3 +273,17 @@ export default class Sign_Up extends Component {
     </div>
     )}
 }
+
+const styles = theme => ({
+    cssLabel: {
+    '&$cssFocused': {
+      color: "#2bbbad",
+    },
+  },
+  cssFocused: {},
+  cssUnderline: {
+    '&:after': {
+      borderBottomColor: "#2bbbad",
+    },
+  }
+})
