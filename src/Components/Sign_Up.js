@@ -34,6 +34,7 @@ export default class Sign_Up extends Component {
             first_name: "", 
             last_name: "",
             email: "",
+            user_type: "",
             tel: "",
             password: "",
             confirm_password: "",
@@ -62,6 +63,7 @@ export default class Sign_Up extends Component {
     handleInputChange (evt) {
         this.setState({ [evt.target.name]: evt.target.value })
     }
+
     driver() {this.setState({driver: !this.state.driver})}       
     owner() {this.setState({owner: !this.state.owner})}
 
@@ -69,22 +71,42 @@ export default class Sign_Up extends Component {
         this.setState({ show: true });
       }
 
-    handleSubmit() {        
+    async handleSubmit() {   
 
+        if (this.state.driver && this.state.owner) {
+            await this.setState({user_type: "both"})                
+        } else if (this.state.driver) {
+            await this.setState({user_type: "driver"})                
+        } else {
+            await this.setState({user_type: "owner"})                
+        }
+        
         if (this.state.password !== this.state.confirm_password) {
             console.log("Passwords do not match")
             this.toggleModal()
         } else {
-            fetch("http://Preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users/new", {
+
+            await console.log(
+                "first_name:", this.state.first_name,
+                "last_name:", this.state.last_name,
+                "email:", this.state.email,
+                "user_type:", this.state.user_type,    
+                "tel:", this.state.tel,                
+                "password:", this.state.password,
+                "slogan:", this.state.slogan
+            )
+                    
+            fetch("http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users/new", {
                 method: "POST", 
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({
-                    first_name: this.state.firstName,
-                    last_name: this.state.lastName,
+                    first_name: this.state.first_name,
+                    last_name: this.state.last_name,
                     email: this.state.email,
-                    tel: this.state.tel,
-                    email: this.state.email, 
-                    password: this.state.password,                    
+                    user_type: this.state.user_type,    
+                    tel: this.state.tel,                    
+                    password: this.state.password,  
+                    slogan: this.state.slogan                  
                 }), 
 
             })
@@ -95,8 +117,8 @@ export default class Sign_Up extends Component {
             .catch((error) => {
               console.error(error);
             })
-            .done();
-        }                       
+            
+        }                     
     }
 
     toggleModal() {   
@@ -143,7 +165,7 @@ export default class Sign_Up extends Component {
                                                                 
                                 <Input 
                                     label="Tel" 
-                                    name="email" 
+                                    name="tel" 
                                     type="number" 
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
@@ -182,13 +204,10 @@ export default class Sign_Up extends Component {
                         </div>                            
                     </div>
                 </section>
-
-                <Button bsStyle="primary" bsSize="large" onClick={this.toggleModal}>
-                  Launch demo modal
-                </Button>
+                
 
                 <Modal isOpen={this.state.showModal} toggle={this.toggleModal} side position="bottom-right">
-                    <ModalHeader toggle={this.toggleModal}>Passwords do not match</ModalHeader>                            
+                    <ModalBody style={{fontSize: 18, textAlign: "center"}} toggle={this.toggleModal}>PASSWORDS DON'T MATCH!</ModalBody>                            
                 </Modal>       
 
             </div>
