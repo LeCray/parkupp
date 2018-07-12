@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Ionicon from 'react-ionicons'
 import { Link } from 'react-router-dom'
+import InstagramEmbed from 'react-instagram-embed'
 
 import {
   Collapse,
@@ -32,7 +33,7 @@ export default class About_Us extends Component {
         
             <div class="container" style={{backgroundColor: "#2bbbad", color: "white", marginTop: 50, padding: 40}}>
                 <div class="row">
-                    <div class="col-lg-8">                    
+                    <div class="col-lg-10 offset-lg-1" style={{textAlign: "center"}}>                    
                     
                         <h1 style={{fontSize: 30, marginTop: 20}}>About Us</h1>                    
 
@@ -50,7 +51,36 @@ export default class About_Us extends Component {
 
                         </p>                       
                     </div>             
-                </div>                  
+                </div>  
+                <div class="row" style={{flexDirection: "row", justifyContent: "center"}}>
+                  <InstagramEmbed
+                    url='https://www.instagram.com/p/BlHqn_NFg51/?hl=en&taken-by=_parkupp'
+                    maxWidth={320}
+                    hideCaption={true}
+                    containerTagName='div'
+                    protocol=''
+                    injectScript
+                    style={{margin: 20}}
+                  />                
+                  <InstagramEmbed
+                    url='https://www.instagram.com/p/BlDfnekF7ZM/?hl=en&taken-by=_parkupp'
+                    maxWidth={320}
+                    hideCaption={true}
+                    containerTagName='div'
+                    protocol=''
+                    injectScript
+                    style={{margin: 20}}
+                  />
+                  <InstagramEmbed
+                    url='https://www.instagram.com/p/BkjnrIuDHgt/?hl=en&taken-by=_parkupp'
+                    maxWidth={320}
+                    hideCaption={true}
+                    containerTagName='div'
+                    protocol=''
+                    injectScript
+                    style={{margin: 20}}
+                  />
+                </div>
             </div>
             <div style={{marginTop: 20, textAlign: "center", padding: 25}}>
                 <hr style={{borderColor: "white", width: "75%", marginTop: 150}}/> 
