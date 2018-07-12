@@ -74,11 +74,38 @@ export default class Landing extends Component {
         fetch('http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users')
         .then(response => response.json())                                 
         .then((response) => {
-            console.log(response)
-                    
+            console.log(response.users)
+            console.log(response.users.length)
+            
+            const length = response.users.length
+            const data = response.users
+            
+
+            var i
+            var driverCount = 0
+            var ownerCount = 0
+
+            for (i = 0; i < length; i++ ) {                
+
+                if (data[i].userType === "driver" || data[i].userType === "both") {
+                    driverCount++                        
+                }
+
+                if (data[i].userType === "owner" || data[i].userType === "both") {
+                    ownerCount++                        
+                }
+            }
+
+            this.setState({
+                driverCount: driverCount,
+                ownerCount: ownerCount
+            })
+
+            console.log("Drivers:",this.state.driverCount)     
+            console.log("Owners:",this.state.ownerCount)     
 
         })
-            console.log(this.state.driverCount)
+            
     }
 
     componentDidMount() {
@@ -105,14 +132,14 @@ export default class Landing extends Component {
                             <div class="col-sm-6 col-md-4 offset-md-2 col-lg-2 offset-lg-4">
                                 <div >
                                     <img src={require("../location.png")} style={{height: 80, marginBottom: 10}}/> 
-                                    <h2 style={{color: "#e6c131"}}>33</h2>
+                                    <h2 style={{color: "#e6c131"}}>{this.state.ownerCount}</h2>
                                     <h4 style={{color: "#32bca2"}}>Shared<br/>Locations</h4>   
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4 col-lg-2 parkers">
                                 <div>
                                     <img src={require("../parkers.png")} style={{height: 80, marginBottom: 10}}/> 
-                                    <h2 style={{color: "#e6c131"}}>256</h2>
+                                    <h2 style={{color: "#e6c131"}}>{this.state.driverCount}</h2>
                                     <h4 style={{color: "#32bca2"}}>Sharing<br/>Parkers</h4>   
                                 </div>
                             </div>
