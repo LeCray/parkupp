@@ -44,6 +44,8 @@ export default class Sign_Up extends Component {
             confirm_password: "",
             showModal: false,
             showValidationModal: false,
+            showSuccessModal: false,
+            showExistsModal: false,
             passwordError: "",
             phoneNumberError: "",
             emailError: "",
@@ -54,6 +56,8 @@ export default class Sign_Up extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
         this.toggleValidationModal = this.toggleValidationModal.bind(this);
+        this.toggleSuccessModal = this.toggleSuccessModal.bind(this);
+        this.toggleExistsModal = this.toggleExistsModal.bind(this);
         this.driver = this.driver.bind(this);
         this.owner = this.owner.bind(this);
         this.handleShow = this.handleShow.bind(this);
@@ -124,37 +128,47 @@ export default class Sign_Up extends Component {
             })
             .then(response => response.json())                                              
             .then((responseData) => {
-                
-                this.toggleValidationModal() 
+                console.log(responseData.error)
 
-                const data = responseData.error.slice(17).split(":")
-                console.log(data)
-                
-                var err;
+                if (responseData.error == false) {                    
+                    console.log("Sign up: Success")
+                    this.toggleSuccessModal()
 
-                for (err of data) {                                        
-                    if (String(err.slice(1, 14)) === "Password must") {                        
-                        this.setState({passwordError: "Password must contain at least 6 characters, and include at least one number"})
-                        console.log(this.state.passwordError)
+                } else if (String(responseData.error).includes("exists!")) {
+                    
+                    this.setState({showExistsModal: !this.state.showExistsModal})
+                    console.log("User exists")
+                
+                } else {
+
+                    this.toggleValidationModal() 
+
+                    const data = responseData.error.slice(17).split(":")
+                    console.log(data)
+                    
+                    var err;
+
+                    for (err of data) {                                        
+                        if (String(err).includes("Password must")) {                        
+                            this.setState({passwordError: "Password must contain at least 6 characters and include at least one number"})
+                            console.log(this.state.passwordError)
+                        }
+                    }
+
+                    for (err of data) {
+                        if (String(err).includes("Phone number")) {
+                            this.setState({phoneNumberError: "Phone number must be 10 digits long"})
+                            console.log(this.state.phoneNumberError)
+                        }
+                    }
+
+                    for (err of data) {
+                        if (String(err).includes("valid email!")) {
+                            this.setState({emailError: "f is not a valid email!"})
+                            console.log(this.state.emailError)
+                        }
                     }
                 }
-
-                for (err of data) {
-                    if (String(err.slice(1, 13)) === "Phone number") {
-                        this.setState({phoneNumberError: "Phone number must be 10 digits long"})
-                        console.log(this.state.phoneNumberError)
-                    }
-                }
-
-                for (err of data) {
-                    if (String(err[err.length-1]) === "!") {
-                        this.setState({emailError: "f is not a valid email!"})
-                        console.log(this.state.emailError)
-                    }
-                }
-           
-                
-                
 
                 this.disableBtn()
             })
@@ -173,6 +187,13 @@ export default class Sign_Up extends Component {
     toggleValidationModal() {   
         this.setState({showValidationModal: !this.state.showValidationModal})             
     }
+    
+    toggleSuccessModal() {
+        this.setState({showSuccessModal: !this.state.showSuccessModal})                
+    }
+    toggleExistsModal() {
+        this.setState({showExistsModal: !this.state.showExistsModal})                   
+    }
 
     disableBtn() {
         this.setState({disableBtn: !this.state.disableBtn})
@@ -180,8 +201,8 @@ export default class Sign_Up extends Component {
 
     passwordError() {
         if (this.state.passwordError) {
-            return (
-                <hr/>
+            return (                             
+                <hr/>                
             )
         } else {
             return null
@@ -189,8 +210,8 @@ export default class Sign_Up extends Component {
     }
     phoneNumberError() {
         if (this.state.phoneNumberError) {
-            return (
-                <hr/>
+            return (                                   
+                <hr/>                
             )
         } else {
             return null
@@ -198,8 +219,8 @@ export default class Sign_Up extends Component {
     }
     emailError() {
         if (this.state.emailError) {
-            return (
-                <hr/>
+            return (                                
+                <hr/>                
             )
         } else {
             return null
@@ -306,17 +327,32 @@ export default class Sign_Up extends Component {
 
                 <Modal isOpen={this.state.showValidationModal} toggle={this.toggleValidationModal} side position="bottom-right">
                     <ModalBody style={{fontSize: 18}} toggle={this.toggleValidationModal}>
-                        {this.state.passwordError}<br/>
+                        {this.state.passwordError}
                         {this.passwordError()}
-
-                        {this.state.phoneNumberError}<br/>
+                        {this.state.phoneNumberError}
                         {this.phoneNumberError()}
-
                         {this.state.emailError}
                         {this.emailError()}
                         <b className="pull-right" style={{fontSize: 15}} onClick={this.toggleValidationModal}>CLOSE</b>
                     </ModalBody>                            
-                </Modal>     
+                </Modal>   
+
+                <Modal isOpen={this.state.showSuccessModal} toggle={this.toggleSuccessModal} size="sm">
+                    <ModalBody toggle={this.toggleSuccessModal}>                    
+                        Welcome to ParkUpp!<br/>                        
+                        Sign up: Success
+                    </ModalBody>
+                    <ModalFooter>
+                        <b className="pull-right" onClick={this.toggleSuccessModal}>Close</b>                    
+                    </ModalFooter>
+                </Modal>  
+
+                <Modal isOpen={this.state.showExistsModal} toggle={this.toggleExistsModal} size="sm">
+                    <ModalBody toggle={this.toggleExistsModal}>User already exists</ModalBody>
+                    <ModalFooter>
+                        <b className="pull-right" onClick={this.toggleExistsModal}>Close</b>                    
+                    </ModalFooter>
+                </Modal>
 
             </div>
             <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
