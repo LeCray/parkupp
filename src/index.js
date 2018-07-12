@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App';
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+
 
 
 
@@ -13,10 +13,8 @@ import 'mdbreact/dist/css/mdb.css';
 
 <link rel="stylesheet" href="https://video-react.github.io/assets/video-react.css" />
 
-render((
-	<MuiThemeProvider>
+render((	
   <BrowserRouter>
     <App />
-  </BrowserRouter>
-  </MuiThemeProvider>
+  </BrowserRouter>  
 ), document.getElementById('root'));

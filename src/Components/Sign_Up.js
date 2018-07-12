@@ -44,7 +44,9 @@ export default class Sign_Up extends Component {
             confirm_password: "",
             showModal: false,
             showValidationModal: false,
-            error: "",
+            passwordError: "",
+            phoneNumberError: "",
+            emailError: "",
             disableBtn: false
         };
 
@@ -56,6 +58,9 @@ export default class Sign_Up extends Component {
         this.owner = this.owner.bind(this);
         this.handleShow = this.handleShow.bind(this);
         this.disableBtn = this.disableBtn.bind(this);
+        this.passwordError = this.passwordError.bind(this);
+        this.phoneNumberError = this.phoneNumberError.bind(this);
+        this.emailError = this.emailError.bind(this);
     }
 
     componentWillMount(){
@@ -81,6 +86,10 @@ export default class Sign_Up extends Component {
       }
 
     async handleSubmit() {   
+
+        this.setState({passwordError: ""})
+        this.setState({phoneNumberError: ""})
+        this.setState({emailError: ""})
                 
         this.disableBtn()
 
@@ -93,20 +102,13 @@ export default class Sign_Up extends Component {
         }
         
         if (this.state.password !== this.state.confirm_password) {
+
             console.log("Passwords do not match")
             this.toggleModal()
+            this.disableBtn()
+
         } else {
-/*
-            await console.log(
-                "firstName:", this.state.first_name,
-                "lastName:", this.state.last_name,
-                "email:", this.state.email,
-                "userType:", this.state.user_type,    
-                "phoneNumber:", this.state.tel,                
-                "password:", this.state.password,
-                "slogan:", this.state.slogan
-            )
-  */                  
+                 
             fetch("http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users/new", {
                 method: "POST", 
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
@@ -122,11 +124,38 @@ export default class Sign_Up extends Component {
             })
             .then(response => response.json())                                              
             .then((responseData) => {
-                //console.log(responseData.error.ValidationError);  
-                const data = responseData.error.split(":")
-                console.log("Password:", data[2].slice(0, 77))
-                this.setState({error: responseData.error})                
-                this.toggleValidationModal()
+                
+                this.toggleValidationModal() 
+
+                const data = responseData.error.slice(17).split(":")
+                console.log(data)
+                
+                var err;
+
+                for (err of data) {                                        
+                    if (String(err.slice(1, 14)) === "Password must") {                        
+                        this.setState({passwordError: "Password must contain at least 6 characters, and include at least one number"})
+                        console.log(this.state.passwordError)
+                    }
+                }
+
+                for (err of data) {
+                    if (String(err.slice(1, 13)) === "Phone number") {
+                        this.setState({phoneNumberError: "Phone number must be 10 digits long"})
+                        console.log(this.state.phoneNumberError)
+                    }
+                }
+
+                for (err of data) {
+                    if (String(err[err.length-1]) === "!") {
+                        this.setState({emailError: "f is not a valid email!"})
+                        console.log(this.state.emailError)
+                    }
+                }
+           
+                
+                
+
                 this.disableBtn()
             })
             .catch((error) => {
@@ -147,6 +176,34 @@ export default class Sign_Up extends Component {
 
     disableBtn() {
         this.setState({disableBtn: !this.state.disableBtn})
+    }
+
+    passwordError() {
+        if (this.state.passwordError) {
+            return (
+                <hr/>
+            )
+        } else {
+            return null
+        }
+    }
+    phoneNumberError() {
+        if (this.state.phoneNumberError) {
+            return (
+                <hr/>
+            )
+        } else {
+            return null
+        }
+    }
+    emailError() {
+        if (this.state.emailError) {
+            return (
+                <hr/>
+            )
+        } else {
+            return null
+        }
     }
 
     render() {   
@@ -216,14 +273,7 @@ export default class Sign_Up extends Component {
                                     type="text" 
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
-                               
-
-                                  
-                                                                  
-                                    
-                                
-
-
+ 
                                 <h6 style={{color: "#2bbbad", fontSize: 12}}> *Increase your chance of winning by following our social media accounts</h6>
                                 <div style={{flexDirection: "row"}}>                                        
                                     <a href="https://twitter.com/_parkupp?lang=en" target="_blank" style={{marginRight: 5}}><Ionicon icon="logo-twitter" fontSize="20px" color="#2bbbad"/></a>
@@ -255,7 +305,17 @@ export default class Sign_Up extends Component {
                 </Modal>   
 
                 <Modal isOpen={this.state.showValidationModal} toggle={this.toggleValidationModal} side position="bottom-right">
-                    <ModalBody style={{fontSize: 18, textAlign: "center"}} toggle={this.toggleValidationModal}>{this.state.error}</ModalBody>                            
+                    <ModalBody style={{fontSize: 18}} toggle={this.toggleValidationModal}>
+                        {this.state.passwordError}<br/>
+                        {this.passwordError()}
+
+                        {this.state.phoneNumberError}<br/>
+                        {this.phoneNumberError()}
+
+                        {this.state.emailError}
+                        {this.emailError()}
+                        <b className="pull-right" style={{fontSize: 15}} onClick={this.toggleValidationModal}>CLOSE</b>
+                    </ModalBody>                            
                 </Modal>     
 
             </div>
