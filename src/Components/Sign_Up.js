@@ -164,7 +164,7 @@ export default class Sign_Up extends Component {
 
                     for (err of data) {
                         if (String(err).includes("valid email!")) {
-                            this.setState({emailError: "f is not a valid email!"})
+                            this.setState({emailError: "Email address not valid"})
                             console.log(this.state.emailError)
                         }
                     }
