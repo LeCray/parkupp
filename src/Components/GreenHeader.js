@@ -71,6 +71,7 @@ export default class GreenHeader extends React.Component {
                                   <DropdownItem><Link to="/Support" onClick={this.onClick} style={{color: "#2bbbad"}}>Support</Link></DropdownItem>
                                   <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClick} style={{color: "#2bbbad"}}>Terms and Conditions</Link></DropdownItem>
                                   <DropdownItem><Link to="/Privacy_Policy" onClick={this.onClick} style={{color: "#2bbbad"}}>Privacy Policy</Link></DropdownItem>
+                                  <DropdownItem><Link to="/FAQ" onClick={this.onClick} style={{color: "#2bbbad"}}>FAQ</Link></DropdownItem>
                               </DropdownMenu>
                               </Dropdown>
                           </NavItem>
@@ -107,6 +108,7 @@ export default class GreenHeader extends React.Component {
                                   <DropdownItem><Link to="/Support" onClick={this.onClick} style={{color: "#2bbbad"}}>Support</Link></DropdownItem>
                                   <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClick} style={{color: "#2bbbad"}}>Terms and Conditions</Link></DropdownItem>
                                   <DropdownItem><Link to="/Privacy_Policy" onClick={this.onClick} style={{color: "#2bbbad"}}>Privacy Policy</Link></DropdownItem>
+                                  <DropdownItem><Link to="/FAQ" onClick={this.onClick} style={{color: "#2bbbad"}}>FAQ</Link></DropdownItem>
                               </DropdownMenu>
                               </Dropdown>
                           </NavItem>

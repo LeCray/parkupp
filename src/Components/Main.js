@@ -10,6 +10,7 @@ import Careers from './Careers';
 import About_Us from './About_Us';
 import Sign_Up from './Sign_Up';
 import Parking from './Parking';
+import FAQ from './FAQ';
 
 
 
@@ -25,6 +26,7 @@ const Main = () => (
         <Route path="/About_Us" component={About_Us}/>     
         <Route path="/Sign_Up" component={Sign_Up}/>
         <Route path="/Parking" component={Parking}/>
+        <Route path="/FAQ" component={FAQ}/>
         
     </Switch>
   </main>

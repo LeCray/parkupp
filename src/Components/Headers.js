@@ -18,7 +18,8 @@ const Headers = () => (
         <Route path="/Terms_Conditions" component={WhiteHeader}/>
         <Route path="/Privacy_Policy" component={WhiteHeader}/>
         <Route path="/Careers" component={WhiteHeader}/>
-        <Route path="/About_Us" component={WhiteHeader}/>     
+        <Route path="/About_Us" component={WhiteHeader}/>
+        <Route path="/FAQ" component={WhiteHeader}/>   
               
     </Switch>
   

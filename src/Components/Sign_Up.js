@@ -359,7 +359,7 @@ export default class Sign_Up extends Component {
                         {this.state.phoneNumberError}
                         {this.phoneNumberError()}
                         {this.state.emailError}
-                        {this.emailError()}
+                        {this.emailError()}                        
                         <b className="pull-right" style={{fontSize: 15}} onClick={this.toggleValidationModal}>CLOSE</b>
                     </ModalBody>                            
                 </Modal>   
