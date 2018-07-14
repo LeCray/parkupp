@@ -46,6 +46,7 @@ export default class Sign_Up extends Component {
             showValidationModal: false,
             showSuccessModal: false,
             showExistsModal: false,
+            pleaseSelectModal: false,
             passwordError: "",
             phoneNumberError: "",
             emailError: "",
@@ -54,10 +55,12 @@ export default class Sign_Up extends Component {
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.validateOption = this.validateOption.bind(this);
         this.toggleModal = this.toggleModal.bind(this);
         this.toggleValidationModal = this.toggleValidationModal.bind(this);
         this.toggleSuccessModal = this.toggleSuccessModal.bind(this);
         this.toggleExistsModal = this.toggleExistsModal.bind(this);
+        this.togglePleaseSelectModal = this.togglePleaseSelectModal.bind(this);
         this.driver = this.driver.bind(this);
         this.owner = this.owner.bind(this);
         this.handleShow = this.handleShow.bind(this);
@@ -89,12 +92,27 @@ export default class Sign_Up extends Component {
         this.setState({ show: true });
       }
 
+    validateOption() {
+        console.log(this.state.driver)
+        console.log(this.state.owner)
+
+        if (!this.state.driver && !this.state.owner) {
+            this.togglePleaseSelectModal()
+            this.disableBtn()
+        } else {
+            this.handleSubmit()            
+        }
+    }
+
     async handleSubmit() {   
 
         this.setState({passwordError: ""})
         this.setState({phoneNumberError: ""})
         this.setState({emailError: ""})
-                
+
+        console.log(this.state.driver)
+        console.log(this.state.driver)
+         
         this.disableBtn()
 
         if (this.state.driver && this.state.owner) {
@@ -193,6 +211,12 @@ export default class Sign_Up extends Component {
     }
     toggleExistsModal() {
         this.setState({showExistsModal: !this.state.showExistsModal})                   
+    }
+    togglePleaseSelectModal() {
+        if (this.state.pleaseSelectModal) {
+            this.disableBtn()
+        }
+        this.setState({pleaseSelectModal: !this.state.pleaseSelectModal})
     }
 
     disableBtn() {
@@ -310,7 +334,7 @@ export default class Sign_Up extends Component {
                                             disabled={this.state.disableBtn}
                                             type="button" 
                                             className="btn btn-block z-depth-1" 
-                                            onClick={this.handleSubmit}>
+                                            onClick={this.validateOption}>
                                             Sign Up
                                         </Button>
                                     </div>
@@ -338,9 +362,16 @@ export default class Sign_Up extends Component {
                 </Modal>   
 
                 <Modal isOpen={this.state.showSuccessModal} toggle={this.toggleSuccessModal} size="sm">
-                    <ModalBody toggle={this.toggleSuccessModal}>                    
-                        Welcome to ParkUpp!<br/>                        
-                        Sign up: Success
+                    <ModalBody toggle={this.toggleSuccessModal}>   
+                        <div style={{textAlign: "center"}}>
+                            <img src={require("../welcome.png")} style={{height: 80, marginBottom: 20}}/> 
+                            <div style={{fontSize: 20}}>                        
+                                <b>Welcome to ParkUpp!</b><br/>
+                                <b>Sign up: Success</b>
+                                <hr/>
+                                <p style={{fontSize: 15}}>Now head over to the PlayStore/AppStore for more awesomeness</p>
+                            </div>
+                        </div>                        
                     </ModalBody>
                     <ModalFooter>
                         <b className="pull-right" onClick={this.toggleSuccessModal}>Close</b>                    
@@ -353,6 +384,17 @@ export default class Sign_Up extends Component {
                         <b className="pull-right" onClick={this.toggleExistsModal}>Close</b>                    
                     </ModalFooter>
                 </Modal>
+
+                <Modal isOpen={this.state.pleaseSelectModal} toggle={this.togglePleaseSelectModal} size="sm">
+                    <ModalBody toggle={this.togglePleaseSelectModal}>
+                        Please choose wether you want to be a <b>Driver</b> or an <b>Owner</b>
+                    </ModalBody>
+                    <ModalFooter>
+                        <b className="pull-right" onClick={this.togglePleaseSelectModal}>Close</b>                    
+                    </ModalFooter>
+                </Modal>
+
+
 
             </div>
             <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
