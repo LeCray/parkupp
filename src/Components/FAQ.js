@@ -56,7 +56,7 @@ export default class FAQ extends Component {
                 <div style={{marginTop: 40}}>
                     <p class="faq" onClick={() => this.setState({show1: !this.state.show1})}>Listings</p><br/>
                     <p class="faq" onClick={() => this.setState({show2: !this.state.show2})}>What type of parking is provided for?</p><br/>
-                    <p class="faq" onClick={() => this.setState({show3: !this.state.show3})}>Who uses ParkUpp</p><br/>                
+                    <p class="faq" onClick={() => this.setState({show3: !this.state.show3})}>Who uses ParkUpp?</p><br/>                
                     <p class="faq" onClick={() => this.setState({show4: !this.state.show4})}>Earnings</p><br/>
                     <p class="faq" onClick={() => this.setState({show5: !this.state.show5})}>How do ParkUpp payments work?</p><br/>
                     <p class="faq" onClick={() => this.setState({show6: !this.state.show6})}>Does ParkUpp have insurance?</p>

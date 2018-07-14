@@ -18,6 +18,7 @@ export default class GreenHeader extends React.Component {
             color: false
         };
     this.onClick = this.onClick.bind(this);
+    this.onClickAgain = this.onClickAgain.bind(this);
     this.toggle = this.toggle.bind(this);
     }
 
