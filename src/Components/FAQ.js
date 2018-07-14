@@ -50,18 +50,16 @@ export default class FAQ extends Component {
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
         <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 50, fontFamily: "Quicksand"}}>
         
-            <div class="container" style={{backgroundColor: "#2bbbad", color: "white", marginTop: 50}}>
+            <div class="container" style={{marginTop: 50, padding: 50}}>
                 <h1>FAQ</h1>
 
                 <div style={{marginTop: 40}}>
-                    <p onClick={() => this.setState({show1: !this.state.show1})}>Listings</p>
-
-                    <p onClick={() => this.setState({show2: !this.state.show2})}>What type of parking is provided for?</p>
-                    <p onClick={() => this.setState({show3: !this.state.show3})}>Who users ParkUpp</p>
-                
-                    <p onClick={() => this.setState({show4: !this.state.show4})}>Earnings</p>
-                    <p onClick={() => this.setState({show5: !this.state.show5})}>How do ParkUpp payments work?</p>
-                    <p onClick={() => this.setState({show6: !this.state.show6})}>Does ParkUpp have insurance?</p>
+                    <p class="faq" onClick={() => this.setState({show1: !this.state.show1})}>Listings</p><br/>
+                    <p class="faq" onClick={() => this.setState({show2: !this.state.show2})}>What type of parking is provided for?</p><br/>
+                    <p class="faq" onClick={() => this.setState({show3: !this.state.show3})}>Who uses ParkUpp</p><br/>                
+                    <p class="faq" onClick={() => this.setState({show4: !this.state.show4})}>Earnings</p><br/>
+                    <p class="faq" onClick={() => this.setState({show5: !this.state.show5})}>How do ParkUpp payments work?</p><br/>
+                    <p class="faq" onClick={() => this.setState({show6: !this.state.show6})}>Does ParkUpp have insurance?</p>
                 </div>
                 
                 <Modal isOpen={this.state.show1} toggle={() => this.setState({show1: !this.state.show1})} size="lg">
@@ -81,9 +79,101 @@ export default class FAQ extends Component {
                         </div>                        
                     </ModalBody>
                     <ModalFooter>
-                        <b className="pull-right" onClick={() => this.setState({show1: !this.state.show1})}>Close</b>                    
+                        <b className="pull-right faq" onClick={() => this.setState({show1: !this.state.show1})}>Close</b>                    
                     </ModalFooter>
                 </Modal>  
+
+                <Modal isOpen={this.state.show2} toggle={() => this.setState({show1: !this.state.show2})} size="lg">
+                    <ModalBody toggle={() => this.setState({show2: !this.state.show2})}>   
+                        <div style={{padding: 20}}>
+                            <h2>What type of parking is provided for?</h2>                            
+                            <hr/>
+                            <div style={{marginTop: 20}}>                        
+                                <p>                                                                        
+                                    Short term parking - this is where users can use your parking for less than a month.<br/>
+                                    Long term parking - usually longer than a month.<br/>
+                                    Booked parking - sometimes drivers know where they are going and will book your parking days before.<br/>
+                                    On-demand - sometimes users won’t know where they are going until they get there.
+                                </p>
+                            </div>
+                        </div>                        
+                    </ModalBody>
+                    <ModalFooter>
+                        <b className="pull-right faq" onClick={() => this.setState({show2: !this.state.show2})}>Close</b>                    
+                    </ModalFooter>
+                </Modal>
+
+                <Modal isOpen={this.state.show3} toggle={() => this.setState({show3: !this.state.show3})} size="lg">
+                    <ModalBody toggle={() => this.setState({show3: !this.state.show3})}>   
+                        <div style={{padding: 20}}>
+                            <h2>Who uses ParkUpp?</h2>                            
+                            <hr/>
+                            <div style={{marginTop: 20}}>                        
+                                <p>                                                                        
+                                    People going to meetings, work, events, going for shopping, markets and everything else in between
+                                </p>
+                            </div>
+                        </div>                        
+                    </ModalBody>
+                    <ModalFooter>
+                        <b className="pull-right faq" onClick={() => this.setState({show3: !this.state.show3})}>Close</b>                    
+                    </ModalFooter>
+                </Modal>
+
+                <Modal isOpen={this.state.show4} toggle={() => this.setState({show4: !this.state.show4})} size="lg">
+                    <ModalBody toggle={() => this.setState({show4: !this.state.show4})}>   
+                        <div style={{padding: 20}}>
+                            <h2>Earnings</h2>
+                            <h6>How should I price my listing on ParkUpp?</h6>
+                            <hr/>
+                            <div style={{marginTop: 20}}>                        
+                                <p>                                                                        
+                                    What you charge is up to you but we give you some tips on how 
+                                    to charge based on our smart analytic tools to help you to be more competitive. 
+                                    You can charge daily, weekly and monthly.
+                                </p>
+                            </div>
+                        </div>                        
+                    </ModalBody>
+                    <ModalFooter>
+                        <b className="pull-rightfaq" onClick={() => this.setState({show4: !this.state.show4})}>Close</b>                    
+                    </ModalFooter>
+                </Modal>
+
+                <Modal isOpen={this.state.show5} toggle={() => this.setState({show5: !this.state.show5})} size="lg">
+                    <ModalBody toggle={() => this.setState({show5: !this.state.show5})}>   
+                        <div style={{padding: 20}}>
+                            <h2>How do ParkUpp payments work?</h2>                            
+                            <hr/>
+                            <div style={{marginTop: 20}}>                        
+                                <p>                                                                        
+                                    ParkUpp pays you on a monthly basis through our secure online payment system. 
+                                </p>
+                            </div>
+                        </div>                        
+                    </ModalBody>
+                    <ModalFooter>
+                        <b className="pull-right faq" onClick={() => this.setState({show5: !this.state.show5})}>Close</b>                    
+                    </ModalFooter>
+                </Modal>
+
+                <Modal isOpen={this.state.show6} toggle={() => this.setState({show6: !this.state.show6})} size="lg">
+                    <ModalBody toggle={() => this.setState({show6: !this.state.show6})}>   
+                        <div style={{padding: 20}}>
+                            <h2>Does ParkUpp have insurance?</h2>                            
+                            <hr/>
+                            <div style={{marginTop: 20}}>                        
+                                <p>                                                                        
+                                    Damages to property on ParkUpp are rare as we screen users however should anything happen, 
+                                    we have a third party liability insurance that has you covered.
+                                </p>
+                            </div>
+                        </div>                        
+                    </ModalBody>
+                    <ModalFooter>
+                        <b className="pull-right faq" onClick={() => this.setState({show6: !this.state.show6})}>Close</b>                    
+                    </ModalFooter>
+                </Modal>
 
 
 

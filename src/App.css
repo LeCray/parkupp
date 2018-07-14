@@ -205,6 +205,11 @@
   border:  1px solid red;
 }
 
+.faq{
+  cursor: pointer;
+  display: inline-block;
+}
+
 
 
 
