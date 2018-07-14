@@ -55,7 +55,7 @@ export default class About_Us extends Component {
                 </div>
                 
                 <h1 style={{textAlign: "center", fontSize: 30, marginTop: 20}}>Are you on the Gram?</h1>
-                <p style={{textAlign: "center", fontSize: 20}}>Follow us and check out what’s on the haps!</p>
+                <p style={{textAlign: "center", fontSize: 20, paddingLeft: 30, paddingRight: 30}}>Follow us and check out what’s on the haps!</p>
 
                 <div class="row" style={{flexDirection: "row", justifyContent: "center"}}>
                   <InstagramEmbed
