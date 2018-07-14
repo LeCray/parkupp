@@ -72,6 +72,7 @@ export default class Contact_Us extends Component {
                         | <Link to="/Terms_Conditions" style={{ color: '#FFF' }}>Terms & Conditions </Link> 
                         | <Link to="/Privacy_Policy" style={{ color: '#FFF' }}>Privacy Policy </Link>
                         | <Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link>
+                        | <Link to="/FAQ" style={{ color: '#FFF' }}>FAQ </Link>
                     </p>
                     <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
                 </div> 

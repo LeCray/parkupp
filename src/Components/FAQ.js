@@ -51,7 +51,7 @@ export default class FAQ extends Component {
         <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 50, fontFamily: "Quicksand"}}>
         
             <div class="container" style={{marginTop: 50, padding: 50}}>
-                <h1>FAQ</h1>
+                <h1 style={{fontSize: 30}}>FAQ</h1>
 
                 <div style={{marginTop: 40}}>
                     <p class="faq" onClick={() => this.setState({show1: !this.state.show1})}>Listings</p><br/>
@@ -189,6 +189,7 @@ export default class FAQ extends Component {
                     | <Link to="/Terms_Conditions" style={{ color: '#FFF' }}>Terms & Conditions </Link> 
                     | <Link to="/Privacy_Policy" style={{ color: '#FFF' }}>Privacy Policy </Link>
                     | <Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link>
+                    | <Link to="/FAQ" style={{ color: '#FFF' }}>FAQ </Link>
                 </p>
                 <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
             </div> 

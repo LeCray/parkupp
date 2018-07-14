@@ -73,7 +73,7 @@ export default class GreenHeader extends React.Component {
                                   <DropdownItem><Link to="/Support" onClick={this.onClick}>Support</Link></DropdownItem>
                                   <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClickAgain}>Terms and Conditions</Link></DropdownItem>
                                   <DropdownItem><Link to="/Privacy_Policy" onClick={this.onClickAgain}>Privacy Policy</Link></DropdownItem>
-                                  <DropdownItem><Link to="/FAQ" onClick={this.onClick}>FAQ</Link></DropdownItem>
+                                  <DropdownItem><Link to="/FAQ" onClick={this.onClickAgain}>FAQ</Link></DropdownItem>
                               </DropdownMenu>
                               </Dropdown>
                           </NavItem>

@@ -146,7 +146,7 @@ export default class Landing extends Component {
                         </div>
 
                         <hr class="line margin" style={{borderColor: "#32bca2", width: 120, marginTop: 100}}/>
-                        <Ionicon onClick={() => scrollToComponent(this.why_parkupp, { offset: -50, align: 'top', duration: 1500})} icon="md-arrow-down" fontSize="35px" color="#32bca2"/>
+                        <Ionicon style={{cursor: "pointer"}}onClick={()=>scrollToComponent(this.why_parkupp,{offset:-50,align:'top',duration:1500})} icon="md-arrow-down" fontSize="35px" color="#32bca2"/>
                     </div>
                     
                     
@@ -154,7 +154,7 @@ export default class Landing extends Component {
                         <Link to="/Sign_Up"><h2 style={{fontSize: 30, color: "white"}}>SIGN UP NOW</h2></Link>
                         <h6 style={{fontSize: this.state.mobile? 13: 20}}>
                             STAND A CHANCE TO WIN A R1500 CAR SERVICE VOUCHER<br/> 
-                            BY WATCHING <u onClick={() => scrollToComponent(this.how_it_works, { offset: -100, align: 'top', duration: 1500})}>HOW IT WORKS</u>, 
+                            BY WATCHING <u style={{cursor: "pointer"}} onClick={() => scrollToComponent(this.how_it_works, {offset:-100,align:'top',duration:1500})}>HOW IT WORKS</u>, 
                             <Link to="/Sign_Up" style={{color: "white"}}> <u>SIGNING UP</u></Link> AND <br/>
                             SUBMITTING A COOL SLOGAN<br/>                            
                         </h6>                                                              
@@ -241,7 +241,7 @@ export default class Landing extends Component {
 
                         <div class="row" style={{marginTop: 50, color: "black", paddingLeft: 30, paddingRight: 30,justifyContent: "center" }}>                            
                             <div style={{border: "2px solid #2bbbad", borderRadius: 30, padding: 20}}> 
-                                <h4 style={{fontSize: 20}} onClick={() => scrollToComponent(this.how_it_works, { offset: -100, align: 'top', duration: 1500})}>HOW IT WORKS</h4>
+                                <h4 style={{fontSize: 20, cursor: "pointer"}} onClick={()=>scrollToComponent(this.how_it_works,{offset:-100,align:'top',duration:1500})}>HOW IT WORKS</h4>
                             </div>                                                                                  
                         </div>
                         
@@ -266,14 +266,14 @@ export default class Landing extends Component {
                     <hr style={{borderColor: "#32bca2", width: 120, marginBottom: 50}}/>   
                     */}    
 
-                    <h4 ref={(section) => { this.how_it_works = section; }} style={{marginBottom: 100}}> VIDEO COMING SOON! </h4>
+                    <h4 ref={(section)=>{this.how_it_works=section;}} style={{marginBottom: 100}}> VIDEO COMING SOON! </h4>
 
                    <div style={{position: "relative"}}>
                         <img src={require("../car_two.jpg")} style={{height: "auto", width: "100%", background: "#000000" }} />                                      
                     </div>
                     
 
-                    <div ref={(section) => { this.sign_up = section; }} style={{paddingBottom: 20, backgroundColor: "#32bca2", color: "white"}}>
+                    <div ref={(section)=>{this.sign_up=section;}} style={{paddingBottom: 20, backgroundColor: "#32bca2", color: "white"}}>
       
                         <hr style={{borderColor: "white", width: "75%", marginTop: 0}}/>    
 
@@ -284,6 +284,7 @@ export default class Landing extends Component {
                                 | <Link to="/Terms_Conditions" style={{ color: '#FFF' }}>Terms & Conditions </Link> 
                                 | <Link to="/Privacy_Policy" style={{ color: '#FFF' }}>Privacy Policy </Link>
                                 | <Link to="/Careers" style={{ color: '#FFF' }}>Careers </Link>
+                                | <Link to="/FAQ" style={{ color: '#FFF' }}>FAQ </Link>
                             </p>
                             <p>© Copyright 2018 ParkUpp. All rights reserved</p>                                
                         </div>                    
