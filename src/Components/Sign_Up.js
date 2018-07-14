@@ -74,7 +74,7 @@ export default class Sign_Up extends Component {
         this.setState({height: window.innerHeight + 'px'});
         if (this.state.width < 576) {
             this.setState({mobile: true});
-        }
+        }       
       }
 
     componentDidMount() {
@@ -351,6 +351,9 @@ export default class Sign_Up extends Component {
 
                 <Modal isOpen={this.state.showValidationModal} toggle={this.toggleValidationModal} side position="bottom-right">
                     <ModalBody style={{fontSize: 18}} toggle={this.toggleValidationModal}>
+                        <div style={{textAlign: "center"}}>
+                            <img src={require("../lol.png")} style={{height: 80, marginBottom: 20}}/>
+                        </div> 
                         {this.state.passwordError}
                         {this.passwordError()}
                         {this.state.phoneNumberError}
@@ -368,8 +371,6 @@ export default class Sign_Up extends Component {
                             <div style={{fontSize: 20}}>                        
                                 <b>Welcome to ParkUpp!</b><br/>
                                 <b>Sign up: Success</b>
-                                <hr/>
-                                <p style={{fontSize: 15}}>Now head over to the PlayStore/AppStore for more awesomeness</p>
                             </div>
                         </div>                        
                     </ModalBody>
