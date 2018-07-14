@@ -144,9 +144,7 @@ export default class Parking extends Component {
                         <div style={{padding: 15}}>
                             <h3><span style={{fontSize: 50, color: "#2bbbad", marginRight: 10}}><b>2</b></span><b>Allow Access</b></h3>
                             <p>
-                                For access controlled parking facilities, install LPR technology linked to our
-                                system where parkers can enter using their licence plates. 
-                                For single driveways or parking bays, simply leave parkupp enabled QR code at gate for users to tag and check-in.
+                                For driveways and privately owned parking, simply allow user to park.
                             </p>
                         </div>                    
                     </div>
@@ -161,9 +159,7 @@ export default class Parking extends Component {
                         <div class="col-lg-5" style={{padding: 15}}>                                        
                             <h3><b>Allow Access</b></h3>
                             <p>
-                                For access controlled parking facilities, install LPR technology linked to our
-                                system where parkers can enter using their licence plates. 
-                                For single driveways or parking bays, simply leave parkupp enabled QR code at gate for users to tag and check-in.
+                                For driveways and privately owned parking, simply allow user to park.
                             </p>
                         </div>
                     </div>

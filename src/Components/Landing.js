@@ -140,7 +140,7 @@ export default class Landing extends Component {
                                 <div>
                                     <img src={require("../parkers.png")} style={{height: 80, marginBottom: 10}}/> 
                                     <h2 style={{color: "#e6c131"}}>{this.state.driverCount}</h2>
-                                    <h4 style={{color: "#32bca2"}}>Sharing<br/>Parkers</h4>   
+                                    <h4 style={{color: "#32bca2"}}>Users</h4>   
                                 </div>
                             </div>
                         </div>
@@ -168,19 +168,21 @@ export default class Landing extends Component {
                         <div class="row" style={{marginTop: 50, color: "black"}}>
                             <div class="col-lg-4">
                                 <div >
-                                    <img src={require("../time.png")} style={{height: 130}} /> 
+                                    <img src={require("../search.png")} style={{height: 130}} /> 
                                     <h5 style={{marginTop: 50}}><strong>Find Parking</strong></h5>
-                                    <p style={{paddingLeft: 20, paddingRight: 20}}>Stop driving around tirelessly finding parking. Search on the app and book your time</p>
+                                    <p style={{paddingLeft: 20, paddingRight: 20}}>
+                                        Stop driving around tirelessly finding parking. Search on the app and book your time
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-lg-4 pictures">
                                 <div>
                                     <img src={require("../culture.png")} style={{height: 130}} />
                                     <h5 style={{marginTop: 50}}><strong>Share Culture</strong></h5>
-                                    <p style={{textAlign: "center"}}>
-                                        ParkUpp lets you list your<br/>
-                                        driveway so drivers can<br/>
-                                        find parking anywhere in<br/>
+                                    <p style={{paddingLeft: 20, paddingRight: 20}}>
+                                        ParkUpp lets you list your
+                                        driveway so drivers can
+                                        find parking anywhere in
                                         the city
                                     </p>
                                 </div>
@@ -189,10 +191,10 @@ export default class Landing extends Component {
                                 
                                 <img src={require("../pay_easy.png")} style={{height: 130}} />
                                 <h5 style={{marginTop: 50}}><strong>Pay Easy</strong></h5>
-                                <p>
-                                    Users can find their spot<br/>
-                                    and pay for it with the<br/>
-                                    app and cut out any cash<br/>
+                                <p style={{paddingLeft: 20, paddingRight: 20}}>
+                                    Users can find their spo
+                                    and pay for it with the
+                                    app and cut out any cash
                                     exchange
                                 </p>
                                 
