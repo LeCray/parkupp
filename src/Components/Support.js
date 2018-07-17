@@ -35,7 +35,7 @@ export default class Support extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.driver = this.driver.bind(this);
         this.owner = this.owner.bind(this);
-    }
+    }    
 
     handleChange(event) {
         this.setState({value: event.target.value});
@@ -56,6 +56,32 @@ export default class Support extends Component {
     componentDidMount() {
       window.scrollTo(0, 0)
     }
+
+    handleInputChange (evt) {
+        this.setState({ [evt.target.name]: evt.target.value })
+    }
+
+    async handleSubmit() {   
+                                    
+        fetch("http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users/new", {
+            method: "POST", 
+            headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+            body: JSON.stringify({
+                name: this.state.name,                    
+                email: this.state.email,
+                message: this.state.message,                                    
+            }), 
+
+        })  
+        .then(response => response.json())                                              
+        .then(this.disableBtn())                
+        .catch((error) => {
+          console.error(error);
+        })
+            
+                          
+    }
+
 
     render() {   
     return(        

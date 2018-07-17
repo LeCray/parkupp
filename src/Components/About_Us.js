@@ -58,18 +58,20 @@ export default class About_Us extends Component {
                 <p style={{textAlign: "center", fontSize: 20, paddingLeft: 30, paddingRight: 30}}>Follow us and check out what’s on the haps!</p>
 
                 <div class="row" style={{flexDirection: "row", justifyContent: "center"}}>
+
                   <InstagramEmbed
                     url='https://www.instagram.com/p/BlHqn_NFg51/?hl=en&taken-by=_parkupp'
-                    maxWidth={340}
+                    maxWidth={350}
                     hideCaption={true}
                     containerTagName='div'
                     protocol=''
                     injectScript
                     style={{margin: 20}}
-                  />                
+                  /> 
+
                   <InstagramEmbed
                     url='https://www.instagram.com/p/BlDfnekF7ZM/?hl=en&taken-by=_parkupp'
-                    maxWidth={340}
+                    maxWidth={350}
                     hideCaption={true}
                     containerTagName='div'
                     protocol=''
@@ -78,7 +80,7 @@ export default class About_Us extends Component {
                   />
                   <InstagramEmbed
                     url='https://www.instagram.com/p/BkjnrIuDHgt/?hl=en&taken-by=_parkupp'
-                    maxWidth={340}
+                    maxWidth={350}
                     hideCaption={true}
                     containerTagName='div'
                     protocol=''

@@ -4,10 +4,7 @@ import { Input, Button, Fa, Card, CardBody, ModalFooter } from 'mdbreact';
 import Ionicon from 'react-ionicons'
 //import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import scrollToComponent from 'react-scroll-to-component';
-
-
-
-
+    
 import { Link } from 'react-router-dom'
 
 import ReactPlayer from 'react-player';

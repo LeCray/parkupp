@@ -3,6 +3,7 @@ import Ionicon from 'react-ionicons'
 import { Link } from 'react-router-dom'
 import { Input, Button, Fa, Card, CardBody, ModalFooter } from 'mdbreact';
 
+
 import {
   Collapse,
   Navbar,
@@ -25,7 +26,14 @@ export default class Parking extends Component {
         super(props);
         this.state = {            
             width: window.innerWidth,
-            mobile: false
+            mobile: false,            
+            show1: false,
+            show2: false,
+            show3: false,
+            show4: false,
+            show5: false,
+            show6: false
+        
         };
     }
     
@@ -292,6 +300,68 @@ export default class Parking extends Component {
                         </div>
                     </div>
                 }
+
+            <h3 style={{marginTop: 50}}>Frequently Asked Questions</h3>
+            <div style={{marginTop: 50}} class="row">
+                <div class="col-lg-6">
+                    <h5 class="faq" onClick={() => this.setState({show1: !this.state.show1})}>Listings</h5>
+                    <p style={{display: this.state.show1?"block":"none"}}>
+                        It’s easy to list your space in most high traffic areas and you list for free. 
+                        If you have a parking facility, idle driveway, privately owned garage, parking space in a building, 
+                        church parking lot you’d like to make extra cash from during the week or any parking based in the CBD or 
+                        high density suburban areas, ParkUpp will find you users.
+                    </p>
+                    <hr/>
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="faq" onClick={() => {this.setState({show2: !this.state.show2})}}>
+                    What type of parking is provided for?</h5>
+                    <p style={{display: this.state.show2?"block":"none"}}>
+                        Short term parking - this is where users can use your parking for less than a month.<br/>
+                        Long term parking - usually longer than a month.<br/>
+                        Booked parking - sometimes drivers know where they are going and will book your parking days before.<br/>
+                        On-demand - sometimes users won’t know where they are going until they get there.
+                    </p>
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5 class="faq" onClick={() => this.setState({show3: !this.state.show3})}>Who uses ParkUpp?</h5>
+                    <p style={{display: this.state.show3?"block":"none"}}>
+                        People going to meetings, work, events, going for shopping, markets and everything else in between
+                    </p>
+                    <hr/>
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="faq" onClick={() => this.setState({show4: !this.state.show4})}>Earnings</h5>
+                    <p style={{display: this.state.show4?"block":"none"}}>
+                        How should I price my listing on ParkUpp?<br/>
+                        What you charge is up to you but we give you some tips on how 
+                        to charge based on our smart analytic tools to help you to be more competitive. 
+                        You can charge daily, weekly and monthly.
+                    </p>
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h5 class="faq" onClick={() => this.setState({show5: !this.state.show5})}>How do ParkUpp payments work?</h5>
+                    <p style={{display: this.state.show5?"block":"none"}}>
+                        ParkUpp pays you on a monthly basis through our secure online payment system. 
+                    </p>
+                    <hr/>
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="faq" onClick={() => this.setState({show6: !this.state.show6})}>Does ParkUpp have insurance?</h5>
+                    <p style={{display: this.state.show6?"block":"none"}}>
+                        Damages to property on ParkUpp are rare as we screen users however should anything happen, 
+                        we have a third party liability insurance that has you covered.
+                    </p>
+                    <hr/>
+                </div>
+            </div>
+
             </div>
                 
             <div style={{paddingBottom: 20, backgroundColor: "#32bca2", color: "white", textAlign: "center", marginTop: 100}}>

@@ -210,6 +210,15 @@
   display: inline-block;
 }
 
+.basket {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+.basket.hide {
+  opacity: 0;
+  pointer-events:none;
+}
+
 
 
 
