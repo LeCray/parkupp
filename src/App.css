@@ -175,6 +175,13 @@
     height: 200px;    
 }
 
+.mainBackground {
+    background-image: url('./parkupp.gif');
+    background-repeat: no-repeat;
+    background-size:100% auto;
+    height: 100vh;    
+}
+
 .video {
   height: 400px; 
   width: 700px
@@ -203,6 +210,10 @@
 
 .borderr{
   border:  1px solid red;
+}
+
+.borderWhite{
+  border:  1px solid white;
 }
 
 .faq{

@@ -62,17 +62,25 @@ export default class Parking extends Component {
                     long term parking or an idle driveway.<br/> 
                     ParkUpp helps you find users for your parking.
                 </p>
+
+                <div class="pull-right">
+                    <Link to="/List"><Button color="blue"> DISCOVER PARKING</Button> </Link>
+                </div>
             </div>
             :
                 <div class="girlBackground woman" style={{flex: 1,  paddingTop: "15%", paddingLeft: 150, color: "white", fontFamily: "Quicksand"}}>                
-                    <div>
+                    <div style={{display: "inline-block "}}>
                         <h4>Get paid with ParkUpp</h4>
                         <p>
                             Whether you have an existing parking facility, 
                             long term parking or an idle driveway.<br/> 
                             ParkUpp helps you find users for your parking.
                         </p>
-                    </div>                                 
+                    </div> 
+
+                    <div className="align-top" style={{display: "inline-block", marginLeft: "20%"}}>
+                        <Link to="/List"><Button color="blue">LIST PARKING</Button> </Link>
+                    </div>                                
                 </div>
             }
             

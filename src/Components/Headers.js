@@ -19,7 +19,9 @@ const Headers = () => (
         <Route path="/Privacy_Policy" component={WhiteHeader}/>
         <Route path="/Careers" component={WhiteHeader}/>
         <Route path="/About_Us" component={WhiteHeader}/>
-        <Route path="/FAQ" component={WhiteHeader}/>   
+        <Route path="/FAQ" component={WhiteHeader}/>
+        <Route path="/List" component={WhiteHeader}/>
+        <Route path="/Discover_Parking" component={WhiteHeader}/>   
               
     </Switch>
   

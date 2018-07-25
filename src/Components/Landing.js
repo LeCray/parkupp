@@ -116,7 +116,11 @@ export default class Landing extends Component {
             <link rel="stylesheet" href="/css/video-react.css" />
             <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>			
             <div style={{overflow: "hidden", fontFamily: "Quicksand"}}> 
-                <img src={require("../parkupp.gif")} style={{width: "100%"}} /> 
+
+                <div class="mainBackground" style={{flex: 1,  paddingTop: "30%", paddingLeft: "15%", color: "white"}}>
+                    <Link to="/Discover_Parking"><Button color="blue"> DISCOVER PARKING</Button> </Link>
+                </div>
+
                 <div style={{textAlign: "center", paddingTop: 100}}>
 
                     {/* PARKUPP */}

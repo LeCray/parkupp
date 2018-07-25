@@ -11,6 +11,9 @@ import About_Us from './About_Us';
 import Sign_Up from './Sign_Up';
 import Parking from './Parking';
 import FAQ from './FAQ';
+import List from './List';
+import Discover_Parking from './Discover_Parking';
+
 
 
 
@@ -27,6 +30,8 @@ const Main = () => (
         <Route path="/Sign_Up" component={Sign_Up}/>
         <Route path="/Parking" component={Parking}/>
         <Route path="/FAQ" component={FAQ}/>
+        <Route path="/List" component={List}/>
+        <Route path="/Discover_Parking" component={Discover_Parking}/>
         
     </Switch>
   </main>
