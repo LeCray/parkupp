@@ -118,7 +118,11 @@ export default class Landing extends Component {
             <div style={{overflow: "hidden", fontFamily: "Quicksand"}}> 
 
                 <div class="mainBackground" style={{flex: 1,  paddingTop: "30%", paddingLeft: "15%", color: "white"}}>
-                    <Link to="/Discover_Parking"><Button color="blue"> DISCOVER PARKING</Button> </Link>
+                    <Link to="/Discover_Parking">
+                        <p class="button ourButton"> 
+                            DISCOVER PARKING
+                        </p> 
+                    </Link>
                 </div>
 
                 <div style={{textAlign: "center", paddingTop: 100}}>
@@ -171,7 +175,7 @@ export default class Landing extends Component {
                                 <div >
                                     <img src={require("../search.png")} style={{height: 130}} /> 
                                     <h5 style={{marginTop: 50}}><strong>Find Parking</strong></h5>
-                                    <p style={{paddingLeft: 20, paddingRight: 20}}>
+                                    <p style={{paddingLeft: 80, paddingRight: 80}}>
                                         Stop driving around tirelessly finding parking. Search on the app and book your time
                                     </p>
                                 </div>
@@ -180,7 +184,7 @@ export default class Landing extends Component {
                                 <div>
                                     <img src={require("../culture.png")} style={{height: 130}} />
                                     <h5 style={{marginTop: 50}}><strong>Share Culture</strong></h5>
-                                    <p style={{paddingLeft: 20, paddingRight: 20}}>
+                                    <p style={{paddingLeft: 80, paddingRight: 80}}>
                                         ParkUpp lets you list your
                                         driveway so drivers can
                                         find parking anywhere in
@@ -192,7 +196,7 @@ export default class Landing extends Component {
                                 
                                 <img src={require("../pay_easy.png")} style={{height: 130}} />
                                 <h5 style={{marginTop: 50}}><strong>Pay Easy</strong></h5>
-                                <p style={{paddingLeft: 20, paddingRight: 20}}>
+                                <p style={{paddingLeft: 80, paddingRight: 80}}>
                                     Users can find their spo
                                     and pay for it with the
                                     app and cut out any cash
@@ -211,7 +215,7 @@ export default class Landing extends Component {
                                     <div >
                                         <img src={require("../star.png")} style={{height: 130}} /> 
                                         <h5 style={{marginTop: 50}}><strong>Vetting</strong></h5>
-                                        <p style={{paddingLeft: 20, paddingRight: 20}}>
+                                        <p style={{paddingLeft: 80, paddingRight: 80}}>
                                             Owners of driveways and parking lots including drivers are vetted through detailed profiles, 
                                             peer-to-peer rating and confirmed verification
                                         </p>
@@ -221,7 +225,7 @@ export default class Landing extends Component {
                                     <div>
                                         <img src={require("../lock.png")} style={{height: 130}} />
                                         <h5 style={{marginTop: 50}}><strong>Sharing with Trust</strong></h5>
-                                        <p style={{paddingLeft: 20, paddingRight: 20}}>
+                                        <p style={{paddingLeft: 80, paddingRight: 80}}>
                                            ParkUpp verifies each user and owner profile 
                                            while payments are made through a secure payment gateway
                                         </p>
@@ -231,7 +235,7 @@ export default class Landing extends Component {
                                     
                                     <img src={require("../support.png")} style={{height: 130}} />
                                     <h5 style={{marginTop: 50}}><strong>24/7 Support</strong></h5>
-                                    <p style={{textAlign: "center", paddingLeft: 20, paddingRight: 20}}>
+                                    <p style={{textAlign: "center", paddingLeft: 80, paddingRight: 80}}>
                                        We have a world class support team and a chat bot ready to help you around the clock.
                                     </p>
                                     
