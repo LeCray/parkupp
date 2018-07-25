@@ -129,7 +129,7 @@ export default class Landing extends Component {
 
                     {/* PARKUPP */}
                     <div class="parkupp height" 
-                        style={{paddingBottom: 20, marginTop: "10%", marginBottom: 30, backgroundColor: "white", height: "100%", paddingLeft: 20, paddingRight: 20}}>
+                        style={{paddingBottom: 20, marginTop: "5%", marginBottom: 30, backgroundColor: "white", height: "100%", paddingLeft: 20, paddingRight: 20}}>
                         <h1 style={{color: "#32bca2", fontSize: 60}}><strong>ParkUpp</strong></h1><br/>
                         
 

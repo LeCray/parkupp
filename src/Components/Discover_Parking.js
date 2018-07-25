@@ -51,38 +51,47 @@ export default class Discover_Parking extends Component {
                     
             <div class="container" style={{padding: 40}}>    
                 <div class="row" style={{flexDirection: "row", justifyContent: "center"}}>
-                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right"}}>
+                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right", backgroundColor: "white", borderRadius: 3}}>
                         <p class="button ourBookingButton  pull-right" onClick={() => this.setState({show1: !this.state.show1})}>Book</p>                    
+                        <p style={{textAlign: "center", marginTop: 100, color: "black"}}>COMING SOON</p>
                     </div>
-                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right"}}>
+                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right", backgroundColor: "white", borderRadius: 3}}>
                         <p class="button ourBookingButton  pull-right">Book</p>
+                        <p style={{textAlign: "center", marginTop: 100, color: "black"}}>COMING SOON</p>
                     </div>
-                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right"}}>
+                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right", backgroundColor: "white", borderRadius: 3}}>
                         <p class="button ourBookingButton  pull-right">Book</p>
-                    </div>
-                </div>
-
-                <div class="row" style={{flexDirection: "row", justifyContent: "center"}}>
-                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right"}}>
-                        <p class="button ourBookingButton  pull-right">Book</p>
-                    </div>
-                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right"}}>
-                        <p class="button ourBookingButton  pull-right">Book</p>
-                    </div>
-                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right"}}>
-                        <p class="button ourBookingButton  pull-right">Book</p>
+                        <p style={{textAlign: "center", marginTop: 100, color: "black"}}>COMING SOON</p>
                     </div>
                 </div>
 
                 <div class="row" style={{flexDirection: "row", justifyContent: "center"}}>
-                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right"}}>
+                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right", backgroundColor: "white", borderRadius: 3}}>
                         <p class="button ourBookingButton  pull-right">Book</p>
+                        <p style={{textAlign: "center", marginTop: 100, color: "black"}}>COMING SOON</p>
                     </div>
-                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right"}}>
+                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right", backgroundColor: "white", borderRadius: 3}}>
                         <p class="button ourBookingButton  pull-right">Book</p>
+                        <p style={{textAlign: "center", marginTop: 100, color: "black"}}>COMING SOON</p>
                     </div>
-                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right"}}>
+                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right", backgroundColor: "white", borderRadius: 3}}>
                         <p class="button ourBookingButton  pull-right">Book</p>
+                        <p style={{textAlign: "center", marginTop: 100, color: "black"}}>COMING SOON</p>
+                    </div>
+                </div>
+
+                <div class="row" style={{flexDirection: "row", justifyContent: "center"}}>
+                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right", backgroundColor: "white", borderRadius: 3}}>
+                        <p class="button ourBookingButton  pull-right">Book</p>
+                        <p style={{textAlign: "center", marginTop: 100, color: "black"}}>COMING SOON</p>
+                    </div>
+                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right", backgroundColor: "white", borderRadius: 3}}>
+                        <p class="button ourBookingButton  pull-right">Book</p>
+                        <p style={{textAlign: "center", marginTop: 100, color: "black"}}>COMING SOON</p>
+                    </div>
+                    <div class="borderWhite" style={{margin: 30, height: 200, width: 300, textAlign: "right", backgroundColor: "white", borderRadius: 3}}>
+                        <p class="button ourBookingButton  pull-right">Book</p>
+                        <p style={{textAlign: "center", marginTop: 100, color: "black"}}>COMING SOON</p>
                     </div>
                 </div>
             </div>   
