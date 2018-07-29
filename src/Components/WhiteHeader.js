@@ -15,28 +15,38 @@ export default class GreenHeader extends React.Component {
             collapse: false,
             isWideEnough: false,
             dropdownOpen: false,
-            color: false
+            color: false,
+            mobile: false,
+            width: window.innerWidth,
         };
     this.onClick = this.onClick.bind(this);
-    this.onClickAgain = this.onClickAgain.bind(this);
+    //this.onClickAgain = this.onClickAgain.bind(this);
     this.toggle = this.toggle.bind(this);
+    }
+
+    componentWillMount() {
+      if (this.state.width <= 576) {
+          this.setState({mobile: true})
+        }
     }
 
     onClick(){
         this.setState({
             collapse: !this.state.collapse,            
         });
-        this.state.color ? setTimeout(() => {this.setState({color: !this.state.color})}, 500) : this.setState({color: !this.state.color})
+        if (this.state.mobile) {
+          this.state.color?setTimeout(() => {this.setState({color: !this.state.color})}, 500) : this.setState({color: !this.state.color})
+        }
     }
 
-
+/*
     onClickAgain(){
       this.setState({
             collapse: !this.state.collapse            
         });       
                                 
     }
-
+*/
     toggle() {
         this.setState({
             dropdownOpen: !this.state.dropdownOpen
@@ -55,26 +65,26 @@ export default class GreenHeader extends React.Component {
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>  
-                           
+
                           <NavItem>
-                              <NavLink to="/Parking" onClick={this.onClickAgain} style={{fontStyle:"bold"}}>Have parking?</NavLink>
+                              <NavLink to="/Parking" onClick={this.onClick} style={{fontStyle:"bold"}}>Have parking?</NavLink>
                           </NavItem>                                               
                           <NavItem>
                               <NavLink to="/Sign_Up" onClick={this.onClick} style={{fontStyle:"bold"}}>Sign up</NavLink>
                           </NavItem>
                           <NavItem>
-                              <NavLink to="/About_Us" onClick={this.onClickAgain}>About us</NavLink>
+                              <NavLink to="/About_Us" onClick={this.onClick}>About us</NavLink>
                           </NavItem>
                           <NavItem>
                               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                               <DropdownToggle nav caret>Menu</DropdownToggle>
                               <DropdownMenu>
-                                  <DropdownItem><Link to="/Contact_Us" onClick={this.onClickAgain}><b>Contact us</b></Link></DropdownItem>
-                                  <DropdownItem><Link to="/Careers" onClick={this.onClickAgain}>Careers</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Contact_Us" onClick={this.onClick}><b>Contact us</b></Link></DropdownItem>
+                                  <DropdownItem><Link to="/Careers" onClick={this.onClick}>Careers</Link></DropdownItem>
                                   <DropdownItem><Link to="/Support" onClick={this.onClick}>Support</Link></DropdownItem>
-                                  <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClickAgain}>Terms and Conditions</Link></DropdownItem>
-                                  <DropdownItem><Link to="/Privacy_Policy" onClick={this.onClickAgain}>Privacy Policy</Link></DropdownItem>
-                                  <DropdownItem><Link to="/FAQ" onClick={this.onClickAgain}>FAQ</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClick}>Terms and Conditions</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Privacy_Policy" onClick={this.onClick}>Privacy Policy</Link></DropdownItem>
+                                  <DropdownItem><Link to="/FAQ" onClick={this.onClick}>FAQ</Link></DropdownItem>
                               </DropdownMenu>
                               </Dropdown>
                           </NavItem>

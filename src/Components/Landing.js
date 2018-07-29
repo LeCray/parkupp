@@ -150,7 +150,7 @@ export default class Landing extends Component {
                             </div>
                         </div>
 
-                        <hr class="line margin" style={{borderColor: "#32bca2", width: 120, marginTop: 100}}/>
+                        <hr class="line margin" style={{borderColor: "#32bca2", width: 120, marginTop: this.state.mobile?50:100}}/>
                         <Ionicon style={{cursor: "pointer"}}onClick={()=>scrollToComponent(this.why_parkupp,{offset:-50,align:'top',duration:1500})} icon="md-arrow-down" fontSize="35px" color="#32bca2"/>
                     </div>
                     
@@ -206,8 +206,8 @@ export default class Landing extends Component {
                             </div>
                         </div>
                         
-                        <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: 100}}/>
-                        <div class="height"  style={{height: "100%", paddingTop: 100, paddingBottom: 50, backgroundColor: "white"}}>
+                        <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: this.state.mobile?50:100}}/>
+                        <div class="height"  style={{height: "100%", paddingTop: this.state.mobile?50:100, paddingBottom: 50, backgroundColor: "white"}}>
                             <h1 style={{color: "black", fontSize: 30, marginBottom: 50}}><strong>ParkUpp Works on Trust and Safety</strong></h1>
 
                             <div class="row" style={{marginTop: 50, color: "black"}}>
@@ -243,17 +243,18 @@ export default class Landing extends Component {
                             </div>
                         </div>        
 
-
+                        {/*}
                         <div class="row" style={{marginTop: 50, color: "black", paddingLeft: 30, paddingRight: 30,justifyContent: "center" }}>                            
                             <div style={{border: "2px solid #2bbbad", borderRadius: 30, padding: 20}}> 
                                 <h4 style={{fontSize: 20, cursor: "pointer"}} onClick={()=>scrollToComponent(this.how_it_works,{offset:-100,align:'top',duration:1500})}>HOW IT WORKS</h4>
                             </div>                                                                                  
                         </div>
+                        */}
                         
-                        <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: 50}}/>                        
+                        <hr class="margin" style={{borderColor: "#2bbbad", width: 120, marginTop: this.state.mobile?0:50}}/>                        
                     </div>
 
-                    {/* HOW IT WORKS 2
+                    {/* HOW IT WORKS 2 */}
                     
                                                               
                     <h1 ref={(section) => { this.how_it_works = section; }} style={{color: "black", fontSize: 30, marginBottom: 50}}><strong>How it works</strong></h1>                                          
@@ -268,10 +269,7 @@ export default class Landing extends Component {
                         />  
                     </div>                                                
                     
-                    <hr style={{borderColor: "#32bca2", width: 120, marginBottom: 50}}/>   
-                    */}    
-
-                    <h4 ref={(section)=>{this.how_it_works=section;}} style={{marginBottom: 100}}> VIDEO COMING SOON! </h4>
+                    <hr style={{borderColor: "#32bca2", width: 120, marginBottom: 50}}/>                                              
 
                    <div style={{position: "relative"}}>
                         <img src={require("../Resources/car_two.jpg")} style={{height: "auto", width: "100%", background: "#000000" }} />                                      
