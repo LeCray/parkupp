@@ -87,9 +87,9 @@ export default class Support extends Component {
     return(        
         <div>                    
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>  
-        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100vh", fontFamily: "Quicksand"}}>
+        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100%", fontFamily: "Quicksand"}}>
         
-            <div >
+            
                 <div class="container" style={{padding: 40}}>                    
                     
                     <section className="form-dark">
@@ -117,8 +117,8 @@ export default class Support extends Component {
                     <hr style={{borderColor: "white", width: "75%", marginTop: 150}}/> 
 
                 </div>                       
-            </div>
-            <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
+            
+            <div style={{marginTop: -50, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
                 <p>
                     <Link to="/Support" style={{ color: '#FFF' }}>Support |</Link>
                     <Link to="/Contact_Us" style={{ color: '#FFF' }}> Contact us |</Link>  
