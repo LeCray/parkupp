@@ -87,14 +87,14 @@ export default class Support extends Component {
     return(        
         <div>                    
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>  
-        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: "100%", fontFamily: "Quicksand"}}>
+        <div style={{backgroundColor: "#fff", color: "#2bbbad", paddingTop: 100, height: "100%", fontFamily: "Quicksand"}}>
         
             
                 <div class="container" style={{padding: 40}}>                    
                     
                     <section className="form-dark">
                         <div class="row">
-                            <div class="col-lg-6 offset-lg-3">
+                            <div class="col-lg-6 offset-lg-3" style={{textAlign: "center"}}>
                                 <img src={require("../Resources/support.png")} style={{height: 100, marginBottom: 10}} /> 
                                 <h1 style={{fontSize: 30, marginTop: 20}}>Support</h1>  
                                 <p style={{fontSize: 20}}>Send us an mail and we will contact you</p>                  
@@ -107,8 +107,10 @@ export default class Support extends Component {
                                     <textarea type="text" class="md-form form-dark md-textarea" rows="2" style={{width: "100%", color: "white"}}></textarea>
                                     <label>Message</label>
                                 </div>                                    
-                                                                                               
-                                <Button color="yellow" rounded type="button" className="btn pull-left" style={{marginTop: -20}}>Submit</Button>
+                                
+                                <div class="offset-lg-3 col-lg-6">
+                                    <p class="signUpButton btn-block" style={{marginTop: -20}}>Submit</p>
+                                </div>
                                                                                                                                                  
                             </div>
                         </div>

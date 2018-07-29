@@ -277,9 +277,9 @@ export default class Sign_Up extends Component {
     return(  
         <div>                    
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
-        <div style={{backgroundColor: "#2bbbad", height: "100%", paddingTop: 50, fontFamily: "Quicksand"}}>
+        <div style={{backgroundColor: "#fff", height: "100%", paddingTop: 50, fontFamily: "Quicksand"}}>
                     
-            <div className="container" style={{padding: 40, color: "white", marginTop: 50}}>
+            <div className="container" style={{padding: 40, color: "#2bbbad", marginTop: 50}}>
                <section className="form-dark">
                     <div className="row">
                         <div className="col-lg-6 offset-lg-3" style={{paddingRight: 30, textAlign: "center"}}>
@@ -290,13 +290,13 @@ export default class Sign_Up extends Component {
                                     label="First Name" 
                                     name="first_name" 
                                     type="text" 
-                                    style={{color: "white"}} 
+                                    style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
                                 <Input 
                                     label="Last Name"  
                                     name="last_name" 
                                     type="text" 
-                                    style={{color: "white"}} 
+                                    style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
                                 <Input 
                                     label="Email Address" 
@@ -304,13 +304,13 @@ export default class Sign_Up extends Component {
                                     type="email"  
                                     validators={['required', 'isEmail']}    
                                     errorMessages={['this field is required', 'email is not valid']}                               
-                                    style={{color: "white"}} 
+                                    style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
                                 
                                 <div style={{textAlign: "center"}} >  
-                                    <div style={{flexDirection: "row"}}>
+                                    <div style={{flexDirection: "row"}}>                                    
                                         <p class="button signUpButton" style={{backgroundColor: this.state.driver?"#e6c131":"#21406a"}} onClick={this.driver}>DRIVER</p>
-                                        <p class="button signUpButton" style={{backgroundColor: this.state.owner?"#e6c131":"#21406a"}} onClick={this.owner}>OWNER</p>
+                                        <p class="button signUpButton" style={{backgroundColor: this.state.owner?"#e6c131":"#21406a"}} onClick={this.owner}>OWNER</p>                                    
                                     </div>
                                 </div>
                                                                 
@@ -324,25 +324,25 @@ export default class Sign_Up extends Component {
                                     label="Password" 
                                     name="password" 
                                     type="text" 
-                                    style={{color: "white"}} 
+                                    style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
                                 <Input 
                                     label="Confirm Password" 
                                     name="confirm_password" 
                                     type="text" 
-                                    style={{color: "white"}} 
+                                    style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
                                 <Input 
                                     label="Type your cool slogan here..."  
                                     name="slogan" 
                                     type="text" 
-                                    style={{color: "white"}} 
+                                    style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
  
-                                <h6 style={{color: "#fff", fontSize: 12}}> *Increase your chance of winning by following our social media accounts</h6>
+                                <h6 style={{color: "#2bbbad", fontSize: 12}}> *Increase your chance of winning by following our social media accounts</h6>
                                 <div style={{flexDirection: "row"}}>                                        
-                                    <a href="https://twitter.com/_parkupp?lang=en" target="_blank" style={{marginRight: 5}}><Ionicon icon="logo-twitter" fontSize="20px" color="#fff"/></a>
-                                    <a href="https://www.instagram.com/_parkupp/?hl=en" target="_blank"><Ionicon icon="logo-instagram" fontSize="20px" color="#fff"/></a>                                        
+                                    <a href="https://twitter.com/_parkupp?lang=en" target="_blank" style={{marginRight: 5}}><Ionicon icon="logo-twitter" fontSize="20px" color="#2bbbad"/></a>
+                                    <a href="https://www.instagram.com/_parkupp/?hl=en" target="_blank"><Ionicon icon="logo-instagram" fontSize="20px" color="#2bbbad"/></a>                                        
                                 </div>
 
                        

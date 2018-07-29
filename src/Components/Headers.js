@@ -10,8 +10,8 @@ import WhiteHeader from './WhiteHeader';
 const Headers = () => (
   
     <Switch>    	
-        <Route path="/Support" component={WhiteHeader}/>
-        <Route path="/Sign_Up" component={WhiteHeader}/>
+        <Route path="/Support" component={GreenHeader}/>
+        <Route path="/Sign_Up" component={GreenHeader}/>
         <Route exact path="/" component={WhiteHeader}/>
         <Route path="/Parking" component={WhiteHeader}/>
         <Route path="/Contact_Us" component={WhiteHeader}/>

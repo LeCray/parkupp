@@ -40,9 +40,9 @@
   height: 15px; }
 
 .form-dark .md-form label {
-  color: #fff; }
+  color: #2bbbad; }
 .form-light .md-form label {
-  color: #fff; }
+  color: #2bbbad; }
 
 .form-dark .md-form input[type=text]:focus:not([readonly]) {
   border-bottom: 1px solid #e6c131;
