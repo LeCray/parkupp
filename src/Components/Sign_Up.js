@@ -194,11 +194,12 @@ export default class Sign_Up extends Component {
               console.error(error);
             })
             
-        fetch("http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/users/new", {
+        fetch("http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/slogan", {
             method: "POST", 
             headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
             body: JSON.stringify({
-                name: this.state.name                                                            
+                email: this.state.email,
+                slogan: this.state.slogan                                                           
             }), 
 
         })
