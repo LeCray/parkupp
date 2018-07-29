@@ -39,11 +39,8 @@ export default class Contact_Us extends Component {
                     <div class="row">
                         <div class="col-sm-12">
                             <p style={{marginTop: 50, fontSize: 20}}>
-                                Happy Email: <br/>  
-                                <u>happychappy@parkupp.co.za</u> 
-                                <br/><br/>                                                 
-                                Sad Email: <br/>
-                                <u>frowniebrownie@parkupp.co.za</u> 
+                                Email: hello@parkupp.co.za
+                                 
                                 <br/>
                                 <div style={{marginTop: 35, flexDirection: "row"}}>
                                     <Ionicon icon="logo-facebook" fontSize="35px" color="#fff"/>
