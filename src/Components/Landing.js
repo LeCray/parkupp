@@ -125,7 +125,7 @@ export default class Landing extends Component {
                     </Link>*/}
                 </div>
 
-                <div style={{textAlign: "center", paddingTop: this.state.mobile?0:100, marginTop: this.state.mobile?-300:0}}>
+                <div style={{textAlign: "center", paddingTop: this.state.mobile?0:100, marginTop: this.state.mobile?-370:0}}>
 
                     {/* PARKUPP */}
                     <div class="parkupp height" 
