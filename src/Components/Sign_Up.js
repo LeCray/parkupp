@@ -93,6 +93,8 @@ export default class Sign_Up extends Component {
       }
 
     validateOption() {
+        this.disableBtn()
+
         console.log(this.state.driver)
         console.log(this.state.owner)
 
@@ -100,7 +102,8 @@ export default class Sign_Up extends Component {
             this.togglePleaseSelectModal()
             this.disableBtn()
         } else {
-            this.handleSubmit()            
+            this.handleSubmit()
+            this.disableBtn()        
         }
     }
 
@@ -112,8 +115,7 @@ export default class Sign_Up extends Component {
 
         console.log(this.state.driver)
         console.log(this.state.driver)
-         
-        this.disableBtn()
+             
 
         if (this.state.driver && this.state.owner) {
             await this.setState({user_type: "both"})                
@@ -188,27 +190,29 @@ export default class Sign_Up extends Component {
                     }
                 }
 
-                this.disableBtn()
+                
             })
             .catch((error) => {
               console.error(error);
             })
             
-        fetch("http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/slogan", {
-            method: "POST", 
-            headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
-            body: JSON.stringify({
-                email: this.state.email,
-                slogan: this.state.slogan                                                           
-            }), 
+            fetch("http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/slogan", {
+                method: "POST", 
+                headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+                body: JSON.stringify({
+                    email: this.state.email,
+                    slogan: this.state.slogan                                                           
+                }), 
 
-        })
-        .then(response => response.json())                                              
-        .then(this.disableBtn())                
-        .catch((error) => {
-          console.error(error);
-        })
-        }                     
+            })
+            .then(response => response.json())                                              
+            .then(this.disableBtn())                
+            .catch((error) => {
+              console.error(error);
+            })
+        }     
+
+                       
     }
 
     toggleModal() {   
@@ -374,7 +378,7 @@ export default class Sign_Up extends Component {
                         {this.phoneNumberError()}
                         {this.state.emailError}
                         {this.emailError()}                        
-                        <b className="pull-right" style={{fontSize: 15}} onClick={this.toggleValidationModal}>CLOSE</b>
+                        <b className="pull-right" style={{fontSize: 15, cursor: "pointer"}} onClick={this.toggleValidationModal}>CLOSE</b>
                     </ModalBody>                            
                 </Modal>   
 
