@@ -416,6 +416,7 @@ export default class Sign_Up extends Component {
 
 
             </div>
+            <hr style={{borderColor: "white", width: "75%", marginTop: 0}}/> 
             <div style={{marginTop: 20, textAlign: "center", backgroundColor: "#2bbbad", padding: 25}}>
                 <p>
                     <Link to="/Support" style={{ color: '#FFF' }}>Support |</Link>
