@@ -40,7 +40,7 @@
   height: 15px; }
 
 .form-dark .md-form label {
-  color: #2bbbad; }
+  color: #fff; }
 .form-light .md-form label {
   color: #fff; }
 
@@ -240,6 +240,7 @@
   cursor: pointer;
   margin: 10px;
   border-radius: 3px;
+
 }
 
 .ourBookingButton {
@@ -252,6 +253,19 @@
   cursor: pointer;
   margin: 10px;
   border-radius: 3px;
+}
+
+.signUpButton {
+  font-size: 15px; 
+  padding: 10px; 
+  text-align: center; 
+  color: white; 
+  background-color: #21406a; 
+  width: 100px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 3px;
+  display: inline-block;
 }
 
 
