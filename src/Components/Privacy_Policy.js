@@ -63,7 +63,7 @@ export default class Privacy_Policy extends Component {
         <div ref={(section) => { this.top = section; }} style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 150, fontFamily: "Quicksand"}}>
                         
             <div style={{textAlign: "center", marginBottom: 50}}>
-                <img src={require("../privacy_policy.png")} style={{height: 100, marginBottom: 10}} /> 
+                <img src={require("../Resources/privacy_policy.png")} style={{height: 100, marginBottom: 10}} /> 
                 <h1>Privacy Policy</h1>
                 <p>We all got trust issues</p>
             </div>

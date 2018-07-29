@@ -49,7 +49,7 @@ export default class GreenHeader extends React.Component {
                 <link href="https://fonts.googleapis.com/css?family=Quicksand:700" rel="stylesheet"/>
                 <Navbar transparent fixed="top" color="transparent" dark expand="md" scrolling style={{paddingLeft: 50, fontFamily: "Quicksand", backgroundColor: this.state.color? "#2bbbad": "transparent"}}>
                     <NavbarBrand>
-                        <Link to="/"><img src={require("../parkupp_logo.png")} height="50"/></Link>                                                 
+                        <Link to="/"><img src={require("../Resources/parkupp_logo.png")} height="50"/></Link>                                                 
                     </NavbarBrand>
 
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } />}

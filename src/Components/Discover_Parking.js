@@ -229,7 +229,7 @@ export default class Discover_Parking extends Component {
                                 Please contact 011 213 5671 for access.
                             </h5>   
                             <div style={{marginTop: 20, textAlign: "center"}}>
-                                <img src={require("../book.png")} style={{height: 80, marginBottom: 20}}/>
+                                <img src={require("../Resources/book.png")} style={{height: 80, marginBottom: 20}}/>
                             </div>           
                         </div>                            
                                 

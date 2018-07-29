@@ -95,7 +95,7 @@ export default class Support extends Component {
                     <section className="form-dark">
                         <div class="row">
                             <div class="col-lg-6 offset-lg-3">
-                                <img src={require("../support.png")} style={{height: 100, marginBottom: 10}} /> 
+                                <img src={require("../Resources/support.png")} style={{height: 100, marginBottom: 10}} /> 
                                 <h1 style={{fontSize: 30, marginTop: 20}}>Support</h1>  
                                 <p style={{fontSize: 20}}>Send us an mail and we will contact you</p>                  
 

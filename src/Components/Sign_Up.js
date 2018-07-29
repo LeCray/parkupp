@@ -365,7 +365,7 @@ export default class Sign_Up extends Component {
                 <Modal isOpen={this.state.showValidationModal} toggle={this.toggleValidationModal} side position="bottom-right">
                     <ModalBody style={{fontSize: 18}} toggle={this.toggleValidationModal}>
                         <div style={{textAlign: "center"}}>
-                            <img src={require("../lol.png")} style={{height: 80, marginBottom: 20}}/>
+                            <img src={require("../Resources/lol.png")} style={{height: 80, marginBottom: 20}}/>
                         </div> 
                         {this.state.passwordError}
                         {this.passwordError()}
@@ -380,7 +380,7 @@ export default class Sign_Up extends Component {
                 <Modal isOpen={this.state.showSuccessModal} toggle={this.toggleSuccessModal} size="sm">
                     <ModalBody toggle={this.toggleSuccessModal}>   
                         <div style={{textAlign: "center"}}>
-                            <img src={require("../welcome.png")} style={{height: 80, marginBottom: 20}}/> 
+                            <img src={require("../Resources/welcome.png")} style={{height: 80, marginBottom: 20}}/> 
                             <div style={{fontSize: 20}}>                        
                                 <b>Welcome to ParkUpp!</b><br/>
                                 <b>Sign up: Success</b>

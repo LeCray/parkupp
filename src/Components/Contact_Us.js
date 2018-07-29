@@ -33,7 +33,7 @@ export default class Contact_Us extends Component {
            
                 <div class="container" style={{padding: 40}}>                    
                     
-                    <img src={require("../contact_us.png")} style={{height: 100, marginBottom: 10}} /> 
+                    <img src={require("../Resources/contact_us.png")} style={{height: 100, marginBottom: 10}} /> 
                     <h1 style={{fontSize: 30, marginTop: 20}}>Contact Us</h1>  
                                       
                     <div class="row">

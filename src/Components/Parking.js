@@ -123,7 +123,7 @@ export default class Parking extends Component {
                     <div>
                         <div class="row" style={{marginTop: 30}}>                
                             <div class="col-sm-12">  
-                                <img src={require("../listing_woman.jpg")} class="img-fluid"/> 
+                                <img src={require("../Resources/listing_woman.jpg")} class="img-fluid"/> 
                             </div>
                         </div>                               
                         <div style={{padding: 15}}>
@@ -147,7 +147,7 @@ export default class Parking extends Component {
                             </p>
                         </div>
                         <div class="col-lg-5">
-                            <img src={require("../listing_woman.jpg")} class="img-fluid"/> 
+                            <img src={require("../Resources/listing_woman.jpg")} class="img-fluid"/> 
                         </div>                    
                     </div>
                 }
@@ -156,7 +156,7 @@ export default class Parking extends Component {
                     <div>
                         <div class="row" style={{marginTop: 30}}>                
                             <div class="col-sm-12">  
-                                <img src={require("../parking_car.jpg")} class="img-fluid"/> 
+                                <img src={require("../Resources/parking_car.jpg")} class="img-fluid"/> 
                             </div>
                         </div>                               
                         <div style={{padding: 15}}>
@@ -169,7 +169,7 @@ export default class Parking extends Component {
                 :
                     <div class="row" style={{marginTop: 80}}>                
                         <div class="col-lg-5">  
-                            <img src={require("../parking_car.jpg")} class="img-fluid"/> 
+                            <img src={require("../Resources/parking_car.jpg")} class="img-fluid"/> 
                         </div>
                         <div class="col-lg-1" style={{textAlign: "right"}}>
                             <h1 style={{fontSize: 80, color: "#2bbbad"}}><b>2</b></h1>
@@ -188,7 +188,7 @@ export default class Parking extends Component {
                     <div>
                         <div class="row" style={{marginTop: 30}}>                
                             <div class="col-sm-12">  
-                                <img src={require("../man_smiling.jpg")} class="img-fluid"/> 
+                                <img src={require("../Resources/man_smiling.jpg")} class="img-fluid"/> 
                             </div>
                         </div>                               
                         <div style={{padding: 15}}>
@@ -210,7 +210,7 @@ export default class Parking extends Component {
                             </p>
                         </div>
                         <div class="col-lg-5">
-                            <img src={require("../man_smiling.jpg")} class="img-fluid"/> 
+                            <img src={require("../Resources/man_smiling.jpg")} class="img-fluid"/> 
                         </div>
                     </div>
                 }
@@ -225,7 +225,7 @@ export default class Parking extends Component {
                 {this.state.mobile?
                     <div>
                         <div style={{marginTop: 30}}>
-                            <img src={require("../badge.png")} class="align-top" style={{height: 50, marginRight: 10, display: "inline-block"}}/>
+                            <img src={require("../Resources/badge.png")} class="align-top" style={{height: 50, marginRight: 10, display: "inline-block"}}/>
                             <div style={{display: "inline-block"}}> 
                                 <h5 ><strong>Host<br/>Guarantee</strong></h5>
                             </div>
@@ -236,7 +236,7 @@ export default class Parking extends Component {
                         </div>                                                                                                    
 
                         <div style={{marginTop: 60}}>
-                            <img src={require("../shield.png")} class="align-top" style={{height: 50, marginRight: 10, display: "inline-block"}}/>
+                            <img src={require("../Resources/shield.png")} class="align-top" style={{height: 50, marginRight: 10, display: "inline-block"}}/>
                             <div style={{display: "inline-block"}}> 
                                  <h5><strong>Owner Protection<br/>Insurance</strong></h5>
                             </div>
@@ -247,7 +247,7 @@ export default class Parking extends Component {
                         </div>                                                            
                         
                         <div style={{marginTop: 60}}>
-                            <img src={require("../trust.png")} class="align-top" style={{height: 50, marginRight: 10, display: "inline-block"}}/>
+                            <img src={require("../Resources/trust.png")} class="align-top" style={{height: 50, marginRight: 10, display: "inline-block"}}/>
                             <div style={{display: "inline-block"}}> 
                                  <h5><strong>Trust<br/>system</strong></h5>
                             </div>
@@ -263,7 +263,7 @@ export default class Parking extends Component {
                         <div class="col-lg-4">
                             <div class="row">
                                 <div class="col-lg-3">
-                                    <img src={require("../badge.png")} class="img-fluid"/>
+                                    <img src={require("../Resources/badge.png")} class="img-fluid"/>
                                 </div>
                                 <div class="col-lg-8" style={{paddingTop: 5}}>
                                     <h5><strong>Host<br/>Guarantee</strong></h5>
@@ -279,7 +279,7 @@ export default class Parking extends Component {
                         <div class="col-lg-4 pictures">
                             <div class="row">
                                 <div class="col-lg-3">                        
-                                    <img src={require("../shield.png")} class="img-fluid"/> 
+                                    <img src={require("../Resources/shield.png")} class="img-fluid"/> 
                                 </div>
                                 <div class="col-lg-8" style={{paddingTop: 5}}>
                                     <h5><strong>Owner Protection<br/>Insurance</strong></h5>
@@ -295,7 +295,7 @@ export default class Parking extends Component {
                         <div class="col-lg-4 pictures"> 
                             <div class="row">
                                 <div class="col-lg-3"> 
-                                    <img src={require("../trust.png")} class="img-fluid"/>  
+                                    <img src={require("../Resources/trust.png")} class="img-fluid"/>  
                                 </div>
                                 <div class="col-lg-8" style={{paddingTop: 5}}>                                 
                                     <h5><strong>Trust<br/>system</strong></h5>

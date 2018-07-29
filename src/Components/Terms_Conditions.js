@@ -32,7 +32,7 @@ export default class Terms_Conditions extends Component {
                        
 
                 <div style={{textAlign: "center", marginBottom: 50}}>
-                    <img src={require("../ts_cs.png")} style={{height: 100, marginBottom: 10}} /> 
+                    <img src={require("../Resources/ts_cs.png")} style={{height: 100, marginBottom: 10}} /> 
                     <h1>Ts & Cs</h1>
                     <p>Long and boring but important stuff</p>
                 </div>

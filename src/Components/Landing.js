@@ -136,14 +136,14 @@ export default class Landing extends Component {
                         <div class="row" style={{marginTop: 20}}>
                             <div class="col-sm-6 col-md-4 offset-md-2 col-lg-2 offset-lg-4">
                                 <div >
-                                    <img src={require("../location.png")} style={{height: 80, marginBottom: 10}}/> 
+                                    <img src={require("../Resources/location.png")} style={{height: 80, marginBottom: 10}}/> 
                                     <h2 style={{color: "#e6c131"}}>{this.state.ownerCount}</h2>
                                     <h4 style={{color: "#32bca2"}}>Shared<br/>Locations</h4>   
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4 col-lg-2 parkers">
                                 <div>
-                                    <img src={require("../parkers.png")} style={{height: 80, marginBottom: 10}}/> 
+                                    <img src={require("../Resources/parkers.png")} style={{height: 80, marginBottom: 10}}/> 
                                     <h2 style={{color: "#e6c131"}}>{this.state.driverCount}</h2>
                                     <h4 style={{color: "#32bca2"}}>Users</h4>   
                                 </div>
@@ -173,7 +173,7 @@ export default class Landing extends Component {
                         <div class="row" style={{marginTop: 50, color: "black"}}>
                             <div class="col-lg-4">
                                 <div >
-                                    <img src={require("../search.png")} style={{height: 130}} /> 
+                                    <img src={require("../Resources/search.png")} style={{height: 130}} /> 
                                     <h5 style={{marginTop: 50}}><strong>Find Parking</strong></h5>
                                     <p style={{paddingLeft: 80, paddingRight: 80}}>
                                         Stop driving around tirelessly finding parking. Search on the app and book your time
@@ -182,7 +182,7 @@ export default class Landing extends Component {
                             </div>
                             <div class="col-lg-4 pictures">
                                 <div>
-                                    <img src={require("../culture.png")} style={{height: 130}} />
+                                    <img src={require("../Resources/culture.png")} style={{height: 130}} />
                                     <h5 style={{marginTop: 50}}><strong>Share Culture</strong></h5>
                                     <p style={{paddingLeft: 80, paddingRight: 80}}>
                                         ParkUpp lets you list your
@@ -194,7 +194,7 @@ export default class Landing extends Component {
                             </div>                            
                             <div class="col-lg-4 pictures">
                                 
-                                <img src={require("../pay_easy.png")} style={{height: 130}} />
+                                <img src={require("../Resources/pay_easy.png")} style={{height: 130}} />
                                 <h5 style={{marginTop: 50}}><strong>Pay Easy</strong></h5>
                                 <p style={{paddingLeft: 80, paddingRight: 80}}>
                                     Users can find their spo
@@ -213,7 +213,7 @@ export default class Landing extends Component {
                             <div class="row" style={{marginTop: 50, color: "black"}}>
                                 <div class="col-lg-4">
                                     <div >
-                                        <img src={require("../star.png")} style={{height: 130}} /> 
+                                        <img src={require("../Resources/star.png")} style={{height: 130}} /> 
                                         <h5 style={{marginTop: 50}}><strong>Vetting</strong></h5>
                                         <p style={{paddingLeft: 80, paddingRight: 80}}>
                                             Owners of driveways and parking lots including drivers are vetted through detailed profiles, 
@@ -223,7 +223,7 @@ export default class Landing extends Component {
                                 </div>
                                 <div class="col-lg-4 pictures">
                                     <div>
-                                        <img src={require("../lock.png")} style={{height: 130}} />
+                                        <img src={require("../Resources/lock.png")} style={{height: 130}} />
                                         <h5 style={{marginTop: 50}}><strong>Sharing with Trust</strong></h5>
                                         <p style={{paddingLeft: 80, paddingRight: 80}}>
                                            ParkUpp verifies each user and owner profile 
@@ -233,7 +233,7 @@ export default class Landing extends Component {
                                 </div>                            
                                 <div class="col-lg-4 pictures">
                                     
-                                    <img src={require("../support.png")} style={{height: 130}} />
+                                    <img src={require("../Resources/support.png")} style={{height: 130}} />
                                     <h5 style={{marginTop: 50}}><strong>24/7 Support</strong></h5>
                                     <p style={{textAlign: "center", paddingLeft: 80, paddingRight: 80}}>
                                        We have a world class support team and a chat bot ready to help you around the clock.
@@ -274,7 +274,7 @@ export default class Landing extends Component {
                     <h4 ref={(section)=>{this.how_it_works=section;}} style={{marginBottom: 100}}> VIDEO COMING SOON! </h4>
 
                    <div style={{position: "relative"}}>
-                        <img src={require("../car_two.jpg")} style={{height: "auto", width: "100%", background: "#000000" }} />                                      
+                        <img src={require("../Resources/car_two.jpg")} style={{height: "auto", width: "100%", background: "#000000" }} />                                      
                     </div>
                     
 

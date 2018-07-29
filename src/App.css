@@ -155,28 +155,28 @@
     cursor: pointer; }
 
 .imgBackground {
-    background-image: url('./car_three.jpeg');
+    background-image: url('./Resources/car_three.jpeg');
     background-repeat: no-repeat;
     background-size:100% auto;
     height: 500px;    
 }
 
 .girlBackground {
-    background-image: url('./girl.jpg');
+    background-image: url('./Resources/girl.jpg');
     background-repeat: no-repeat;
     background-size:100% auto;
     height: 400px;    
 }
 
 .moreBackground {
-    background-image: url('./more_girl.jpg');
+    background-image: url('./Resources/more_girl.jpg');
     background-repeat: no-repeat;
     background-size:100% auto;
     height: 200px;    
 }
 
 .mainBackground {
-    background-image: url('./parkupp.gif');
+    background-image: url('./Resources/parkupp.gif');
     background-repeat: no-repeat;
     background-size:100% auto;
     height: 100vh;    

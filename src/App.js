@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom'
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 import Headers from './Components/Headers';
