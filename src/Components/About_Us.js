@@ -39,7 +39,7 @@ export default class About_Us extends Component {
 
                         <p style={{marginTop: 50, fontSize: 20}}>
                         At ParkUpp, we are a family of young, diverse, creative and somewhat quirky 
-                        individuals who love solving worldly problems. For us it’s about it’s about serving others and providing value to both the user and the owners.
+                        individuals who love solving worldly problems. For us it’s about serving others and providing value to both the user and the owners.
                         <br/><br/>
                         The ParkUpp idea came about when we noticed the amount of idle driveways in areas where demand for parking was high while drivers struggled to find parking.
                         <br/><br/>

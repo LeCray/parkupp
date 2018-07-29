@@ -118,14 +118,14 @@ export default class Landing extends Component {
             <div style={{overflow: "hidden", fontFamily: "Quicksand"}}> 
 
                 <div class="mainBackground" style={{flex: 1,  paddingTop: "30%", paddingLeft: "15%", color: "white"}}>
-                    <Link to="/Discover_Parking">
+                    {/*<Link to="/Discover_Parking">
                         <p class="button ourButton"> 
                             DISCOVER PARKING
                         </p> 
-                    </Link>
+                    </Link>*/}
                 </div>
 
-                <div style={{textAlign: "center", paddingTop: 100}}>
+                <div style={{textAlign: "center", paddingTop: this.state.mobile?0:100, marginTop: this.state.mobile?-200:0}}>
 
                     {/* PARKUPP */}
                     <div class="parkupp height" 
