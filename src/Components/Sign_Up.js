@@ -196,12 +196,12 @@ export default class Sign_Up extends Component {
               console.error(error);
             })
             
-            fetch("http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/slogan", {
+            fetch("http://preproduction.an22aevtww.eu-west-1.elasticbeanstalk.com/api/story", {
                 method: "POST", 
                 headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
                 body: JSON.stringify({
                     email: this.state.email,
-                    slogan: this.state.slogan                                                           
+                    story: this.state.story                                                           
                 }), 
 
             })
@@ -333,8 +333,8 @@ export default class Sign_Up extends Component {
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
                                 <Input 
-                                    label="Type your cool slogan here..."  
-                                    name="slogan" 
+                                    label="Your parking horror story..."  
+                                    name="story" 
                                     type="text" 
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>

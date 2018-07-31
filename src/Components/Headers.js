@@ -20,7 +20,7 @@ const Headers = () => (
         <Route path="/Careers" component={WhiteHeader}/>
         <Route path="/About_Us" component={WhiteHeader}/>
         <Route path="/FAQ" component={WhiteHeader}/>
-        <Route path="/List" component={WhiteHeader}/>
+        <Route path="/List_Parking" component={WhiteHeader}/>
         <Route path="/Discover_Parking" component={WhiteHeader}/>   
         <Route path="/Mobile_App" component={WhiteHeader}/>   
               

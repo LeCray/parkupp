@@ -53,12 +53,13 @@ export default class GreenHeader extends React.Component {
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } color="#2bbbad"/>}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right> 
+                          
                           <NavItem>
-                              <NavLink to="/Mobile_App" onClick={this.onClick} style={{fontStyle:"bold"}}>Mobile App</NavLink>
-                          </NavItem>  
+                              <NavLink to="/Discover_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Discover Parking</NavLink>
+                          </NavItem>                            
                           <NavItem>
-                              <NavLink to="/Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Have parking?</NavLink>
-                          </NavItem>                              
+                              <NavLink to="/List_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List Parking</NavLink>
+                          </NavItem>                            
                           <NavItem>
                               <NavLink to="/Sign_Up" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Sign up</NavLink>
                           </NavItem>
@@ -69,11 +70,13 @@ export default class GreenHeader extends React.Component {
                               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
                               <DropdownToggle nav caret style={{color: this.state.color?"#fff":"#2bbbad"}}>More</DropdownToggle>
                               <DropdownMenu>
-                                  <DropdownItem><Link to="/Contact_Us" onClick={this.onClick} style={{color: "#2bbbad"}}>Contact us</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Parking" onClick={this.onClick} style={{color: "#2bbbad"}}>Have Parking?</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Mobile_App" onClick={this.onClick} style={{color: "#2bbbad"}}>Download The App</Link></DropdownItem>
                                   <DropdownItem><Link to="/Careers" onClick={this.onClick} style={{color: "#2bbbad"}}>Careers</Link></DropdownItem>
                                   <DropdownItem><Link to="/Support" onClick={this.onClick} style={{color: "#2bbbad"}}>Support</Link></DropdownItem>
                                   <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClick} style={{color: "#2bbbad"}}>Terms and Conditions</Link></DropdownItem>
                                   <DropdownItem><Link to="/Privacy_Policy" onClick={this.onClick} style={{color: "#2bbbad"}}>Privacy Policy</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Contact_Us" onClick={this.onClick} style={{color: "#2bbbad"}}>Contact us</Link></DropdownItem>
                                   <DropdownItem><Link to="/FAQ" onClick={this.onClick} style={{color: "#2bbbad"}}>FAQ</Link></DropdownItem>
                               </DropdownMenu>
                               </Dropdown>
@@ -94,7 +97,10 @@ export default class GreenHeader extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>
                           <NavItem>
-                              <NavLink to="/Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Have parking?</NavLink>
+                              <NavLink to="/Discover_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Discover Parking</NavLink>
+                          </NavItem>                            
+                          <NavItem>
+                              <NavLink to="/List_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List Parking</NavLink>
                           </NavItem>                          
                           <NavItem>
                               <NavLink to="/Sign_Up" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Sign up</NavLink>
@@ -106,11 +112,13 @@ export default class GreenHeader extends React.Component {
                               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
                               <DropdownToggle nav caret style={{color: this.state.color?"#fff":"#2bbbad"}}>More</DropdownToggle>
                               <DropdownMenu>
-                                  <DropdownItem><Link to="/Contact_Us" onClick={this.onClick} style={{color: "#2bbbad"}}>Contact us</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Parking" onClick={this.onClick} style={{color: "#2bbbad"}}>Have Parking?</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Mobile_App" onClick={this.onClick} style={{color: "#2bbbad"}}>Download The App</Link></DropdownItem>
                                   <DropdownItem><Link to="/Careers" onClick={this.onClick} style={{color: "#2bbbad"}}>Careers</Link></DropdownItem>
                                   <DropdownItem><Link to="/Support" onClick={this.onClick} style={{color: "#2bbbad"}}>Support</Link></DropdownItem>
                                   <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClick} style={{color: "#2bbbad"}}>Terms and Conditions</Link></DropdownItem>
                                   <DropdownItem><Link to="/Privacy_Policy" onClick={this.onClick} style={{color: "#2bbbad"}}>Privacy Policy</Link></DropdownItem>
+                                  <DropdownItem><Link to="/Contact_Us" onClick={this.onClick} style={{color: "#2bbbad"}}>Contact us</Link></DropdownItem>
                                   <DropdownItem><Link to="/FAQ" onClick={this.onClick} style={{color: "#2bbbad"}}>FAQ</Link></DropdownItem>
                               </DropdownMenu>
                               </Dropdown>

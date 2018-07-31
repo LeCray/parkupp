@@ -51,9 +51,10 @@ export default class FAQ extends Component {
         <div style={{backgroundColor: "#2bbbad", height: "100%", color: "white", paddingTop: 50, fontFamily: "Quicksand"}}>
         
             <div class="container" style={{marginTop: 50, padding: 50}}>
-                <h1 style={{fontSize: 30}}>FAQ</h1>
+                <h1 style={{textAlign: "center", fontSize: 30}}>FAQ</h1>
+                <hr style={{borderColor: "#fff", width: "50%", marginTop: 30}}/>
 
-                <div style={{marginTop: 40}}>
+                <div style={{textAlign: "center", marginTop: 40}}>
                     <p class="faq" onClick={() => this.setState({show1: !this.state.show1})}>Listings</p><br/>
                     <p class="faq" onClick={() => this.setState({show2: !this.state.show2})}>What type of parking is provided for?</p><br/>
                     <p class="faq" onClick={() => this.setState({show3: !this.state.show3})}>Who uses ParkUpp?</p><br/>                

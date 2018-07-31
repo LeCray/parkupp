@@ -1,6 +1,14 @@
+
 import React, { Component } from 'react';
 import Ionicon from 'react-ionicons'
 import { Link } from 'react-router-dom'
+import StepZilla from 'react-stepzilla'
+
+
+import Type from './Listing/Type'
+import Location from './Listing/Location'
+
+
 
 import {
   Collapse,
@@ -19,22 +27,31 @@ import {
 
 
 
-export default class List extends Component {
+
+export default class List_Parking extends Component {
   componentDidMount() {
       window.scrollTo(0, 0)
     }
+    
 
-    render() {   
+    render() {  
+        const steps =
+            [
+              {name: 'Type', component: <Type />},
+              {name: 'Location', component: <Location />}
+           
+            ]
     return(  
         <div>
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
         <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: 2000, fontFamily: "Quicksand", textAlign: "center"}}>
                     
             <div class="container" style={{padding: 40}}>    
-                                                
+              <h1>List Parking</h1>                           
             </div>   
               
-            <div style={{height: 1000}}>
+            <div className='step-progress'>
+                <StepZilla steps={steps}/>
             </div>
 
 

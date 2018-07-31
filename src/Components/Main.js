@@ -11,9 +11,9 @@ import About_Us from './About_Us';
 import Sign_Up from './Sign_Up';
 import Parking from './Parking';
 import FAQ from './FAQ';
-import List from './List';
-import Discover_Parking from './Discover_Parking';
 import Mobile_App from './Mobile_App';
+import Discover_Parking from './Discover_Parking';
+import List_Parking from './List_Parking';
 
 
 
@@ -30,12 +30,10 @@ const Main = () => (
         <Route path="/About_Us" component={About_Us}/>     
         <Route path="/Sign_Up" component={Sign_Up}/>
         <Route path="/Parking" component={Parking}/>
-        <Route path="/FAQ" component={FAQ}/>
-        <Route path="/List" component={List}/>
-        <Route path="/Discover_Parking" component={Discover_Parking}/>
+        <Route path="/FAQ" component={FAQ}/>                
         <Route path="/Mobile_App" component={Mobile_App}/>
-        
-        
+        <Route path="/Discover_Parking" component={Discover_Parking}/>
+        <Route path="/List_Parking" component={List_Parking}/>                
     </Switch>
   </main>
 )

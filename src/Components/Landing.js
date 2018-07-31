@@ -138,7 +138,7 @@ export default class Landing extends Component {
                                 <div >
                                     <img src={require("../Resources/location.png")} style={{height: 80, marginBottom: 10}}/> 
                                     <h2 style={{color: "#e6c131"}}>{this.state.ownerCount}</h2>
-                                    <h4 style={{color: "#32bca2"}}>Shared<br/>Locations</h4>   
+                                    <h4 style={{color: "#32bca2"}}>Locations</h4>   
                                 </div>
                             </div>
                             <div class="col-sm-6 col-md-4 col-lg-2 parkers">
@@ -158,10 +158,10 @@ export default class Landing extends Component {
                     <div class="imgBackground sneakers" style={{flex: 1, flexDirection: "column", paddingTop: "15%", color: "white"}}>
                         <Link to="/Sign_Up"><h2 style={{fontSize: 30, color: "white"}}>SIGN UP NOW</h2></Link>
                         <h6 style={{fontSize: this.state.mobile? 13: 20}}>
-                            STAND A CHANCE TO WIN A R1500 CAR SERVICE VOUCHER<br/> 
+                            STAND A CHANCE TO WIN A R3000 CAR SERVICE VOUCHER<br/> 
                             BY WATCHING <u style={{cursor: "pointer"}} onClick={() => scrollToComponent(this.how_it_works, {offset:-100,align:'top',duration:1500})}>HOW IT WORKS</u>, 
                             <Link to="/Sign_Up" style={{color: "white"}}> <u>SIGNING UP</u></Link> AND <br/>
-                            SUBMITTING A COOL SLOGAN<br/>                            
+                            SHARING YOUR PARKING HORROR STORY<br/>                            
                         </h6>                                                              
                     </div>
 
@@ -260,7 +260,7 @@ export default class Landing extends Component {
                     <h1 ref={(section) => { this.how_it_works = section; }} style={{color: "black", fontSize: 30, marginBottom: 50}}><strong>How it works</strong></h1>                                          
                     <div class="video" style={{margin: "0 auto",  backgroundColor: "white", paddingBottom: 50}}>
                         <YouTubePlayer
-                          url='https://youtu.be/sBKBlfAWGEg'
+                          url='https://youtu.be/35XnLTfKtDQ'
                           className='react-player'                          
                           controls
                           loop
