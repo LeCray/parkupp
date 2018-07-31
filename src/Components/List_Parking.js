@@ -53,7 +53,10 @@ export default class List_Parking extends Component {
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div className='borderr step-progress'>
-                        <StepZilla steps={steps} nextButtonCls="myNextBtn pull-right"/>
+                        <StepZilla 
+                            steps={steps} 
+                            nextButtonCls="myNextBtn pull-right"
+                            backButtonCls="myNextBtn pull-left"/>
                     </div>
                 </div>
             </div>
