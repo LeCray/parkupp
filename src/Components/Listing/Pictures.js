@@ -19,7 +19,7 @@ import {
 
 
 
-export default class Type extends Component {
+export default class Pictures extends Component {
     componentDidMount() {
       window.scrollTo(0, 0)
     }
@@ -29,7 +29,7 @@ export default class Type extends Component {
         <div>
                                      
           <div class="borderr container" style={{height: 300, padding: 40}}>                    
-              <h2>Type</h2>
+              <h2>Pictures</h2>
               
           </div>   
                                                       

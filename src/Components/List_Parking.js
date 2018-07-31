@@ -7,6 +7,8 @@ import StepZilla from 'react-stepzilla'
 
 import Type from './Listing/Type'
 import Location from './Listing/Location'
+import Pictures from './Listing/Pictures'
+import Payment from './Listing/Payment'
 
 
 
@@ -30,7 +32,7 @@ import {
 
 export default class List_Parking extends Component {
   componentDidMount() {
-      window.scrollTo(0, 0)
+      //window.scrollTo(0, 0)
     }
     
 
@@ -38,13 +40,14 @@ export default class List_Parking extends Component {
         const steps =
             [
               {name: 'Type', component: <Type />},
-              {name: 'Location', component: <Location />}
-           
+              {name: 'Location', component: <Location />},
+              {name: 'Pictures', component: <Pictures />},
+              {name: 'Payment', component: <Payment />}
             ]
     return(  
         <div>
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>
-        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: 2000, fontFamily: "Quicksand", textAlign: "center"}}>
+        <div style={{backgroundColor: "#2bbbad", color: "white", paddingTop: 100, height: 2000, fontFamily: "Quicksand", textAlign: "center", "overflow-x": "hidden"}}>
                     
             <div class="container" style={{padding: 40}}>    
               <h1>List Parking</h1>                           
@@ -52,12 +55,12 @@ export default class List_Parking extends Component {
             
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
-                    <div className='borderr step-progress'>
+                    <div className='step-progress'>
                         <StepZilla 
                             steps={steps} 
                             nextButtonCls="myNextBtn pull-right"
                             backButtonCls="myNextBtn pull-left"/>
-                    </div>
+                    </div>                
                 </div>
             </div>
 
