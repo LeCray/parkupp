@@ -49,9 +49,13 @@ export default class List_Parking extends Component {
             <div class="container" style={{padding: 40}}>    
               <h1>List Parking</h1>                           
             </div>   
-              
-            <div className='step-progress'>
-                <StepZilla steps={steps}/>
+            
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div className='borderr step-progress'>
+                        <StepZilla steps={steps} nextButtonCls="myNextBtn pull-right"/>
+                    </div>
+                </div>
             </div>
 
 

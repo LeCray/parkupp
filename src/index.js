@@ -11,7 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
 
-<link rel="stylesheet" href="https://video-react.github.io/assets/video-react.css" />
+var StepZilla = require('react-stepzilla')
 
 render((	
   <BrowserRouter>
