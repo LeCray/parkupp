@@ -58,11 +58,14 @@ export default class GreenHeader extends React.Component {
                               <NavLink to="/Discover_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Discover Parking</NavLink>
                           </NavItem> */}  
                           <NavItem>
-                              <NavLink to="/Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Have Parking?</NavLink>
-                          </NavItem>                         
+                              <NavLink to="/Mobile_App" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Mobile App</NavLink>
+                          </NavItem>
                           <NavItem>
+                              <NavLink to="/Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List Parking</NavLink>
+                          </NavItem>                         
+                          {/*<NavItem>
                               <NavLink to="/List_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List Parking</NavLink>
-                          </NavItem>                            
+                          </NavItem>  */}                           
                           <NavItem>
                               <NavLink to="/Sign_Up" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Sign up</NavLink>
                           </NavItem>
@@ -74,7 +77,7 @@ export default class GreenHeader extends React.Component {
                               <DropdownToggle nav caret style={{color: this.state.color?"#fff":"#2bbbad"}}>More</DropdownToggle>
                               <DropdownMenu>
                                   {/*<DropdownItem><Link to="/Parking" onClick={this.onClick} style={{color: "#2bbbad"}}>Have Parking?</Link></DropdownItem>*/}
-                                  <DropdownItem><Link to="/Mobile_App" onClick={this.onClick} style={{color: "#2bbbad"}}>Download The App</Link></DropdownItem>
+                                  {/*<DropdownItem><Link to="/Mobile_App" onClick={this.onClick} style={{color: "#2bbbad"}}>Download The App</Link></DropdownItem>*/}
                                   <DropdownItem><Link to="/Careers" onClick={this.onClick} style={{color: "#2bbbad"}}>Careers</Link></DropdownItem>
                                   <DropdownItem><Link to="/Support" onClick={this.onClick} style={{color: "#2bbbad"}}>Support</Link></DropdownItem>
                                   <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClick} style={{color: "#2bbbad"}}>Terms and Conditions</Link></DropdownItem>
@@ -101,13 +104,16 @@ export default class GreenHeader extends React.Component {
                         <NavbarNav right>
                           {/*<NavItem>
                               <NavLink to="/Discover_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Discover Parking</NavLink>
-                          </NavItem>*/}  
+                          </NavItem>*/}
                           <NavItem>
-                              <NavLink to="/Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Have Parking?</NavLink>
+                              <NavLink to="/Mobile_App" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Mobile App</NavLink>
+                          </NavItem>  
+                          <NavItem>
+                              <NavLink to="/Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List Parking</NavLink>
                           </NavItem>                          
-                          <NavItem>
+                          {/*<NavItem>
                               <NavLink to="/List_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List Parking</NavLink>
-                          </NavItem>                          
+                          </NavItem>  */}                         
                           <NavItem>
                               <NavLink to="/Sign_Up" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Sign up</NavLink>
                           </NavItem>
@@ -119,7 +125,7 @@ export default class GreenHeader extends React.Component {
                               <DropdownToggle nav caret style={{color: this.state.color?"#fff":"#2bbbad"}}>More</DropdownToggle>
                               <DropdownMenu>
                                   {/*<DropdownItem><Link to="/Parking" onClick={this.onClick} style={{color: "#2bbbad"}}>Have Parking?</Link></DropdownItem>*/}
-                                  <DropdownItem><Link to="/Mobile_App" onClick={this.onClick} style={{color: "#2bbbad"}}>Download The App</Link></DropdownItem>
+                                  {/*<DropdownItem><Link to="/Mobile_App" onClick={this.onClick} style={{color: "#2bbbad"}}>Download The App</Link></DropdownItem>*/}
                                   <DropdownItem><Link to="/Careers" onClick={this.onClick} style={{color: "#2bbbad"}}>Careers</Link></DropdownItem>
                                   <DropdownItem><Link to="/Support" onClick={this.onClick} style={{color: "#2bbbad"}}>Support</Link></DropdownItem>
                                   <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClick} style={{color: "#2bbbad"}}>Terms and Conditions</Link></DropdownItem>

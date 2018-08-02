@@ -69,11 +69,14 @@ export default class GreenHeader extends React.Component {
                               <NavLink to="/Discover_Parking" onClick={this.onClick} style={{fontStyle:"bold"}}>Discover Parking</NavLink>
                           </NavItem>*/}
                           <NavItem>
-                              <NavLink to="/Parking" onClick={this.onClick} style={{fontStyle:"bold"}}>Have Parking?</NavLink>
-                          </NavItem> 
+                              <NavLink to="/Mobile_App" onClick={this.onClick} style={{fontStyle:"bold"}}>Mobile App</NavLink>
+                          </NavItem>
                           <NavItem>
+                              <NavLink to="/Parking" onClick={this.onClick} style={{fontStyle:"bold"}}>List Parking</NavLink>
+                          </NavItem> 
+                          {/*<NavItem>
                               <NavLink to="/List_Parking" onClick={this.onClick} style={{fontStyle:"bold"}}>List Parking</NavLink>
-                          </NavItem>                                                                                    
+                          </NavItem> */}                                                                                   
                           <NavItem>
                               <NavLink to="/Sign_Up" onClick={this.onClick} style={{fontStyle:"bold"}}>Sign up</NavLink>
                           </NavItem>
@@ -85,7 +88,7 @@ export default class GreenHeader extends React.Component {
                               <DropdownToggle nav caret>Menu</DropdownToggle>
                               <DropdownMenu>
                                   {/*<DropdownItem><Link to="/Parking" onClick={this.onClick}><b>Have Parking?</b></Link></DropdownItem>*/}
-                                  <DropdownItem><Link to="/Mobile_App" onClick={this.onClick}>Download The App</Link></DropdownItem>
+                                  {/*<DropdownItem><Link to="/Mobile_App" onClick={this.onClick}>Mobile App</Link></DropdownItem>*/}
                                   <DropdownItem><Link to="/Careers" onClick={this.onClick}>Careers</Link></DropdownItem>
                                   <DropdownItem><Link to="/Support" onClick={this.onClick}>Support</Link></DropdownItem>
                                   <DropdownItem><Link to="/Terms_Conditions" onClick={this.onClick}>Terms and Conditions</Link></DropdownItem>
