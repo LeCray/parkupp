@@ -27,13 +27,21 @@ export default class Type extends Component {
             residential: false,
             commercial: false,
             driveway: false,
-            parkingLot: false
+            parkingLot: false,
+            width: window.innerWidth,
+            mobile: false
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.renderResCom = this.renderResCom.bind(this);
         //this.handleSubmit = this.handleSubmit.bind(this);
-      }
+    }
+
+    componentWillMount(){        
+        if (this.state.width < 576) {
+            this.setState({mobile: true});
+        }       
+    }
     componentDidMount() {
       window.scrollTo(0, 0)
     }
@@ -49,10 +57,12 @@ export default class Type extends Component {
             console.log(this.state.type)
             this.setState({residential: true})
             this.state.commercial? this.setState({commercial: false}): null
-        } else {
+        } else if (this.state.type == "Commercial"){
             console.log(this.state.type)
             this.setState({commercial: true})
             this.state.residential? this.setState({residential: false}): null
+        } else {
+            null
         }
 
         //DRIVEWAY/PARKING LOT
@@ -60,10 +70,12 @@ export default class Type extends Component {
             console.log(this.state.type)
             this.setState({driveway: true})
             this.state.parkingLot? this.setState({parkingLot: false}): null
-        } else {
+        } else if (this.state.resKind == "ParkingLot"){
             console.log(this.state.type)
             this.setState({parkingLot: true})
             this.state.driveway? this.setState({driveway: false}): null
+        } else {
+            null
         }
     }
 
@@ -72,26 +84,25 @@ export default class Type extends Component {
         
         
                                
-        <div class="container" style={{height: this.state.commercial?600:450, padding: 40, borderBottom: "1px solid white", textAlign: "left"}}>  
+        <div class="container" style={{height: this.state.commercial?600:500, padding: 40, borderBottom: this.state.mobile?null:"1px solid white", textAlign: "left"}}>  
             <h3 style={{marginBottom: 25}}>Please tell us the type of your parking spot</h3>
             
             <hr style={{borderColor: "#fff", marginBottom: 25}}/>
             {/*TYPE OF PARKING*/}                  
             <div  style={{flex: 1, flexDirection: "row", justifyContent: "flex-end"}}>
-                <h4 style={{marginTop: 5, display: "inline-block"}}>Type of Parking</h4>  
-                <div class="float-right" style={{display: "inline-block"}}>
-                    <select
-                        style={{marginLeft: 20, width: 300}}  
-                        className="form-control "
-                        required
-                        value={this.state.value} 
-                        onChange={this.handleChange}
-                        name="type">                    
-                            <option value="" disabled>{this.state.type?this.state.type:"Type of parking"}</option>
-                            <option value="Residential">Residential</option>
-                            <option value="Commercial">Commercial</option>                      
-                    </select>
-                </div>
+                <h4 style={{marginTop: 5, display: "inline-block"}}>Type of Parking</h4>                  
+                <select
+                    style={{marginLeft: 20, width: 300, display: "inline-block"}}  
+                    className="form-control float-right"
+                    required
+                    value={this.state.value} 
+                    onChange={this.handleChange}
+                    name="type">                    
+                        <option value="" disabled>{this.state.type?this.state.type:"Type of parking"}</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial">Commercial</option>                      
+                </select>
+                
             </div>
             
             {/*TYPE OF PARKING == RESIDENTIAL*/}
@@ -114,20 +125,74 @@ export default class Type extends Component {
                 </div>
             </div>
             
-            {/*MAX HOURS*/}
+            {/*DRIVEWAY*/}
             <div  style={{display: this.state.driveway?"":"none", marginTop: 20}}>
-                <h5 style={{marginTop: 5, fontStyle: "italic", display: "inline-block"}}>
-                    Max hours
-                </h5>                    
-                <input
-                    style={{width: 300, display: "inline-block"}}
-                    className="form-control pull-right"
-                    name="maxHours"
-                    autoComplete="off"
-                    type="number"
-                    placeholder="Max hours"
-                    required
-                    onChange={this.handleChange}/>                
+                <div>
+                    <h5 style={{marginTop: 5, fontStyle: "italic", display: "inline-block"}}>
+                        Max hours allowed?
+                    </h5>                    
+                    <input
+                        style={{width: 300, display: "inline-block"}}
+                        className="form-control pull-right"
+                        name="maxHours"
+                        autoComplete="off"
+                        type="number"
+                        placeholder="Max hours"
+                        required
+                        onChange={this.handleChange}/> 
+                </div>
+                
+                <div style={{marginTop: 20}}>
+                    <h5 style={{marginTop: 5, fontStyle: "italic", display: "inline-block"}}>
+                        Charge a rate*
+                    </h5>                    
+                    <input
+                        style={{width: 300, display: "inline-block"}}
+                        className="form-control pull-right"
+                        name="drivewayRate"
+                        autoComplete="off"
+                        type="number"
+                        placeholder="Leave empty to use suggested"
+                        required
+                        onChange={this.handleChange}/>    
+                </div>           
+            </div>
+
+        {/*PARKING LOT*/}
+            <div  style={{display: this.state.parkingLot?"":"none", marginTop: 20}}>
+                <div>
+                    <h5 style={{marginTop: 5, fontStyle: "italic", display: "inline-block"}}>
+                        Term?
+                    </h5>                    
+                    <select
+                        style={{width: 300, display: "inline-block"}}                
+                        className="form-control pull-right"
+                        required
+                        value={this.state.value} 
+                        onChange={this.handleChange}
+                        name="term">                    
+                            <option value="" disabled>{this.state.term?this.state.term:"Select Term"}</option>
+                            <option value="3months">3 Months</option>
+                            <option value="6months">6 Months</option>
+                            <option value="12months">12 Months</option>
+                            <option value="24months">24 Months</option>
+                    </select> 
+                </div>
+                
+                <div style={{marginTop: 20}}>
+                    <h5 style={{marginTop: 5, fontStyle: "italic", display: "inline-block"}}>
+                        Charge a rate*
+                    </h5>                    
+                    <input
+                        style={{width: 300, display: "inline-block"}}
+                        className="form-control pull-right"
+                        name="parkingLotRate"
+                        autoComplete="off"
+                        type="number"
+                        placeholder="Leave empty to use suggested"
+                        required
+                        onChange={this.handleChange}/>    
+                </div>           
             </div>
             
             {/*TYPE OF PARKING == COMMERCIAL*/}
@@ -173,7 +238,7 @@ export default class Type extends Component {
                         value={this.state.value} 
                         onChange={this.handleChange}
                         name="lpr">                    
-                            <option value="" disabled>LPR?</option>
+                            <option value="" disabled>{this.state.lpr?this.state.lpr:"LPR?"}</option>
                             <option value="resDriveway">Yes</option>
                             <option value="resParkingLot">No</option>                      
                     </select>
@@ -207,7 +272,7 @@ export default class Type extends Component {
                     required
                     value={this.state.value} 
                     onChange={this.handleChange}>                    
-                        <option value="">Is the space locked?</option>
+                        <option value="">{this.state.locked?this.state.locked:"Is the space locked?"}</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>                      
                 </select>
