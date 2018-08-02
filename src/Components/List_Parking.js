@@ -59,6 +59,7 @@ export default class List_Parking extends Component {
                         <StepZilla 
                             steps={steps} 
                             nextButtonCls="myNextBtn pull-right"
+                            nextButtonText="Submit and Next"
                             backButtonCls="myNextBtn pull-left"/>
                     </div>                
                 </div>

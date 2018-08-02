@@ -89,7 +89,7 @@ export default class Type extends Component {
             
             <hr style={{borderColor: "#fff", marginBottom: 25}}/>
             {/*TYPE OF PARKING*/}                  
-            <div  style={{flex: 1, flexDirection: "row", justifyContent: "flex-end"}}>
+            <div >
                 <h4 style={{marginTop: 5, display: "inline-block"}}>Type of Parking</h4>                  
                 <select
                     style={{marginLeft: 20, width: 300, display: "inline-block"}}  
