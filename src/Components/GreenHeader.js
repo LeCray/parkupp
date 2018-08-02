@@ -56,7 +56,10 @@ export default class GreenHeader extends React.Component {
                           
                           {/*<NavItem>
                               <NavLink to="/Discover_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Discover Parking</NavLink>
-                          </NavItem> */}                           
+                          </NavItem> */}  
+                          <NavItem>
+                              <NavLink to="/Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Have Parking?</NavLink>
+                          </NavItem>                         
                           <NavItem>
                               <NavLink to="/List_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List Parking</NavLink>
                           </NavItem>                            
@@ -70,7 +73,7 @@ export default class GreenHeader extends React.Component {
                               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
                               <DropdownToggle nav caret style={{color: this.state.color?"#fff":"#2bbbad"}}>More</DropdownToggle>
                               <DropdownMenu>
-                                  <DropdownItem><Link to="/Parking" onClick={this.onClick} style={{color: "#2bbbad"}}>Have Parking?</Link></DropdownItem>
+                                  {/*<DropdownItem><Link to="/Parking" onClick={this.onClick} style={{color: "#2bbbad"}}>Have Parking?</Link></DropdownItem>*/}
                                   <DropdownItem><Link to="/Mobile_App" onClick={this.onClick} style={{color: "#2bbbad"}}>Download The App</Link></DropdownItem>
                                   <DropdownItem><Link to="/Careers" onClick={this.onClick} style={{color: "#2bbbad"}}>Careers</Link></DropdownItem>
                                   <DropdownItem><Link to="/Support" onClick={this.onClick} style={{color: "#2bbbad"}}>Support</Link></DropdownItem>
@@ -98,7 +101,10 @@ export default class GreenHeader extends React.Component {
                         <NavbarNav right>
                           {/*<NavItem>
                               <NavLink to="/Discover_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Discover Parking</NavLink>
-                          </NavItem>*/}                            
+                          </NavItem>*/}  
+                          <NavItem>
+                              <NavLink to="/Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Have Parking?</NavLink>
+                          </NavItem>                          
                           <NavItem>
                               <NavLink to="/List_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List Parking</NavLink>
                           </NavItem>                          
@@ -112,7 +118,7 @@ export default class GreenHeader extends React.Component {
                               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} >
                               <DropdownToggle nav caret style={{color: this.state.color?"#fff":"#2bbbad"}}>More</DropdownToggle>
                               <DropdownMenu>
-                                  <DropdownItem><Link to="/Parking" onClick={this.onClick} style={{color: "#2bbbad"}}>Have Parking?</Link></DropdownItem>
+                                  {/*<DropdownItem><Link to="/Parking" onClick={this.onClick} style={{color: "#2bbbad"}}>Have Parking?</Link></DropdownItem>*/}
                                   <DropdownItem><Link to="/Mobile_App" onClick={this.onClick} style={{color: "#2bbbad"}}>Download The App</Link></DropdownItem>
                                   <DropdownItem><Link to="/Careers" onClick={this.onClick} style={{color: "#2bbbad"}}>Careers</Link></DropdownItem>
                                   <DropdownItem><Link to="/Support" onClick={this.onClick} style={{color: "#2bbbad"}}>Support</Link></DropdownItem>

@@ -215,7 +215,7 @@ export default class Parking extends Component {
                     </div>
                 }
                 
-
+                {/*
                 {this.state.mobile?
                     <h2 style={{marginTop: 50}}> ParkUpp works on safety</h2>
                 :
@@ -309,7 +309,7 @@ export default class Parking extends Component {
                             </div>                        
                         </div>
                     </div>
-                }
+                }*/}
 
             <h3 style={{marginTop: 50}}>Frequently Asked Questions</h3>
             <div style={{marginTop: 50}} class="row">
