@@ -72,13 +72,13 @@ export default class Type extends Component {
         
         
                                
-        <div class="borderr container" style={{height: this.state.commercial?600:400, padding: 40, borderBottom: "1px solid white", textAlign: "left"}}>  
+        <div class="container" style={{height: this.state.commercial?600:450, padding: 40, borderBottom: "1px solid white", textAlign: "left"}}>  
             <h3 style={{marginBottom: 25}}>Please tell us the type of your parking spot</h3>
             
             <hr style={{borderColor: "#fff", marginBottom: 25}}/>
             {/*TYPE OF PARKING*/}                  
-            <div class="borderr" style={{flex: 1, flexDirection: "row", justifyContent: "flex-end"}}>
-                <h4 style={{display: "inline-block"}}>Type of Parking</h4>  
+            <div  style={{flex: 1, flexDirection: "row", justifyContent: "flex-end"}}>
+                <h4 style={{marginTop: 5, display: "inline-block"}}>Type of Parking</h4>  
                 <div class="float-right" style={{display: "inline-block"}}>
                     <select
                         style={{marginLeft: 20, width: 300}}  
@@ -95,8 +95,8 @@ export default class Type extends Component {
             </div>
             
             {/*TYPE OF PARKING == RESIDENTIAL*/}
-            <div class="borderr" style={{marginTop: 20, display: this.state.residential?"":"none"}}>
-                <h5 style={{display: "inline-block", fontStyle: "italic"}}>
+            <div  style={{marginTop: 20, display: this.state.residential?"":"none"}}>
+                <h5 style={{marginTop: 5, display: "inline-block", fontStyle: "italic"}}>
                     What kind?
                 </h5>    
                 <div class="pull-right" style={{display: "inline-block"}}>
@@ -113,88 +113,95 @@ export default class Type extends Component {
                     </select>
                 </div>
             </div>
-
-            <div class="borderr" style={{display: this.state.driveway?"":"none"}}>
-
-                <h5 class="pull-left" style={{marginTop: 35, fontStyle: "italic"}}>
+            
+            {/*MAX HOURS*/}
+            <div  style={{display: this.state.driveway?"":"none", marginTop: 20}}>
+                <h5 style={{marginTop: 5, fontStyle: "italic", display: "inline-block"}}>
                     Max hours
-                </h5>    
-                <div class="pull-right" style={{marginTop: 30, display: "inline-block"}}>
-                    <input
-                        className="form-control"
-                        name="maxHours"
-                        autoComplete="off"
-                        type="number"
-                        placeholder="Max hours"
-                        required
-                        onChange={this.handleChange}/>
-                </div>
+                </h5>                    
+                <input
+                    style={{width: 300, display: "inline-block"}}
+                    className="form-control pull-right"
+                    name="maxHours"
+                    autoComplete="off"
+                    type="number"
+                    placeholder="Max hours"
+                    required
+                    onChange={this.handleChange}/>                
             </div>
             
             {/*TYPE OF PARKING == COMMERCIAL*/}
-            <div style={{display: this.state.commercial?"":"none"}}>
-                <h5 class="pull-left" style={{marginTop: 35, display: "inline-block", fontStyle: "italic"}}>
-                    Number of parking bays
-                </h5>
-                <input
-                    style={{width: 300, marginTop: 30, display: "inline-block"}}
-                    className="form-control pull-right"
-                    name="numberOfBays"
-                    autoComplete="off"
-                    type="number"
-                    placeholder="Number of parking bays"
-                    required
-                    onChange={this.handleChange}/>
-
-                <h5 class="pull-left" style={{marginTop: 35, display: "inline-block", fontStyle: "italic"}}>
-                    Number of entrances
-                </h5>
-                <input
-                    style={{width: 300, marginTop: 30, display: "inline-block"}}
-                    className="form-control pull-right"
-                    name="numberOfEntrances"
-                    autoComplete="off"
-                    type="number"
-                    placeholder="Number of Entrances"                    
-                    required
-                    onChange={this.handleChange}/>
-
-                <h5 class="pull-left" style={{marginTop: 35, display: "inline-block", fontStyle: "italic"}}>
-                    Do you have LPR?
-                </h5>
-                <select
-                    style={{width: 300, marginTop: 30, display: "inline-block"}}
-                    className="form-control pull-right"
-                    required
-                    value={this.state.value} 
-                    onChange={this.handleChange}
-                    name="lpr">                    
-                        <option value="" disabled>LPR?</option>
-                        <option value="resDriveway">Yes</option>
-                        <option value="resParkingLot">No</option>                      
-                </select>
-
-                <h5 class="pull-left" style={{marginTop: 35, display: "inline-block", fontStyle: "italic"}}>
-                    Parking rates?
-                </h5>
-                <select
-                    style={{width: 300, marginTop: 30, display: "inline-block"}}
-                    className="form-control pull-right"
-                    required
-                    value={this.state.value} 
-                    onChange={this.handleChange}
-                    name="rates">                    
-                        <option value="" disabled>{this.state.rates?this.state.rates:"Rates?"}</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>                      
-                </select>
+            <div style={{display: this.state.commercial?"":"none", marginTop: 20}}>
+                <div>
+                    <h5 style={{marginTop: 5, display: "inline-block", fontStyle: "italic"}}>
+                        Number of parking bays
+                    </h5>
+                    <input
+                        style={{width: 300, display: "inline-block"}}
+                        className="form-control pull-right"
+                        name="numberOfBays"
+                        autoComplete="off"
+                        type="number"
+                        placeholder="Number of parking bays"
+                        required
+                        onChange={this.handleChange}/>
+                </div>
+                
+                <div style={{marginTop: 20}}>
+                    <h5 style={{marginTop: 5, display: "inline-block", fontStyle: "italic"}}>
+                        Number of entrances
+                    </h5>
+                    <input
+                        style={{width: 300, display: "inline-block"}}
+                        className="form-control pull-right"
+                        name="numberOfEntrances"
+                        autoComplete="off"
+                        type="number"
+                        placeholder="Number of Entrances"                    
+                        required
+                        onChange={this.handleChange}/>
+                </div>
+                
+                <div style={{marginTop: 20}}>
+                    <h5 style={{marginTop: 5, display: "inline-block", fontStyle: "italic"}}>
+                        Do you have LPR?
+                    </h5>
+                    <select
+                        style={{width: 300, display: "inline-block"}}
+                        className="form-control pull-right"
+                        required
+                        value={this.state.value} 
+                        onChange={this.handleChange}
+                        name="lpr">                    
+                            <option value="" disabled>LPR?</option>
+                            <option value="resDriveway">Yes</option>
+                            <option value="resParkingLot">No</option>                      
+                    </select>
+                </div>
+                
+                <div style={{marginTop: 20}}>
+                    <h5 style={{marginTop: 5, display: "inline-block", fontStyle: "italic"}}>
+                        Parking rates?
+                    </h5>
+                    <select
+                        style={{width: 300, display: "inline-block"}}
+                        className="form-control pull-right"
+                        required
+                        value={this.state.value} 
+                        onChange={this.handleChange}
+                        name="rates">                    
+                            <option value="" disabled>{this.state.rates?this.state.rates:"Rates?"}</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>                      
+                    </select>
+                </div>
             </div>
            
             {/*IS THE SPACE LOCKED*/}
-            <div style={{}}>
-                <h4 class="pull-left" style={{marginTop: 34, display: "inline-block"}}>Is the space locked?</h4>
+            <div style={{marginTop: 20}}>
+                <h4 style={{marginTop: 5, display: "inline-block"}}>Is the space locked?</h4>
                 <select
-                    style={{marginTop: 30, display: "inline-block", width: 300}}
+                    style={{display: "inline-block", width: 300}}
                     name="locked"                
                     className="form-control pull-right"
                     required
@@ -206,10 +213,10 @@ export default class Type extends Component {
                 </select>
             </div>
 
-            <div style={{}}>
-                <h4 class="pull-left" style={{marginTop: 35, display: "inline-block"}}>Number of bays</h4>
+            <div style={{marginTop: 20}}>
+                <h4 style={{marginTop: 5, display: "inline-block"}}>Number of bays</h4>
                 <input
-                    style={{marginTop: 30, width: 300, display: "inline-block"}}
+                    style={{width: 300, display: "inline-block"}}
                     className="form-control pull-right"
                     name="numberOfBays"
                     autoComplete="off"
