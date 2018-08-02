@@ -84,35 +84,37 @@ export default class Type extends Component {
         
         
                                
-        <div class="container" style={{height: this.state.commercial?600:500, padding: 40, borderBottom: this.state.mobile?null:"1px solid white", textAlign: "left"}}>  
+        <div class="container" style={{height: this.state.mobile?this.state.commercial?720:600:this.state.commercial?600:500, padding: 40, borderBottom: this.state.mobile?null:"1px solid white", textAlign: "left"}}>  
             <h3 style={{marginBottom: 25}}>Please tell us the type of your parking spot</h3>
             
             <hr style={{borderColor: "#fff", marginBottom: 25}}/>
             {/*TYPE OF PARKING*/}                  
             <div >
-                <h4 style={{marginTop: 5, display: "inline-block"}}>Type of Parking</h4>                  
-                <select
-                    style={{marginLeft: 20, width: 300, display: "inline-block"}}  
-                    className="form-control float-right"
-                    required
-                    value={this.state.value} 
-                    onChange={this.handleChange}
-                    name="type">                    
-                        <option value="" disabled>{this.state.type?this.state.type:"Type of parking"}</option>
-                        <option value="Residential">Residential</option>
-                        <option value="Commercial">Commercial</option>                      
-                </select>
+                <h4 style={{marginTop: this.state.mobile?20:5, display: "inline-block"}}>Type of Parking</h4> 
+                <div class={this.state.mobile?"pull-left":"pull-right"}>              
+                    <select
+                        style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}  
+                        className="form-control"
+                        required
+                        value={this.state.value} 
+                        onChange={this.handleChange}
+                        name="type">                    
+                            <option value="" disabled>{this.state.type?this.state.type:"Type of parking"}</option>
+                            <option value="Residential">Residential</option>
+                            <option value="Commercial">Commercial</option>                      
+                    </select>
+                </div>
                 
             </div>
             
             {/*TYPE OF PARKING == RESIDENTIAL*/}
             <div  style={{marginTop: 20, display: this.state.residential?"":"none"}}>
-                <h5 style={{marginTop: 5, display: "inline-block", fontStyle: "italic"}}>
+                <h5 style={{marginTop: this.state.mobile?20:5, display: "inline-block", fontStyle: "italic"}}>
                     What kind?
                 </h5>    
-                <div class="pull-right" style={{display: "inline-block"}}>
+                <div class={this.state.mobile?"pull-left":"pull-right"} style={{display: "inline-block"}}>
                     <select
-                        style={{width: 300}}                
+                        style={{marginTop: this.state.mobile?10:0, width: 300}}                
                         className="form-control"
                         required
                         value={this.state.value} 
@@ -128,12 +130,12 @@ export default class Type extends Component {
             {/*DRIVEWAY*/}
             <div  style={{display: this.state.driveway?"":"none", marginTop: 20}}>
                 <div>
-                    <h5 style={{marginTop: 5, fontStyle: "italic", display: "inline-block"}}>
+                    <h5 style={{marginTop: this.state.mobile?20:5, fontStyle: "italic", display: "inline-block"}}>
                         Max hours allowed?
                     </h5>                    
                     <input
-                        style={{width: 300, display: "inline-block"}}
-                        className="form-control pull-right"
+                        style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}
+                        className={this.state.mobile?"form-control float-left":"form-control float-right"}
                         name="maxHours"
                         autoComplete="off"
                         type="number"
@@ -143,12 +145,12 @@ export default class Type extends Component {
                 </div>
                 
                 <div style={{marginTop: 20}}>
-                    <h5 style={{marginTop: 5, fontStyle: "italic", display: "inline-block"}}>
+                    <h5 style={{marginTop: this.state.mobile?20:5, fontStyle: "italic", display: "inline-block"}}>
                         Charge a rate*
                     </h5>                    
                     <input
-                        style={{width: 300, display: "inline-block"}}
-                        className="form-control pull-right"
+                        style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}
+                        className={this.state.mobile?"form-control float-left":"form-control float-right"}
                         name="drivewayRate"
                         autoComplete="off"
                         type="number"
@@ -161,12 +163,12 @@ export default class Type extends Component {
         {/*PARKING LOT*/}
             <div  style={{display: this.state.parkingLot?"":"none", marginTop: 20}}>
                 <div>
-                    <h5 style={{marginTop: 5, fontStyle: "italic", display: "inline-block"}}>
+                    <h5 style={{marginTop: this.state.mobile?20:5, fontStyle: "italic", display: "inline-block"}}>
                         Term?
                     </h5>                    
                     <select
-                        style={{width: 300, display: "inline-block"}}                
-                        className="form-control pull-right"
+                        style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}                
+                        className={this.state.mobile?"form-control float-left":"form-control float-right"}
                         required
                         value={this.state.value} 
                         onChange={this.handleChange}
@@ -180,12 +182,12 @@ export default class Type extends Component {
                 </div>
                 
                 <div style={{marginTop: 20}}>
-                    <h5 style={{marginTop: 5, fontStyle: "italic", display: "inline-block"}}>
+                    <h5 style={{marginTop: this.state.mobile?20:5, fontStyle: "italic", display: "inline-block"}}>
                         Charge a rate*
                     </h5>                    
                     <input
-                        style={{width: 300, display: "inline-block"}}
-                        className="form-control pull-right"
+                        style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}
+                        className={this.state.mobile?"form-control float-left":"form-control float-right"}
                         name="parkingLotRate"
                         autoComplete="off"
                         type="number"
@@ -198,12 +200,12 @@ export default class Type extends Component {
             {/*TYPE OF PARKING == COMMERCIAL*/}
             <div style={{display: this.state.commercial?"":"none", marginTop: 20}}>
                 <div>
-                    <h5 style={{marginTop: 5, display: "inline-block", fontStyle: "italic"}}>
+                    <h5 style={{marginTop: this.state.mobile?20:5, display: "inline-block", fontStyle: "italic"}}>
                         Number of parking bays
                     </h5>
                     <input
-                        style={{width: 300, display: "inline-block"}}
-                        className="form-control pull-right"
+                        style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}
+                        className={this.state.mobile?"form-control float-left":"form-control float-right"}
                         name="numberOfBays"
                         autoComplete="off"
                         type="number"
@@ -213,12 +215,12 @@ export default class Type extends Component {
                 </div>
                 
                 <div style={{marginTop: 20}}>
-                    <h5 style={{marginTop: 5, display: "inline-block", fontStyle: "italic"}}>
+                    <h5 style={{marginTop: this.state.mobile?20:5, display: "inline-block", fontStyle: "italic"}}>
                         Number of entrances
                     </h5>
                     <input
-                        style={{width: 300, display: "inline-block"}}
-                        className="form-control pull-right"
+                        style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}
+                        className={this.state.mobile?"form-control float-left":"form-control float-right"}
                         name="numberOfEntrances"
                         autoComplete="off"
                         type="number"
@@ -228,12 +230,12 @@ export default class Type extends Component {
                 </div>
                 
                 <div style={{marginTop: 20}}>
-                    <h5 style={{marginTop: 5, display: "inline-block", fontStyle: "italic"}}>
+                    <h5 style={{marginTop: this.state.mobile?20:5, display: "inline-block", fontStyle: "italic"}}>
                         Do you have LPR?
                     </h5>
                     <select
-                        style={{width: 300, display: "inline-block"}}
-                        className="form-control pull-right"
+                        style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}
+                        className={this.state.mobile?"form-control float-left":"form-control float-right"}
                         required
                         value={this.state.value} 
                         onChange={this.handleChange}
@@ -245,12 +247,12 @@ export default class Type extends Component {
                 </div>
                 
                 <div style={{marginTop: 20}}>
-                    <h5 style={{marginTop: 5, display: "inline-block", fontStyle: "italic"}}>
+                    <h5 style={{marginTop: this.state.mobile?20:5, display: "inline-block", fontStyle: "italic"}}>
                         Parking rates?
                     </h5>
                     <select
-                        style={{width: 300, display: "inline-block"}}
-                        className="form-control pull-right"
+                        style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}
+                        className={this.state.mobile?"form-control float-left":"form-control float-right"}
                         required
                         value={this.state.value} 
                         onChange={this.handleChange}
@@ -264,11 +266,11 @@ export default class Type extends Component {
            
             {/*IS THE SPACE LOCKED*/}
             <div style={{marginTop: 20}}>
-                <h4 style={{marginTop: 5, display: "inline-block"}}>Is the space locked?</h4>
+                <h4 style={{marginTop: this.state.mobile?20:5, display: "inline-block"}}>Is the space locked?</h4>
                 <select
-                    style={{display: "inline-block", width: 300}}
+                    style={{marginTop: this.state.mobile?10:0, display: "inline-block", width: 300}}
                     name="locked"                
-                    className="form-control pull-right"
+                    className={this.state.mobile?"form-control float-left":"form-control float-right"}
                     required
                     value={this.state.value} 
                     onChange={this.handleChange}>                    
@@ -279,10 +281,10 @@ export default class Type extends Component {
             </div>
 
             <div style={{marginTop: 20}}>
-                <h4 style={{marginTop: 5, display: "inline-block"}}>Number of bays</h4>
+                <h4 style={{marginTop: this.state.mobile?20:5, display: "inline-block"}}>Number of bays</h4>
                 <input
-                    style={{width: 300, display: "inline-block"}}
-                    className="form-control pull-right"
+                    style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}
+                    className={this.state.mobile?"form-control float-left":"form-control float-right"}
                     name="numberOfBays"
                     autoComplete="off"
                     type="number"

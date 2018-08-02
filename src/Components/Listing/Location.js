@@ -24,12 +24,20 @@ export default class Location extends Component {
         super(props);
         this.state = {
             value: "",
+            width: window.innerWidth,
+            mobile: false
  
         };
 
         this.handleChange = this.handleChange.bind(this);
         //this.renderResCom = this.renderResCom.bind(this);
         //this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    componentWillMount(){        
+        if (this.state.width < 576) {
+            this.setState({mobile: true});
+        }       
     }
 
     componentDidMount() {
@@ -53,8 +61,8 @@ export default class Location extends Component {
                 <div style={{textAlign: "left"}}>
                     <h4 style={{display: "inline-block"}}>Security?</h4>
                     <select
-                        style={{width: 300, display: "inline-block"}}                
-                        className="form-control pull-right"
+                        style={{width: 300, display: "inline-block"}}   
+                        className={this.state.mobile?"form-control pull-left":"form-control pull-right"}                        
                         required
                         value={this.state.value} 
                         onChange={this.handleChange}
@@ -64,9 +72,11 @@ export default class Location extends Component {
                             <option value="no">No</option>                      
                     </select>
                 </div>
+                
+                {this.state.mobile?<br/>:null}
 
-                <div style={{marginTop: 20, textAlign: "left"}}>
-                    <h4 style={{marginTop: 5}}>The Address</h4>  
+                <div style={{marginTop: 30, textAlign: "left"}}>
+                    <h4 style={{marginTop: this.state.mobile?20:5}}>The Address</h4>  
                     <div class="md-form" style={{marginTop: -20}}>
                         <textarea 
                             type="text" 

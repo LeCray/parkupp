@@ -25,7 +25,9 @@ export default class Pictures extends Component {
         super(props);
         this.state = { 
             pictures: [],
-            preview: true
+            preview: true,
+            width: window.innerWidth,
+            mobile: false
         };
          this.onDrop = this.onDrop.bind(this);
          this.preview = this.preview.bind(this);
@@ -35,6 +37,12 @@ export default class Pictures extends Component {
         this.setState({
             pictures: this.state.pictures.concat(picture),
         });
+    }
+
+    componentWillMount(){        
+        if (this.state.width < 576) {
+            this.setState({mobile: true});
+        }       
     }
 
     preview() {
@@ -49,7 +57,7 @@ export default class Pictures extends Component {
     return(  
         <div>
                                      
-          <div class="container" style={{height: 450, padding: 40, borderBottom: "1px solid white"}}>                    
+          <div class="container" style={{height: 500, padding: 40, borderBottom: this.state.mobile?null:"1px solid white"}}>                    
               <h2>Pictures</h2>
               
               <hr style={{borderColor: "#fff", marginBottom: 25}}/>
@@ -58,7 +66,7 @@ export default class Pictures extends Component {
                     <h4 style={{display: "inline-block"}}>Creative Name</h4>
                     <input
                         style={{width: 300, display: "inline-block"}}
-                        className="form-control pull-right"
+                        className={this.state.mobile?"form-control pull-left":"form-control pull-right"}
                         name="maxHours"
                         autoComplete="off"
                         type="text"
@@ -67,7 +75,7 @@ export default class Pictures extends Component {
                         onChange={this.handleChange}/>
                 </div>
 
-                <div style={{marginTop: 20, textAlign: "left"}}>
+                <div style={{marginTop: 50, textAlign: "left"}}>
                     <h4 style={{marginTop: 5, display: "inline-block"}}>Upload 3 Pics</h4> 
 
                     <p class="previewButton pull-right" onClick={this.preview}>{this.state.preview?"Save":"Preview"}</p>

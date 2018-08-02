@@ -26,11 +26,19 @@ export default class Payment extends Component {
         super(props);
         this.state = {
             showPaymentModal: false,
+            width: window.innerWidth,
+            mobile: false
         };
     }
 
     componentDidMount() {
       window.scrollTo(0, 0)
+    }
+    
+    componentWillMount(){        
+        if (this.state.width < 576) {
+            this.setState({mobile: true});
+        }       
     }
 
     async handleChange (evt) {
@@ -42,7 +50,7 @@ export default class Payment extends Component {
     return(  
         <div>
                                      
-          <div class="container" style={{height: 350, padding: 40, textAlign: "left"}}>  
+          <div class="container" style={{height: 450, padding: 40, textAlign: "left"}}>  
 
                 <h2 style={{display: "inline-block"}}>Payment</h2>
                 
@@ -58,7 +66,7 @@ export default class Payment extends Component {
                     <h4 style={{display: "inline-block"}}>Name on card</h4>                                                                            
                     <input 
                         style={{width: 300, display: "inline-block", color: "black"}}
-                        className="form-control pull-right"
+                        className={this.state.mobile?"form-control pull-left":"form-control pull-right"}
                         label="Name on Card" 
                         placeholder="Card holder"
                         name="nameOnCard" 
@@ -66,11 +74,11 @@ export default class Payment extends Component {
                         onChange={this.handleChange}/>  
                 </div> 
 
-                <div style={{marginTop: 20, textAlign: "left"}}>
+                <div style={{marginTop: this.state.mobile?50:20, textAlign: "left"}}>
                     <h4 style={{display: "inline-block"}}>Card Number</h4>                                                                            
                     <input 
                         style={{width: 300, display: "inline-block", color: "black"}}
-                        className="form-control pull-right"
+                        className={this.state.mobile?"form-control pull-left":"form-control pull-right"}
                         label="Card Number" 
                         placeholder="Card Number"
                         name="cardNumber" 
@@ -78,11 +86,11 @@ export default class Payment extends Component {
                         onChange={this.handleChange}/>  
                 </div>
 
-                <div style={{marginTop: 20, textAlign: "left"}}>
+                <div style={{marginTop: this.state.mobile?50:20, textAlign: "left"}}>
                     <h4 style={{display: "inline-block"}}>Expiry Date</h4>                                                                            
                     <input 
                         style={{width: 300, display: "inline-block", color: "black"}}
-                        className="form-control pull-right"
+                        className={this.state.mobile?"form-control pull-left":"form-control pull-right"}
                         label="Expiry Date" 
                         placeholder="Expiry Date"
                         name="expiryDate" 
@@ -90,11 +98,11 @@ export default class Payment extends Component {
                         onChange={this.handleChange}/>  
                 </div>
 
-                <div style={{marginTop: 20, textAlign: "left"}}>
+                <div style={{marginTop: this.state.mobile?50:20, textAlign: "left"}}>
                     <h4 style={{display: "inline-block"}}>CVV</h4>                                                                            
                     <input 
                         style={{width: 300, display: "inline-block", color: "black"}}
-                        className="form-control pull-right"
+                        className={this.state.mobile?"form-control pull-left":"form-control pull-right"}
                         label="CVV" 
                         placeholder="CVV"
                         name="cvv" 
