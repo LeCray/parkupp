@@ -49,7 +49,7 @@ export default class Pictures extends Component {
     return(  
         <div>
                                      
-          <div class="container" style={{height: 450, padding: 40}}>                    
+          <div class="container" style={{height: 450, padding: 40, borderBottom: "1px solid white"}}>                    
               <h2>Pictures</h2>
               
               <hr style={{borderColor: "#fff", marginBottom: 25}}/>
