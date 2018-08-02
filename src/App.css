@@ -281,6 +281,17 @@
   border: 0px;  
 }
 
+.previewButton {
+  font-size: 15px; 
+  padding: 10px; 
+  text-align: center; 
+  color: white; 
+  background-color: #21406a; 
+  width: 100px;
+  cursor: pointer;  
+  border-radius: 3px;
+  display: inline-block;
+}
 
 
 

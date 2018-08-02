@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Ionicon from 'react-ionicons'
 import { Link } from 'react-router-dom'
+import ImageUploader from 'react-images-upload';
 
 import {
   Collapse,
@@ -20,6 +21,26 @@ import {
 
 
 export default class Pictures extends Component {
+     constructor(props) {
+        super(props);
+        this.state = { 
+            pictures: [],
+            preview: true
+        };
+         this.onDrop = this.onDrop.bind(this);
+         this.preview = this.preview.bind(this);
+    }
+ 
+    onDrop(picture) {
+        this.setState({
+            pictures: this.state.pictures.concat(picture),
+        });
+    }
+
+    preview() {
+        this.setState({preview: !this.state.preview})
+    }
+
     componentDidMount() {
       window.scrollTo(0, 0)
     }
@@ -28,7 +49,7 @@ export default class Pictures extends Component {
     return(  
         <div>
                                      
-          <div class="borderr container" style={{height: 300, padding: 40}}>                    
+          <div class="container" style={{height: 450, padding: 40}}>                    
               <h2>Pictures</h2>
               
               <hr style={{borderColor: "#fff", marginBottom: 25}}/>
@@ -40,15 +61,27 @@ export default class Pictures extends Component {
                         className="form-control pull-right"
                         name="maxHours"
                         autoComplete="off"
-                        type="number"
+                        type="text"
                         placeholder="Name your parking"
                         required
                         onChange={this.handleChange}/>
                 </div>
 
                 <div style={{marginTop: 20, textAlign: "left"}}>
-                    <h4 style={{marginTop: 5}}>Upload 3 Pics</h4>  
-                    
+                    <h4 style={{marginTop: 5, display: "inline-block"}}>Upload 3 Pics</h4> 
+
+                    <p class="previewButton pull-right" onClick={this.preview}>{this.state.preview?"Save":"Preview"}</p>
+
+                    <div style={{marginTop: 20, textAlign: "center"}}>
+                        <ImageUploader                        
+                            withIcon={true}
+                            buttonText='Choose images'
+                            onChange={this.onDrop}
+                            imgExtension={['.jpg', '.gif', '.png', '.gif']}
+                            maxFileSize={5242880}
+                            withPreview={this.state.preview}
+                        />
+                    </div>
                 </div>
           </div>   
                                                       
