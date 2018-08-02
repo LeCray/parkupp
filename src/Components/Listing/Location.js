@@ -45,7 +45,7 @@ export default class Location extends Component {
     return(  
         <div>
                   
-            <div class="borderr container" style={{height: 400, padding: 40}}>                    
+            <div class="container" style={{height: 400, padding: 40}}>                    
                 <h2>Location</h2>
 
                 <hr style={{borderColor: "#fff", marginBottom: 25}}/>
