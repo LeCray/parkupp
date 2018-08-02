@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Ionicon from 'react-ionicons'
 import { Link } from 'react-router-dom'
 
+import { Input, Fa, Card, CardBody, ModalFooter,ModalBody, ModalHeader, Modal } from 'mdbreact';
+
 import {
   Collapse,
   Navbar,
@@ -28,11 +30,63 @@ export default class Payment extends Component {
     return(  
         <div>
                                      
-          <div class="borderr container" style={{height: 300, padding: 40}}>                    
-              <h2>Payment Details</h2>
-              
-          </div>   
-                                                      
+          <div class="borderr container" style={{height: 350, padding: 40, textAlign: "left"}}>  
+
+                <h2 style={{display: "inline-block"}}>Payment Details</h2>
+                
+                <p class="processButton pull-right" style={{display: "inline-block", marginTop: 0}}>Process</p>
+                
+
+                <hr style={{borderColor: "#fff"}}/>
+
+                <div style={{textAlign: "left"}}>
+                    <h4 style={{display: "inline-block"}}>Name on card</h4>                                                                            
+                    <input 
+                        style={{width: 300, display: "inline-block", color: "black"}}
+                        className="form-control pull-right"
+                        label="Name on Card" 
+                        placeholder="Card holder"
+                        name="nameOnCard" 
+                        type="text" 
+                        onChange={this.handleChange}/>  
+                </div> 
+
+                <div style={{marginTop: 20, textAlign: "left"}}>
+                    <h4 style={{display: "inline-block"}}>Card Number</h4>                                                                            
+                    <input 
+                        style={{width: 300, display: "inline-block", color: "black"}}
+                        className="form-control pull-right"
+                        label="Card Number" 
+                        placeholder="Card Number"
+                        name="cardNumber" 
+                        type="text" 
+                        onChange={this.handleChange}/>  
+                </div>
+
+                <div style={{marginTop: 20, textAlign: "left"}}>
+                    <h4 style={{display: "inline-block"}}>Expiry Date</h4>                                                                            
+                    <input 
+                        style={{width: 300, display: "inline-block", color: "black"}}
+                        className="form-control pull-right"
+                        label="Expiry Date" 
+                        placeholder="Expiry Date"
+                        name="expiryDate" 
+                        type="text" 
+                        onChange={this.handleChange}/>  
+                </div>
+
+                <div style={{marginTop: 20, textAlign: "left"}}>
+                    <h4 style={{display: "inline-block"}}>CVV</h4>                                                                            
+                    <input 
+                        style={{width: 300, display: "inline-block", color: "black"}}
+                        className="form-control pull-right"
+                        label="CVV" 
+                        placeholder="CVV"
+                        name="cvv" 
+                        type="text" 
+                        onChange={this.handleChange}/>  
+                </div>                                                                                               
+            </div>                                                       
         </div>
         
     )}

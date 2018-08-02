@@ -293,6 +293,17 @@
   display: inline-block;
 }
 
+.processButton {
+  font-size: 15px; 
+  padding: 10px; 
+  text-align: center; 
+  color: white; 
+  background-color: #e6c131; 
+  width: 100px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 3px;
+}
 
 
 
