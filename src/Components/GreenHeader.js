@@ -54,9 +54,9 @@ export default class GreenHeader extends React.Component {
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right> 
                           
-                          <NavItem>
+                          {/*<NavItem>
                               <NavLink to="/Discover_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Discover Parking</NavLink>
-                          </NavItem>                            
+                          </NavItem> */}                           
                           <NavItem>
                               <NavLink to="/List_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List Parking</NavLink>
                           </NavItem>                            
@@ -96,9 +96,9 @@ export default class GreenHeader extends React.Component {
                     { !this.state.isWideEnough && <NavbarToggler onClick = { this.onClick } color="#2bbbad"/>}
                     <Collapse isOpen = { this.state.collapse } navbar>
                         <NavbarNav right>
-                          <NavItem>
+                          {/*<NavItem>
                               <NavLink to="/Discover_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>Discover Parking</NavLink>
-                          </NavItem>                            
+                          </NavItem>*/}                            
                           <NavItem>
                               <NavLink to="/List_Parking" onClick={this.onClick} style={{color: this.state.color?"#fff":"#2bbbad"}}>List Parking</NavLink>
                           </NavItem>                          
