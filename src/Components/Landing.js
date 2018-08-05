@@ -135,21 +135,7 @@ export default class Landing extends Component {
                         </div>}
                 </div>
 
-                <div style={{textAlign: "center", paddingTop: this.state.mobile?0:100, marginTop: this.state.mobile?-370:0}}>
-                    {this.state.mobile? 
-                        <div>
-                            <Link to="/Discover_Preview" style={{display: "inline-block"}}>
-                                <p class="button landingButtons"> 
-                                    DISCOVER PARKING
-                                </p> 
-                            </Link>
-                            <Link to="/Parking" style={{marginLeft: 10, display: "inline-block"}}>
-                                <p class="button landingButtons"> 
-                                    LIST PARKING
-                                </p> 
-                            </Link>
-                        </div>
-                    :null}
+                <div style={{textAlign: "center", paddingTop: this.state.mobile?0:100, marginTop: this.state.mobile?-370:0}}>                    
                     {/* PARKUPP */}
                     <div class="parkupp height" 
                         style={{paddingBottom: 20, marginTop: "5%", marginBottom: 30, backgroundColor: "white", height: "100%", paddingLeft: 20, paddingRight: 20}}>

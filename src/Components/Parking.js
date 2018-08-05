@@ -57,14 +57,14 @@ export default class Parking extends Component {
                 <div class="moreBackground" style={{flex: 1,  paddingTop: "25%", color: "white", textAlign: "center"    }}>
                     <h4>Get paid with ParkUpp</h4>                                            
                 </div>
-                <p class="container" style={{marginTop: 20, paddingLeft: 40, paddingRight: 40, textAlign: "center"}}>
+                <p class="container" style={{marginTop: 20, paddingLeft: 40, paddingRight: 40}}>
                     Whether you have an existing parking facility, 
                     long term parking or an idle driveway.<br/> 
                     ParkUpp helps you find users for your parking.
                 </p>
                 
-                <div class="pull-right">
-                    <Link to="/List_Preview"><Button color="blue"> DISCOVER PARKING</Button> </Link>
+                <div style={{paddingLeft: 25}}>
+                    <Link to="/List_Preview"><p class="landingButtons"> LIST PARKING</p> </Link>
                 </div>
                 
             </div>
