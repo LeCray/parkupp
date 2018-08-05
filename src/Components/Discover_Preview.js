@@ -37,13 +37,12 @@ export default class Discover_Preview extends Component {
                     <h1 style={{fontSize: 30, marginTop: 20}}>DISCOVER PARKING</h1>  
                     <p style={{fontSize: 15}}>COMING SOON</p>
                     
-                    
-
-                                      
-                    
-
-                    
+                    <p style={{fontSize: 20, marginTop: 20}}>DON'T FORGET TO <Link to="Sign_Up"><u style={{color: "#fff"}}>SIGN UP</u></Link></p> 
+  
                 </div>   
+
+                <div style={{height: 100}}>
+                </div>
                                     
                 <hr style={{borderColor: "white", width: "70%", marginTop: 150}}/> 
                 <div style={{marginTop: 20, textAlign: "center", padding: 25, marginTop: -20}}>

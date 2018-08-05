@@ -117,7 +117,7 @@ export default class Landing extends Component {
             <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>			
             <div style={{overflow: "hidden", fontFamily: "Quicksand"}}> 
 
-                <div class="mainBackground" style={{flex: 1, paddingTop: "30%", paddingLeft: "14%", color: "white"}}>
+                <div class="mainBackground" style={{flex: 1, paddingTop: "35%", textAlign:"center", color: "white"}}>
                     {this.state.mobile? 
                         null
                     :

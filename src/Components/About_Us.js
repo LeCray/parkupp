@@ -68,7 +68,7 @@ export default class About_Us extends Component {
                   /> 
 
                   <InstagramEmbed
-                    url='https://www.instagram.com/p/BlDfnekF7ZM/?hl=en&taken-by=_parkupp'
+                    url='https://www.instagram.com/p/BlKOiM3BNYu/?taken-by=_parkupp'
                     maxWidth={350}
                     hideCaption={true}
                     containerTagName='div'
@@ -78,6 +78,38 @@ export default class About_Us extends Component {
                   />
                   <InstagramEmbed
                     url='https://www.instagram.com/p/BkjnrIuDHgt/?hl=en&taken-by=_parkupp'
+                    maxWidth={350}
+                    hideCaption={true}
+                    containerTagName='div'
+                    protocol=''
+                    injectScript
+                    style={{margin: 20}}
+                  />
+                </div>
+
+                <div class="row" style={{flexDirection: "row", justifyContent: "center"}}>
+
+                  <InstagramEmbed
+                    url='https://www.instagram.com/p/Bl5yOnNHmBR/?taken-by=_parkupp'
+                    maxWidth={350}
+                    hideCaption={true}
+                    containerTagName='div'
+                    protocol=''
+                    injectScript
+                    style={{margin: 20}}
+                  /> 
+
+                  <InstagramEmbed
+                    url='https://www.instagram.com/p/Bl2DdColxd3/?taken-by=_parkupp'
+                    maxWidth={350}
+                    hideCaption={true}
+                    containerTagName='div'
+                    protocol=''
+                    injectScript
+                    style={{margin: 20}}
+                  />
+                  <InstagramEmbed
+                    url='https://www.instagram.com/p/Bl7u5lVljHL/?taken-by=_parkupp'
                     maxWidth={350}
                     hideCaption={true}
                     containerTagName='div'

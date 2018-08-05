@@ -36,14 +36,13 @@ export default class List_Preview extends Component {
                     <img src={require("../Resources/welcome.png")} style={{height: 100, marginBottom: 10}} /> 
                     <h1 style={{fontSize: 30, marginTop: 20}}>LIST YOUR PARKING</h1>  
                     <p style={{fontSize: 15}}>COMING SOON</p>
-                    
-                    
 
-                                      
-                    
-
-                    
+                    <p style={{fontSize: 20, marginTop: 20}}>DON'T FORGET TO <Link to="Sign_Up"><u style={{color: "#fff"}}>SIGN UP</u></Link></p> 
+    
                 </div>   
+
+                <div class="borderr" style={{height: 100}}>
+                </div>
                                     
                 <hr style={{borderColor: "white", width: "70%", marginTop: 150}}/> 
                 <div style={{marginTop: 20, textAlign: "center", padding: 25, marginTop: -20}}>
