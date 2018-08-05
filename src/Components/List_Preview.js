@@ -41,7 +41,7 @@ export default class List_Preview extends Component {
     
                 </div>   
 
-                <div class="borderr" style={{height: 100}}>
+                <div style={{height: 100}}>
                 </div>
                                     
                 <hr style={{borderColor: "white", width: "70%", marginTop: 150}}/> 
