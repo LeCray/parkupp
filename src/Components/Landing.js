@@ -119,12 +119,12 @@ export default class Landing extends Component {
 
                 <div class="mainBackground" style={{flex: 1, paddingTop: "30%", paddingLeft: "14%", color: "white"}}>
                     <Link to="/Discover_Preview" style={{display: "inline-block"}}>
-                        <p class="button ourButton"> 
+                        <p class="button landingButtons"> 
                             DISCOVER PARKING
                         </p> 
                     </Link>
                     <Link to="/Parking" style={{marginLeft: 30, display: "inline-block"}}>
-                        <p class="button ourButton"> 
+                        <p class="button landingButtons"> 
                             LIST PARKING
                         </p> 
                     </Link>

@@ -9,13 +9,7 @@ import {withStyles, MuiThemeProvider} from 'material-ui/styles';
 import green from '@material-ui/core/colors/green';
 
 import {
-  //Collapse,
-  //Navbar,
-  //NavbarToggler,
-  //NavbarBrand,
   Nav,
-  //NavItem,
-  //NavLink,
   Container,
   Row,
   Col,
@@ -313,12 +307,22 @@ export default class Sign_Up extends Component {
                                         <p class="button signUpButton" style={{backgroundColor: this.state.owner?"#e6c131":"#21406a"}} onClick={this.owner}>OWNER</p>                                    
                                     </div>
                                 </div>
+                                
+                                {this.state.owner?
+                                    <Input 
+                                        label="Company Name" 
+                                        name="comanyName" 
+                                        type="text" 
+                                        style={{color: "black"}} 
+                                        onChange={this.handleInputChange}/>
+                                :
+                                    null}
                                                                 
                                 <Input 
                                     label="Tel" 
                                     name="tel" 
                                     type="number" 
-                                    style={{color: "white"}} 
+                                    style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
                                 <Input 
                                     label="Password" 
@@ -332,12 +336,16 @@ export default class Sign_Up extends Component {
                                     type="text" 
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
-                                <Input 
+
+                                {this.state.driver?
+                                    <Input 
                                     label="Your parking horror story..."  
                                     name="story" 
                                     type="text" 
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
+                                :
+                                    null}
  
                                 <h6 style={{color: "#2bbbad", fontSize: 12}}> *Increase your chance of winning by following our social media accounts</h6>
                                 <div style={{flexDirection: "row"}}>                                        
