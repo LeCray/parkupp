@@ -84,11 +84,11 @@ export default class Type extends Component {
         
         
                                
-        <div class="container" style={{height: this.state.mobile?this.state.commercial?720:600:this.state.commercial?600:500, padding: 40, borderBottom: this.state.mobile?null:"1px solid white", textAlign: "left"}}>  
+        <div class="container" style={{height: this.state.mobile?this.state.commercial?720:600:this.state.commercial?650:550, padding: 40, borderBottom: this.state.mobile?null:"1px solid white", textAlign: "left"}}>  
             <h3 style={{marginBottom: 25}}>Please tell us the type of your parking spot</h3>
             
             <hr style={{borderColor: "#fff", marginBottom: 25}}/>
-            {/*TYPE OF PARKING*/}                  
+            {/*TYPE OF PARKING*/}                  3
             <div >
                 <h4 style={{marginTop: this.state.mobile?20:5, display: "inline-block"}}>Type of Parking</h4> 
                 <div class={this.state.mobile?"pull-left":"pull-right"}>              
@@ -231,7 +231,7 @@ export default class Type extends Component {
                 
                 <div style={{marginTop: 20}}>
                     <h5 style={{marginTop: this.state.mobile?20:5, display: "inline-block", fontStyle: "italic"}}>
-                        Do you have LPR?
+                        Video Surveylance?
                     </h5>
                     <select
                         style={{marginTop: this.state.mobile?10:0, width: 300, display: "inline-block"}}

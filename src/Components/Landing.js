@@ -117,12 +117,17 @@ export default class Landing extends Component {
             <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet"/>			
             <div style={{overflow: "hidden", fontFamily: "Quicksand"}}> 
 
-                <div class="mainBackground" style={{flex: 1,  paddingTop: "30%", paddingLeft: "15%", color: "white"}}>
-                    {/*<Link to="/Discover_Parking">
+                <div class="mainBackground" style={{flex: 1, paddingTop: "30%", paddingLeft: "14%", color: "white"}}>
+                    <Link to="/Discover_Preview" style={{display: "inline-block"}}>
                         <p class="button ourButton"> 
                             DISCOVER PARKING
                         </p> 
-                    </Link>*/}
+                    </Link>
+                    <Link to="/Parking" style={{marginLeft: 30, display: "inline-block"}}>
+                        <p class="button ourButton"> 
+                            LIST PARKING
+                        </p> 
+                    </Link>
                 </div>
 
                 <div style={{textAlign: "center", paddingTop: this.state.mobile?0:100, marginTop: this.state.mobile?-370:0}}>

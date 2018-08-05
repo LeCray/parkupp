@@ -64,7 +64,7 @@ export default class Parking extends Component {
                 </p>
                 
                 <div class="pull-right">
-                    <Link to="/List_Parking"><Button color="blue"> DISCOVER PARKING</Button> </Link>
+                    <Link to="/List_Preview"><Button color="blue"> DISCOVER PARKING</Button> </Link>
                 </div>
                 
             </div>
@@ -80,7 +80,7 @@ export default class Parking extends Component {
                     </div> 
                     
                     <div className="align-top" style={{display: "inline-block", marginLeft: "20%"}}>
-                        <Link to="/List_Parking"><Button color="blue">LIST PARKING</Button> </Link>
+                        <Link to="/List_Preview"><p class="myNextBtn">LIST PARKING</p> </Link>
                     </div>                                
                     
                 </div>
