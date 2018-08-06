@@ -38,7 +38,7 @@ export default class Contact_Us extends Component {
                                       
                     <div class="row">
                         <div class="col-sm-12">
-                            <p style={{marginTop: 50, fontSize: 20}}>
+                            <p style={{marginTop: 50, fontSize: this.state.mobile?15:20}}>
                                 Email: hello@parkupp.co.za
                                  
                                 <br/>

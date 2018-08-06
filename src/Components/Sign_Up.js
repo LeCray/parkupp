@@ -7,6 +7,8 @@ import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import { createMuiTheme } from 'material-ui/styles';
 import {withStyles, MuiThemeProvider} from 'material-ui/styles';
 import green from '@material-ui/core/colors/green';
+import { Dots } from 'react-activity';
+import 'react-activity/dist/react-activity.css';
 
 import {
   Nav,
@@ -45,7 +47,8 @@ export default class Sign_Up extends Component {
             passwordError: "",
             phoneNumberError: "",
             emailError: "",
-            disableBtn: false
+            disableBtn: false,
+            loading: false
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -63,6 +66,7 @@ export default class Sign_Up extends Component {
         this.passwordError = this.passwordError.bind(this);
         this.phoneNumberError = this.phoneNumberError.bind(this);
         this.emailError = this.emailError.bind(this);
+        this.toggleLoading = this.toggleLoading.bind(this);
     }
 
     componentWillMount(){
@@ -87,29 +91,38 @@ export default class Sign_Up extends Component {
         this.setState({ show: true });
       }
 
-    validateOption() {
-        this.disableBtn()
+    toggleLoading() {
+        this.setState({loading: !this.state.loading});
+      }
 
-        console.log(this.state.driver)
-        console.log(this.state.owner)
+    async validateOption() {
+             
+        this.toggleLoading()
+
+        //console.log(this.state.driver)
+        //console.log(this.state.owner)
 
         if (!this.state.driver && !this.state.owner) {
-            this.togglePleaseSelectModal()
-            this.disableBtn()
+            await this.togglePleaseSelectModal()
+            
+            this.toggleLoading()
         } else {
+            
             this.handleSubmit()
+
             this.disableBtn()        
         }
     }
 
     async handleSubmit() {   
+        
 
         this.setState({passwordError: ""})
         this.setState({phoneNumberError: ""})
         this.setState({emailError: ""})
 
-        console.log(this.state.driver)
-        console.log(this.state.driver)
+        //console.log(this.state.driver)
+        //console.log(this.state.driver)
              
 
         if (this.state.driver && this.state.owner) {
@@ -122,9 +135,9 @@ export default class Sign_Up extends Component {
         
         if (this.state.password !== this.state.confirm_password) {
 
-            console.log("Passwords do not match")
+            //console.log("Passwords do not match")
             this.toggleModal()
-            this.disableBtn()
+            this.toggleLoading()            
 
         } else {
                  
@@ -144,49 +157,52 @@ export default class Sign_Up extends Component {
             })
             .then(response => response.json())                                              
             .then((responseData) => {
-                console.log(responseData.error)
+                //console.log(responseData.error)
 
                 if (responseData.error == false) {                    
-                    console.log("Sign up: Success")
+                    //console.log("Sign up: Success")
                     this.toggleSuccessModal()
 
                 } else if (String(responseData.error).includes("exists!")) {
                     
                     this.setState({showExistsModal: !this.state.showExistsModal})
-                    console.log("User exists")
+                    //console.log("User exists")
                 
                 } else {
+                    null
+                }
+                 /*else {
 
                     this.toggleValidationModal() 
 
                     const data = responseData.error.slice(17).split(":")
-                    console.log(data)
+                    //console.log(data)
                     
                     var err;
 
                     for (err of data) {                                        
                         if (String(err).includes("Password must")) {                        
                             this.setState({passwordError: "Password must contain at least 6 characters and include at least one number"})
-                            console.log(this.state.passwordError)
+                            //console.log(this.state.passwordError)
                         }
                     }
 
                     for (err of data) {
                         if (String(err).includes("Phone number")) {
                             this.setState({phoneNumberError: "Phone number must be 10 digits long"})
-                            console.log(this.state.phoneNumberError)
+                            //console.log(this.state.phoneNumberError)
                         }
                     }
 
                     for (err of data) {
                         if (String(err).includes("valid email!")) {
                             this.setState({emailError: "Email address not valid"})
-                            console.log(this.state.emailError)
+                            //console.log(this.state.emailError)
                         }
                     }
-                }
+                }*/
 
-                
+                this.toggleLoading()
             })
             .catch((error) => {
               console.error(error);
@@ -206,8 +222,9 @@ export default class Sign_Up extends Component {
             .catch((error) => {
               console.error(error);
             })
+            
         }     
-
+        
                        
     }
 
@@ -329,13 +346,13 @@ export default class Sign_Up extends Component {
                                 <Input 
                                     label="Password" 
                                     name="password" 
-                                    type="text" 
+                                    type="password" 
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
                                 <Input 
                                     label="Confirm Password" 
                                     name="confirm_password" 
-                                    type="text" 
+                                    type="password" 
                                     style={{color: "black"}} 
                                     onChange={this.handleInputChange}/>
 
@@ -357,23 +374,35 @@ export default class Sign_Up extends Component {
                                     <a href="https://www.instagram.com/_parkupp/?hl=en" target="_blank"><Ionicon icon="logo-instagram" fontSize="20px" color="#2bbbad"/></a>                                        
                                 </div>
 
-                       
-                                <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
-                                    <div className="text-center mb-3 col-md-12">
-                                        <p class=""                                            
-                                            rounded 
-                                            disabled={this.state.disableBtn}                                            
-                                            className="signUpButton btn-block" 
-                                            onClick={this.validateOption}>
-                                            Sign Up
-                                        </p>
-                                    </div>
-                                </Row>                                      
+                                {this.state.loading?
+                                    <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
+                                        <div className="text-center mb-3 col-md-12">
+                                            <p class=""                                            
+                                                rounded 
+                                                disabled={this.state.disableBtn}                                            
+                                                className="signUpButton btn-block" 
+                                                onClick={this.validateOption}>
+                                                <Dots animating={this.state.loading}/>
+                                            </p>
+                                        </div>
+                                    </Row>
+                                :
+                                    <Row className="d-flex align-items-center mb-4" style={{marginTop: 30, paddingRight: 50, paddingLeft: 50}}>
+                                        <div className="text-center mb-3 col-md-12">
+                                            <p class=""                                            
+                                                rounded 
+                                                disabled={this.state.disableBtn}                                            
+                                                className="signUpButton btn-block" 
+                                                onClick={this.validateOption}>
+                                                Sign Up
+                                            </p>
+                                        </div>
+                                    </Row>}                                      
                             </div>                                      
                         </div>                            
                     </div>
                 </section>
-                
+                                
 
                 <Modal isOpen={this.state.showModal} toggle={this.toggleModal} side position="bottom-right">
                     <ModalBody style={{fontSize: 18, textAlign: "center"}} toggle={this.toggleModal}>PASSWORDS DON'T MATCH!</ModalBody>                            
@@ -405,14 +434,14 @@ export default class Sign_Up extends Component {
                         </div>                        
                     </ModalBody>
                     <ModalFooter>
-                        <b className="pull-right" onClick={this.toggleSuccessModal}>Close</b>                    
+                        <b className="pull-right" style={{cursor: "pointer"}} onClick={this.toggleSuccessModal}>Close</b>                    
                     </ModalFooter>
                 </Modal>  
 
                 <Modal isOpen={this.state.showExistsModal} toggle={this.toggleExistsModal} size="sm">
                     <ModalBody toggle={this.toggleExistsModal}>User already exists</ModalBody>
                     <ModalFooter>
-                        <b className="pull-right" onClick={this.toggleExistsModal}>Close</b>                    
+                        <b className="pull-right" style={{cursor: "pointer"}} onClick={this.toggleExistsModal}>Close</b>                    
                     </ModalFooter>
                 </Modal>
 
@@ -421,7 +450,7 @@ export default class Sign_Up extends Component {
                         Please choose wether you want to be a <b>Driver</b> or an <b>Owner</b>
                     </ModalBody>
                     <ModalFooter>
-                        <b className="pull-right" onClick={this.togglePleaseSelectModal}>Close</b>                    
+                        <b className="pull-right" style={{cursor: "pointer"}} onClick={this.togglePleaseSelectModal}>Close</b>                    
                     </ModalFooter>
                 </Modal>
 
