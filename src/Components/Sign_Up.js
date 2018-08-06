@@ -34,6 +34,7 @@ export default class Sign_Up extends Component {
             email: "",
             user_type: "",
             tel: "",
+            companyName: "",
             password: "",
             confirm_password: "",
             showModal: false,
@@ -135,7 +136,8 @@ export default class Sign_Up extends Component {
                     lastName: this.state.last_name,
                     email: this.state.email,
                     userType: this.state.user_type,    
-                    phoneNumber: this.state.tel,                    
+                    phoneNumber: this.state.tel,   
+                    companyName: this.state.companyName,                
                     password: this.state.password,                      
                 }), 
 
