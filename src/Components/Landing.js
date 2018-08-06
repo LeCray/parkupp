@@ -206,8 +206,8 @@ export default class Landing extends Component {
                                 <img src={require("../Resources/pay_easy.png")} style={{height: 130}} />
                                 <h5 style={{marginTop: 50}}><strong>Pay Easy</strong></h5>
                                 <p style={{paddingLeft: 80, paddingRight: 80}}>
-                                    Users can find their spo
-                                    and pay for it with the
+                                    Users can find their spot
+                                    and pay for it through the
                                     app and cut out any cash
                                     exchange
                                 </p>

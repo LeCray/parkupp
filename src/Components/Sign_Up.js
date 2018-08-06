@@ -346,8 +346,10 @@ export default class Sign_Up extends Component {
                                     onChange={this.handleInputChange}/>
                                 :
                                     null}
- 
-                                <h6 style={{color: "#2bbbad", fontSize: 12}}> *Increase your chance of winning by following our social media accounts</h6>
+                                
+                                {this.state.driver?
+                                    <h6 style={{color: "#2bbbad", fontSize: 12}}> *Increase your chance of winning by following our social media accounts</h6>
+                                :null}
                                 <div style={{flexDirection: "row"}}>                                        
                                     <a href="https://twitter.com/_parkupp?lang=en" target="_blank" style={{marginRight: 5}}><Ionicon icon="logo-twitter" fontSize="20px" color="#2bbbad"/></a>
                                     <a href="https://www.instagram.com/_parkupp/?hl=en" target="_blank"><Ionicon icon="logo-instagram" fontSize="20px" color="#2bbbad"/></a>                                        

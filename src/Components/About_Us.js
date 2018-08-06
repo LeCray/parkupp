@@ -38,11 +38,11 @@ export default class About_Us extends Component {
                         <h1 style={{fontSize: 30, marginTop: 20, textAlign: "center"}}>About Us</h1>                    
 
                         <p style={{marginTop: 50, fontSize: 20}}>
-                        We are a family of young, diverse, creative and somewhat quirky individuals who love solving worldly problems. 
-                        For us it’s about it’s about serving others and providing value to both the user and the owners.
+                        We are a family of young, diverse, creative and somewhat quirky individuals who love solving global problems. 
+                        For us it’s about serving others and providing value to both the user and the owners.
                         <br/><br/>
                         We believe in simplicity, creativity and having an abundance mentality in all we do. Our business is built under 
-                        the core principle that here is enough for all of us and if we all learn to share, people will not be in need of what others already have.
+                        the core principle that there is enough for all of us and if we all learn to share, people will not be in need of what others already have.
                         <br/><br/>
                         What we do is fairly simple: a marketplace that connects owners with idle driveways, garages, 
                         parking facilities and unused parking spaces to drivers who need parking. 

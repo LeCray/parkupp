@@ -46,7 +46,7 @@ export default class Terms_Conditions extends Component {
                 
                 
                     Welcome to www.parkupp.co.za (“website”) and/or the ParkUpp mobile application (“App”). 
-                    By using this website/App and the services offered by Lesa & Co (Pty) Limited 
+                    By using this website/App and the services offered by ParkUpp (Pty) Limited 
                     (registration number 2015/280619/07) (together with its parents, subsidiaries, affiliates, agents, 
                     representatives, consultants, employees, officers, and directors — collectively, “ParkUpp,”“we,” or “us”), 
                     you are agreeing to these legally binding Terms and Conditions (including the Privacy Policy) (collectively the “Terms”). 

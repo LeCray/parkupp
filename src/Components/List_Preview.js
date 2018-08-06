@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Ionicon from 'react-ionicons'
 import { Link } from 'react-router-dom'
+import YouTubePlayer from 'react-player/lib/players/YouTube'
 
 import {
   Collapse,
@@ -20,6 +21,13 @@ import {
 
 
 export default class List_Preview extends Component {
+  constructor(props) {
+        super(props);
+        this.state = {
+            howItWorks: false,
+        };      
+    }
+
     componentDidMount() {
       window.scrollTo(0, 0)
     }
@@ -40,8 +48,29 @@ export default class List_Preview extends Component {
                     <p style={{fontSize: 20, marginTop: 20}}>DON'T FORGET TO <Link to="Sign_Up"><u style={{color: "#fff"}}>SIGN UP</u></Link></p> 
     
                 </div>   
+                
+                <div style={{marginBottom: 50, fontSize: 15}}>
+                  STAND A CHANCE TO WIN A R3000 CAR SERVICE VOUCHER<br/>
+                  BY WATCHING <u onClick={()=>this.setState({howItWorks: !this.state.howItWorks})} style={{cursor: "pointer"}}>HOW IT WORKS</u>, SIGNING UP<br/>                  
+                  AND SHARING YOUR PARKING HORROR STORY
+                </div>
+                
+                {this.state.howItWorks?
+                <div>
+                  <h3>HOW IT WORKS</h3>
+                  <div class="video" style={{margin: "0 auto",  backgroundColor: "white"}}>
+                      <YouTubePlayer
+                        url='https://youtu.be/35XnLTfKtDQ'
+                        className='react-player'                          
+                        controls
+                        loop
+                        width='100%'
+                        height='100%'
+                      />  
+                  </div>
+                </div>:null}
 
-                <div style={{height: 100}}>
+                <div style={{height: this.state.howItWorks?0:100}}>
                 </div>
                                     
                 <hr style={{borderColor: "white", width: "70%", marginTop: 150}}/> 
