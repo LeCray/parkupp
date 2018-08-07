@@ -59,7 +59,7 @@ export default class Parking extends Component {
                 </div>
                 <p class="container" style={{marginTop: 20, paddingLeft: 40, paddingRight: 40}}>
                     Whether you have an existing parking facility, 
-                    long term parking or an idle driveway.<br/> 
+                    long term parking or an idle driveway.<br/>     
                     ParkUpp helps you find users for your parking.
                 </p>
                 
@@ -194,7 +194,7 @@ export default class Parking extends Component {
                         <div style={{padding: 15}}>
                             <h3><span style={{fontSize: 50, color: "#2bbbad", marginRight: 10}}><b>3</b></span><b>Get Paid</b></h3>
                             <p>
-                                Simply receive payment on your account through your our secure payment gateway
+                                Simply receive payment on your account through our secure payment gateway
                             </p>
                         </div>                    
                     </div>

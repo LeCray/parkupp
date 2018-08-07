@@ -20,8 +20,22 @@ import {
 
 
 export default class Contact_Us extends Component {
+    constructor(props) {
+          super(props);
+          this.state = {            
+              width: window.innerWidth,
+              mobile: false
+          }
+    };
+    
     componentDidMount() {
       window.scrollTo(0, 0)
+    }
+
+    componentWillMount() {
+      if (this.state.width <= 576) {
+          this.setState({mobile: true})
+        } 
     }
 
     render() {   
